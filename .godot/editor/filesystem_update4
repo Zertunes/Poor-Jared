@@ -1,0 +1,16 @@
+res://scenes/misc/player.tscn
+res://addons/panku_console/res/panku_console_theme.tres
+res://shader/ChromaticAbberation.gdshader
+res://scenes/menus/gamemenu.tscn
+res://scenes/menus/join_lobby.tscn
+res://scenes/menus/deathmenu.tscn
+res://scenes/menus/bind_buttons.tscn
+res://scenes/misc/view_model_camera.tscn
+res://scenes/test.tscn
+res://scenes/test/floor.tscn
+res://scenes/menus/main_menu.tscn
+res://scenes/misc/skin.tscn
+res://scripts/game/player.gd
+res://scripts/menu/optionsmenu.gd
+res://scripts/menu/gamemenu.gd
+res://scripts/menu/joinlobby.gd

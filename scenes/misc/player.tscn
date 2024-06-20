@@ -1,0 +1,334 @@
+[gd_scene load_steps=19 format=3 uid="uid://cnftbq1lfurh2"]
+
+[ext_resource type="Script" path="res://scripts/game/player.gd" id="1_nip4b"]
+[ext_resource type="Texture2D" uid="uid://creg6n3xdh04a" path="res://crosshair.png" id="2_6au4q"]
+[ext_resource type="PackedScene" uid="uid://b7onwqvcmwg8r" path="res://scenes/misc/skin.tscn" id="2_8vhpd"]
+[ext_resource type="PackedScene" uid="uid://b3swvql85sdvu" path="res://scenes/misc/view_model_camera.tscn" id="2_srhh6"]
+[ext_resource type="PackedScene" uid="uid://oat5868pd1u3" path="res://scenes/misc/skin_old.tscn" id="3_5t4uh"]
+[ext_resource type="Script" path="res://scenes/misc/reticle.gd" id="4_sevse"]
+[ext_resource type="Texture2D" uid="uid://cbktskqi0ksm8" path="res://sprites/stamina_bar.png" id="5_emm5j"]
+[ext_resource type="Texture2D" uid="uid://httk4c5n7nqw" path="res://sprites/heart.png" id="8_806ms"]
+[ext_resource type="Script" path="res://scripts/game/health.gd" id="8_k3xws"]
+[ext_resource type="PackedScene" uid="uid://b5688bakdd1ly" path="res://scenes/menus/deathmenu.tscn" id="10_umbqb"]
+
+[sub_resource type="Gradient" id="Gradient_f547j"]
+offsets = PackedFloat32Array(0.602098, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.301961)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hf6bb"]
+gradient = SubResource("Gradient_f547j")
+fill = 1
+fill_from = Vector2(0.499775, 0.500225)
+
+[sub_resource type="Gradient" id="Gradient_3u257"]
+offsets = PackedFloat32Array(0.26993, 1)
+colors = PackedColorArray(1, 0.027451, 0.027451, 0.0784314, 1, 0, 0, 0.505882)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s0q67"]
+gradient = SubResource("Gradient_3u257")
+fill = 1
+fill_from = Vector2(0.522247, 0.482247)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8vgna"]
+height = 1.9
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3344n"]
+size = Vector3(1, 1.8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yft7i"]
+size = Vector3(1, 0.8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbkye"]
+size = Vector3(1, 1.2, 1)
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2147483648
+collision_mask = 5
+floor_constant_speed = true
+floor_block_on_wall = false
+floor_snap_length = 0.4
+script = ExtResource("1_nip4b")
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="Head" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+
+[node name="Tilt" type="Node3D" parent="Body/Head"]
+
+[node name="ChromaticAbberation" type="ColorRect" parent="Body/Head/Tilt"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.470588, 1, 1)
+
+[node name="ShaderLayer" type="CanvasLayer" parent="Body/Head/Tilt"]
+
+[node name="FPCamera" type="Camera3D" parent="Body/Head/Tilt"]
+cull_mask = 1048573
+current = true
+fov = 110.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Body/Head/Tilt/FPCamera"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Body/Head/Tilt/FPCamera/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(960, 540)
+render_target_update_mode = 4
+
+[node name="ViewModelCamera" parent="Body/Head/Tilt/FPCamera/SubViewportContainer/SubViewport" instance=ExtResource("2_srhh6")]
+
+[node name="punch_ray" type="RayCast3D" parent="Body/Head/Tilt/FPCamera"]
+target_position = Vector3(0, 0, -1.23)
+collision_mask = 7
+hit_from_inside = true
+
+[node name="Vignette" type="TextureRect" parent="Body/Head/Tilt"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_hf6bb")
+
+[node name="Damage Vignette" type="TextureRect" parent="Body/Head/Tilt"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_s0q67")
+
+[node name="TPBody" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+
+[node name="TPCamera" type="Camera3D" parent="TPBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013692, 2.06488)
+cull_mask = 1048573
+fov = 110.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, 0, 1.15802, 0)
+visible = false
+layers = 4
+mesh = SubResource("CapsuleMesh_8vgna")
+
+[node name="Standing_Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 1.17839, 0)
+shape = SubResource("BoxShape3D_3344n")
+
+[node name="Crouching_Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 0.992584, 0)
+visible = false
+shape = SubResource("BoxShape3D_yft7i")
+
+[node name="Crouching_Collision_Backup" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 0.792584, 0)
+visible = false
+shape = SubResource("BoxShape3D_tbkye")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 2.4, 0)
+
+[node name="SkinOld" parent="." instance=ExtResource("3_5t4uh")]
+transform = Transform3D(-1.3, 0, -1.1365e-07, 0, 1.3, 0, 1.1365e-07, 0, -1.3, 0, 0, 0)
+visible = false
+
+[node name="AttackIKTimer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[node name="Skin" parent="." instance=ExtResource("2_8vhpd")]
+transform = Transform3D(-1.3, 0, 1.1365e-07, 0, 1.3, 0, -1.1365e-07, 0, -1.3, 0, 0, 0)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="FPS" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 26.0
+text = "FPS: 60"
+
+[node name="Speed" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 5.0
+offset_right = 50.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SPeed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stamina" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 907.0
+offset_top = 460.0
+offset_right = 1007.0
+offset_bottom = 486.0
+text = "Stamina: 100"
+
+[node name="Reticle" type="CenterContainer" parent="Control" node_paths=PackedStringArray("reticle_lines", "player_controller")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_sevse")
+color = Color(1, 1, 1, 1)
+dot_radius = 0.0
+reticle_lines = [NodePath("Top"), NodePath("Right"), NodePath("Bottom"), NodePath("Left")]
+player_controller = NodePath("../..")
+
+[node name="Top" type="Line2D" parent="Control/Reticle"]
+points = PackedVector2Array(0, -5, 0, -15)
+width = 2.0
+
+[node name="Right" type="Line2D" parent="Control/Reticle"]
+points = PackedVector2Array(5, 0, 15, 0)
+width = 2.0
+
+[node name="Bottom" type="Line2D" parent="Control/Reticle"]
+points = PackedVector2Array(0, 5, 0, 15)
+width = 2.0
+
+[node name="Left" type="Line2D" parent="Control/Reticle"]
+points = PackedVector2Array(-5, 0, -15, 0)
+width = 2.0
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+
+[node name="Crosshair" type="Sprite2D" parent="Control/Control"]
+visible = false
+position = Vector2(20, 20)
+texture = ExtResource("2_6au4q")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -239.5
+offset_top = -73.9
+offset_right = 239.5
+offset_bottom = -39.9
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(239.5, 17)
+step = 0.01
+value = 100.0
+fill_mode = 6
+texture_progress = ExtResource("5_emm5j")
+tint_progress = Color(0.760784, 1, 1, 0.509804)
+
+[node name="StaminaBarR" type="ProgressBar" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 955.0
+offset_top = 909.0
+offset_right = 1451.0
+offset_bottom = 944.0
+value = 10.0
+show_percentage = false
+
+[node name="StaminaBarL" type="ProgressBar" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 459.0
+offset_top = 909.0
+offset_right = 955.0
+offset_bottom = 944.0
+value = 10.0
+rounded = true
+fill_mode = 1
+show_percentage = false
+
+[node name="HealthBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 405.0
+offset_right = 144.0
+offset_bottom = 511.0
+value = 100.0
+fill_mode = 3
+texture_under = ExtResource("8_806ms")
+texture_progress = ExtResource("8_806ms")
+tint_under = Color(0, 0, 0, 1)
+tint_progress = Color(0.755975, 0.0793962, 0.130874, 1)
+
+[node name="Label" type="Label" parent="Control/HealthBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -12.0
+offset_right = 21.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerTickrate" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.03
+autostart = true
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("8_k3xws")
+
+[node name="deathmenu" parent="." instance=ExtResource("10_umbqb")]
+
+[connection signal="timeout" from="AttackIKTimer" to="." method="_on_attack_ik_timer_timeout"]
+[connection signal="timeout" from="PlayerTickrate" to="." method="_on_player_tickrate_timeout"]

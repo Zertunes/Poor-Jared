@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://b5688bakdd1ly"]
+
+[node name="deathmenu" type="Node"]
+
+[node name="DeathMenu" type="CanvasLayer" parent="."]
+layer = 100
+visible = false
+
+[node name="Label" type="Label" parent="DeathMenu"]
+offset_left = 383.0
+offset_top = 140.0
+offset_right = 577.0
+offset_bottom = 163.0
+text = "§ui§dead"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseMenu" type="PanelContainer" parent="DeathMenu"]
+self_modulate = Color(1, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -97.0
+offset_right = 112.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DeathMenu/PauseMenu"]
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeathMenu/PauseMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="ResumeButton" type="Button" parent="DeathMenu/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "§bt§respawn"
+flat = true
+
+[node name="MenuButton" type="Button" parent="DeathMenu/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "§bt§menu"
+flat = true
+
+[node name="ExitButton" type="Button" parent="DeathMenu/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "§bt§exit"
+flat = true
+
+[node name="Background" type="CanvasLayer" parent="DeathMenu"]
+layer = -1
+visible = false
+
+[node name="Background" type="PanelContainer" parent="DeathMenu/Background"]
+self_modulate = Color(1, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="DeathMenu/Background/Background"]
+visible = false
+layout_direction = 1
+layout_mode = 2
+color = Color(0.607843, 0, 0, 0.231373)

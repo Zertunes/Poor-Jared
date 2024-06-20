@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6t76frtkf8c2"]
+
+[ext_resource type="Script" path="res://scripts/bindbuttons.gd" id="1_m67k3"]
+
+[node name="Keybindings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m67k3")
+
+[node name="BindButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 107.0
+offset_bottom = 31.0
+toggle_mode = true
+text = "-"
+
+[node name="BindButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_right = 216.0
+offset_bottom = 31.0
+toggle_mode = true
+text = "-"
+
+[connection signal="toggled" from="BindButton" to="." method="_on_bind_button_toggled"]
+[connection signal="toggled" from="BindButton2" to="." method="_on_bind_button_2_toggled"]

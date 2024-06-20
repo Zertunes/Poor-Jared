@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6t76frtkf8c2"]
+
+[ext_resource type="Script" path="res://scripts/menu/bindbuttons.gd" id="1_pppyl"]
+[ext_resource type="Texture2D" uid="uid://bn50h6qktyevi" path="res://sprites/unbind_button.png" id="2_3iheq"]
+
+[node name="Keybindings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pppyl")
+
+[node name="BindButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 107.0
+offset_bottom = 31.0
+toggle_mode = true
+text = "-"
+
+[node name="UnbindButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 27.0
+offset_bottom = 26.0
+texture_normal = ExtResource("2_3iheq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BindButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_right = 216.0
+offset_bottom = 31.0
+toggle_mode = true
+text = "-"
+
+[node name="UnbindButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 5.0
+offset_right = 136.0
+offset_bottom = 26.0
+texture_normal = ExtResource("2_3iheq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="mouse_entered" from="BindButton" to="." method="_on_bind_button_mouse_entered"]
+[connection signal="mouse_exited" from="BindButton" to="." method="_on_bind_button_mouse_exited"]
+[connection signal="toggled" from="BindButton" to="." method="_on_bind_button_toggled"]
+[connection signal="mouse_entered" from="UnbindButton" to="." method="_on_unbind_button_mouse_entered"]
+[connection signal="mouse_exited" from="UnbindButton" to="." method="_on_unbind_button_mouse_exited"]
+[connection signal="pressed" from="UnbindButton" to="." method="_on_unbind_button_pressed"]
+[connection signal="mouse_entered" from="BindButton2" to="." method="_on_bind_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="BindButton2" to="." method="_on_bind_button_2_mouse_exited"]
+[connection signal="toggled" from="BindButton2" to="." method="_on_bind_button_2_toggled"]
+[connection signal="mouse_entered" from="UnbindButton2" to="." method="_on_unbind_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="UnbindButton2" to="." method="_on_unbind_button_2_mouse_exited"]
+[connection signal="pressed" from="UnbindButton2" to="." method="_on_unbind_button_2_pressed"]

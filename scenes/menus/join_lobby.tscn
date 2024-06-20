@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://dspw0lxyvi2jg"]
+
+[ext_resource type="Script" path="res://scripts/menu/joinlobby.gd" id="1_1hrxf"]
+
+[node name="JoinLobby" type="Node"]
+script = ExtResource("1_1hrxf")
+
+[node name="JoinMenu" type="CanvasLayer" parent="."]
+
+[node name="JoinMenu" type="PanelContainer" parent="JoinMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -97.0
+offset_right = 119.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="JoinMenu/JoinMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="JoinMenu/JoinMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="JoinMenu/JoinMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "§ui§lobby"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddressEntry" type="LineEdit" parent="JoinMenu/JoinMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "§ui§address"
+alignment = 1
+
+[node name="JoinButton" type="Button" parent="JoinMenu/JoinMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "§bt§join"
+
+[node name="SingleButton" type="Button" parent="JoinMenu/JoinMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "§bt§singleplayer"
+
+[node name="HostButton" type="Button" parent="JoinMenu/JoinMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "§bt§host"
+flat = true
+
+[connection signal="pressed" from="JoinMenu/JoinMenu/MarginContainer/VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="JoinMenu/JoinMenu/MarginContainer/VBoxContainer/SingleButton" to="." method="_on_single_button_pressed"]
+[connection signal="pressed" from="JoinMenu/JoinMenu/MarginContainer/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]

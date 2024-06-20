@@ -1,0 +1,612 @@
+[gd_scene load_steps=4 format=3 uid="uid://clo5exbsylp7k"]
+
+[ext_resource type="Script" path="res://scripts/gamemenu.gd" id="1_38f2u"]
+[ext_resource type="Script" path="res://scripts/optionsmenu.gd" id="2_73m5e"]
+[ext_resource type="PackedScene" uid="uid://b6t76frtkf8c2" path="res://scenes/menus/bind_buttons.tscn" id="3_5jct8"]
+
+[node name="GameMenu" type="Node"]
+script = ExtResource("1_38f2u")
+
+[node name="GameMenu" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" type="PanelContainer" parent="GameMenu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -97.0
+offset_right = 112.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GameMenu/PauseMenu"]
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/PauseMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="GameMenu/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Menu do Jogo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="GameMenu/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Voltar ao Jogo"
+
+[node name="OptionsButton" type="Button" parent="GameMenu/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Opções"
+
+[node name="ExitButton" type="Button" parent="GameMenu/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sair"
+
+[node name="OptionsMenu" type="PanelContainer" parent="GameMenu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -415.0
+offset_top = -276.0
+offset_right = 415.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 12
+size_flags_vertical = 12
+script = ExtResource("2_73m5e")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameMenu/OptionsMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/OptionsMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Menu de Opções"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VideoMarginContainer2" type="MarginContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label"]
+layout_mode = 2
+offset_left = -1.0
+offset_right = 401.0
+offset_bottom = 506.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Video" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Vídeo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DisplayMode" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/DisplayMode"]
+layout_mode = 2
+text = "Display Mode"
+vertical_alignment = 1
+
+[node name="DisplayModeButton" type="OptionButton" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/DisplayMode/Label"]
+layout_mode = 2
+offset_left = 174.0
+offset_top = -2.0
+offset_right = 372.0
+offset_bottom = 29.0
+item_count = 2
+selected = 0
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="VSync" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/VSync"]
+layout_mode = 2
+text = "VSync"
+vertical_alignment = 1
+
+[node name="VSyncButton" type="CheckButton" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/VSync/Label"]
+layout_mode = 0
+offset_left = 328.0
+offset_right = 372.0
+offset_bottom = 24.0
+button_pressed = true
+
+[node name="MaxFPS" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/MaxFPS"]
+layout_mode = 2
+text = "Display FPS
+"
+vertical_alignment = 1
+
+[node name="MaxFPSText" type="LineEdit" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/MaxFPS/Label"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -3.0
+offset_right = 180.0
+offset_bottom = 28.0
+text = "MAX"
+alignment = 2
+flat = true
+
+[node name="MaxFPSSlider" type="HSlider" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/MaxFPS/Label"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 369.0
+offset_bottom = 21.0
+min_value = 30.0
+max_value = 600.0
+value = 600.0
+
+[node name="Bloom" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Bloom"]
+layout_mode = 2
+text = "Bloom"
+vertical_alignment = 1
+
+[node name="BloomButton" type="CheckButton" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Bloom/Label"]
+layout_mode = 0
+offset_left = 328.0
+offset_right = 372.0
+offset_bottom = 24.0
+button_pressed = true
+
+[node name="Brightness" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Brightness"]
+layout_mode = 2
+text = "Brightness
+"
+vertical_alignment = 1
+
+[node name="BrightnessText" type="LineEdit" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Brightness/Label"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -3.0
+offset_right = 180.0
+offset_bottom = 28.0
+text = "100"
+alignment = 2
+flat = true
+
+[node name="BrightnessSlider" type="HSlider" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Brightness/Label"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 369.0
+offset_bottom = 21.0
+max_value = 200.0
+value = 100.0
+
+[node name="Audio&GameplayMarginContainer" type="MarginContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 401.0
+offset_right = 799.0
+offset_bottom = 506.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Audio" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Áudio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolume" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume"]
+layout_mode = 2
+text = "Master Volume
+"
+vertical_alignment = 1
+
+[node name="MasterVolumeText" type="LineEdit" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume/Label"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = -3.0
+offset_right = 180.063
+offset_bottom = 28.0
+text = "50"
+alignment = 2
+max_length = 3
+flat = true
+
+[node name="MasterVolumeSlider" type="HSlider" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume/Label"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 369.0
+offset_bottom = 21.0
+value = 50.0
+
+[node name="MusicVolume" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+text = "Music Volume
+"
+vertical_alignment = 1
+
+[node name="MusicVolumeText" type="LineEdit" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MusicVolume/Label"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = -3.0
+offset_right = 180.063
+offset_bottom = 28.0
+text = "50"
+alignment = 2
+max_length = 3
+flat = true
+
+[node name="MusicVolumeSlider" type="HSlider" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MusicVolume/Label"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 369.0
+offset_bottom = 21.0
+value = 50.0
+
+[node name="SFXVolume" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/SFXVolume"]
+layout_mode = 2
+text = "SFX Volume
+"
+vertical_alignment = 1
+
+[node name="SFXVolumeText" type="LineEdit" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/SFXVolume/Label"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = -3.0
+offset_right = 180.063
+offset_bottom = 28.0
+text = "50"
+alignment = 2
+max_length = 3
+flat = true
+
+[node name="SFXVolumeSlider" type="HSlider" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/SFXVolume/Label"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 369.0
+offset_bottom = 21.0
+value = 50.0
+
+[node name="Gameplay" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+Jogabilidade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FOV" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOV"]
+layout_mode = 2
+text = "FOV
+"
+vertical_alignment = 1
+
+[node name="FOVText" type="LineEdit" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOV/Label"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -3.0
+offset_right = 180.0
+offset_bottom = 28.0
+text = "70"
+alignment = 2
+flat = true
+
+[node name="FOVSlider" type="HSlider" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOV/Label"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 369.0
+offset_bottom = 21.0
+min_value = 30.0
+max_value = 110.0
+value = 70.0
+
+[node name="Sensitivity" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/Sensitivity"]
+layout_mode = 2
+text = "Mouse Sensitivity"
+vertical_alignment = 1
+
+[node name="SensitivityText" type="LineEdit" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/Sensitivity/Label"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = -3.0
+offset_right = 180.063
+offset_bottom = 28.0
+text = "200"
+alignment = 2
+max_length = 4
+flat = true
+
+[node name="SensitivitySlider" type="HSlider" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/Sensitivity/Label"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 369.0
+offset_bottom = 21.0
+min_value = 10.0
+max_value = 1000.0
+value = 200.0
+
+[node name="DisplayFPS" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/DisplayFPS"]
+layout_mode = 2
+text = "Display FPS
+"
+vertical_alignment = 1
+
+[node name="DisplayFPSButton" type="CheckButton" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/DisplayFPS/Label"]
+layout_mode = 0
+offset_left = 328.0
+offset_right = 372.0
+offset_bottom = 24.0
+
+[node name="DisplaySpeed" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/DisplaySpeed"]
+layout_mode = 2
+text = "Display Speed
+"
+vertical_alignment = 1
+
+[node name="DisplaySpeedButton" type="CheckButton" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/DisplaySpeed/Label"]
+layout_mode = 0
+offset_left = 328.0
+offset_right = 372.0
+offset_bottom = 24.0
+
+[node name="ViewBobbing" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/ViewBobbing"]
+layout_mode = 2
+text = "View Bobbing"
+vertical_alignment = 1
+
+[node name="ViewBobbingButton" type="CheckButton" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/ViewBobbing/Label"]
+layout_mode = 0
+offset_left = 328.0
+offset_right = 372.0
+offset_bottom = 24.0
+button_pressed = true
+
+[node name="FOVChange" type="GridContainer" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOVChange"]
+layout_mode = 2
+text = "Speed Changes FOV"
+vertical_alignment = 1
+
+[node name="FOVChangeButton" type="CheckButton" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOVChange/Label"]
+layout_mode = 0
+offset_left = 328.0
+offset_right = 372.0
+offset_bottom = 24.0
+button_pressed = true
+
+[node name="BackButtonOptions" type="Button" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 463.0
+offset_right = 114.0
+offset_bottom = 506.0
+text = "Voltar"
+flat = true
+
+[node name="ControlsButton" type="Button" parent="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 461.0
+offset_right = 239.0
+offset_bottom = 504.0
+text = "Controlos"
+
+[node name="ControlsMenu" type="PanelContainer" parent="GameMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -418.0
+offset_right = 580.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GameMenu/ControlsMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/ControlsMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Menu de Controlos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VideoMarginContainer2" type="MarginContainer" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label"]
+layout_mode = 2
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 723.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Movement" type="Label" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Movimentação"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DisplayMode" type="GridContainer" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/DisplayMode"]
+layout_mode = 2
+text = "Forward"
+vertical_alignment = 1
+
+[node name="Control" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/DisplayMode/Label" instance=ExtResource("3_5jct8")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+
+[node name="BackButtonOptions" type="Button" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 743.0
+offset_right = 114.0
+offset_bottom = 786.0
+text = "Voltar"
+flat = true
+
+[node name="KeySelectMenu" type="Panel" parent="GameMenu"]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GameMenu/KeySelectMenu"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 106
+text = "Pressione uma tecla..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="CanvasLayer" parent="GameMenu"]
+layer = -1
+visible = false
+
+[node name="Background" type="PanelContainer" parent="GameMenu/Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="GameMenu/Background/Background"]
+visible = false
+layout_direction = 1
+layout_mode = 2
+color = Color(0, 0, 0, 0.231373)
+
+[connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_host_button_pressed"]
+[connection signal="item_selected" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/DisplayMode/Label/DisplayModeButton" to="GameMenu/OptionsMenu" method="_on_display_mode_button_item_selected"]
+[connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/VSync/Label/VSyncButton" to="GameMenu/OptionsMenu" method="_on_v_sync_button_toggled"]
+[connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/MaxFPS/Label/MaxFPSText" to="GameMenu/OptionsMenu" method="_on_max_fps_text_focus_exited"]
+[connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/MaxFPS/Label/MaxFPSText" to="GameMenu/OptionsMenu" method="_on_max_fps_text_text_submitted"]
+[connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/MaxFPS/Label/MaxFPSSlider" to="GameMenu/OptionsMenu" method="_on_max_fps_slider_value_changed"]
+[connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Bloom/Label/BloomButton" to="GameMenu/OptionsMenu" method="_on_bloom_button_toggled"]
+[connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Brightness/Label/BrightnessText" to="GameMenu/OptionsMenu" method="_on_brightness_text_focus_exited"]
+[connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Brightness/Label/BrightnessText" to="GameMenu/OptionsMenu" method="_on_brightness_text_text_submitted"]
+[connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Brightness/Label/BrightnessSlider" to="GameMenu/OptionsMenu" method="_on_brightness_slider_value_changed"]
+[connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume/Label/MasterVolumeText" to="GameMenu/OptionsMenu" method="_on_master_volume_text_focus_exited"]
+[connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume/Label/MasterVolumeText" to="GameMenu/OptionsMenu" method="_on_master_volume_text_text_submitted"]
+[connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume/Label/MasterVolumeSlider" to="GameMenu/OptionsMenu" method="_on_master_volume_slider_value_changed"]
+[connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MusicVolume/Label/MusicVolumeText" to="GameMenu/OptionsMenu" method="_on_music_volume_text_focus_exited"]
+[connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MusicVolume/Label/MusicVolumeText" to="GameMenu/OptionsMenu" method="_on_music_volume_text_text_submitted"]
+[connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MusicVolume/Label/MusicVolumeSlider" to="GameMenu/OptionsMenu" method="_on_music_volume_slider_value_changed"]
+[connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/SFXVolume/Label/SFXVolumeText" to="GameMenu/OptionsMenu" method="_on_sfx_volume_text_focus_exited"]
+[connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/SFXVolume/Label/SFXVolumeText" to="GameMenu/OptionsMenu" method="_on_sfx_volume_text_text_submitted"]
+[connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/SFXVolume/Label/SFXVolumeSlider" to="GameMenu/OptionsMenu" method="_on_sfx_volume_slider_value_changed"]
+[connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOV/Label/FOVText" to="GameMenu/OptionsMenu" method="_on_fov_text_focus_exited"]
+[connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOV/Label/FOVText" to="GameMenu/OptionsMenu" method="_on_fov_text_text_submitted"]
+[connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOV/Label/FOVSlider" to="GameMenu/OptionsMenu" method="_on_fov_slider_value_changed"]
+[connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/Sensitivity/Label/SensitivityText" to="GameMenu/OptionsMenu" method="_on_sensitivity_text_focus_exited"]
+[connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/Sensitivity/Label/SensitivityText" to="GameMenu/OptionsMenu" method="_on_sensitivity_text_text_submitted"]
+[connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/Sensitivity/Label/SensitivitySlider" to="GameMenu/OptionsMenu" method="_on_sensitivity_slider_value_changed"]
+[connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/DisplayFPS/Label/DisplayFPSButton" to="GameMenu/OptionsMenu" method="_on_display_fps_button_toggled"]
+[connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/DisplaySpeed/Label/DisplaySpeedButton" to="GameMenu/OptionsMenu" method="_on_display_speed_button_toggled"]
+[connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/ViewBobbing/Label/ViewBobbingButton" to="GameMenu/OptionsMenu" method="_on_view_bobbing_button_toggled"]
+[connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/FOVChange/Label/FOVChangeButton" to="GameMenu/OptionsMenu" method="_on_fov_change_button_toggled"]
+[connection signal="pressed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/BackButtonOptions" to="." method="_on_back_button_options_pressed"]
+[connection signal="pressed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/BackButtonOptions" to="." method="_on_back_button_options_pressed"]

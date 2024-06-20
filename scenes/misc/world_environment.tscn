@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dswljdtrqluro"]
+
+[ext_resource type="Script" path="res://scripts/game/world_environment.gd" id="1_ifb22"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wid1h"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_7qqhv"]
+sky_material = SubResource("ProceduralSkyMaterial_wid1h")
+
+[sub_resource type="Environment" id="Environment_mql3b"]
+background_mode = 2
+sky = SubResource("Sky_7qqhv")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_mql3b")
+script = ExtResource("1_ifb22")
