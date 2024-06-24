@@ -123,6 +123,8 @@ func toggle_language(index):
 	elif index == 5:
 		TranslationServer.set_locale("ja")
 	elif index == 6:
+		TranslationServer.set_locale("ro")
+	elif index == 7:
 		TranslationServer.set_locale("pr")
 	else:
 		TranslationServer.set_locale("en")

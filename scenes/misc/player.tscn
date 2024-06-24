@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cnftbq1lfurh2"]
+[gd_scene load_steps=41 format=3 uid="uid://cnftbq1lfurh2"]
 
 [ext_resource type="Script" path="res://scripts/game/player.gd" id="1_nip4b"]
 [ext_resource type="Texture2D" uid="uid://creg6n3xdh04a" path="res://crosshair.png" id="2_6au4q"]
@@ -10,6 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://httk4c5n7nqw" path="res://sprites/heart.png" id="8_806ms"]
 [ext_resource type="Script" path="res://scripts/game/health.gd" id="8_k3xws"]
 [ext_resource type="PackedScene" uid="uid://b5688bakdd1ly" path="res://scenes/menus/deathmenu.tscn" id="10_umbqb"]
+[ext_resource type="AudioStream" uid="uid://d3u25gvaifgn5" path="res://sounds/player_voice/hurt1.wav" id="11_7xwn7"]
+[ext_resource type="AudioStream" uid="uid://c68axvqgv21xi" path="res://sounds/impact/punch1.wav" id="11_eejdu"]
+[ext_resource type="AudioStream" uid="uid://dl74kp6jhajon" path="res://sounds/impact/crack1.wav" id="11_klkqt"]
+[ext_resource type="AudioStream" uid="uid://brdmiweh1r6cf" path="res://sounds/impact/squash1.wav" id="11_xdltw"]
+[ext_resource type="AudioStream" uid="uid://bbyxyophfyqki" path="res://sounds/player_voice/hurt2.wav" id="12_6cxrj"]
+[ext_resource type="AudioStream" uid="uid://b0crx5xl2uomo" path="res://sounds/impact/crack2.wav" id="12_cuerh"]
+[ext_resource type="AudioStream" uid="uid://bag1c1i2ibwor" path="res://sounds/impact/punch2.wav" id="12_muo5v"]
+[ext_resource type="AudioStream" uid="uid://cmayvifkxvsqt" path="res://sounds/impact/punch3.wav" id="13_6hxwe"]
+[ext_resource type="AudioStream" uid="uid://biy0yhh5nhown" path="res://sounds/player_voice/hurt3.wav" id="13_ohqtr"]
+[ext_resource type="AudioStream" uid="uid://grx5rc0dehjk" path="res://sounds/impact/punch4.wav" id="14_77tvt"]
+[ext_resource type="AudioStream" uid="uid://7o8ol63gy2bs" path="res://sounds/player_voice/hurt4.wav" id="14_hkdiy"]
+[ext_resource type="AudioStream" uid="uid://dovibsra18vrv" path="res://sounds/impact/punch5.wav" id="15_oj6ei"]
+[ext_resource type="AudioStream" uid="uid://moujgkwgjnfw" path="res://sounds/impact/punch6.wav" id="16_08d74"]
+[ext_resource type="AudioStream" uid="uid://c487mh2d168q" path="res://sounds/impact/punch7.wav" id="17_u8k4t"]
+[ext_resource type="AudioStream" uid="uid://h7y4uo6g6b8c" path="res://sounds/impact/punch8.wav" id="18_putma"]
+[ext_resource type="AudioStream" uid="uid://dsk40hq6eskry" path="res://sounds/impact/punch9.wav" id="19_wr32t"]
+[ext_resource type="AudioStream" uid="uid://dajmox52xndy2" path="res://sounds/death/deathvoice1.wav" id="27_3o8go"]
+[ext_resource type="AudioStream" uid="uid://bm2iey28frti" path="res://sounds/death/deathvoice2.wav" id="28_pxqso"]
 
 [sub_resource type="Gradient" id="Gradient_f547j"]
 offsets = PackedFloat32Array(0.602098, 1)
@@ -41,8 +59,55 @@ size = Vector3(1, 0.8, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbkye"]
 size = Vector3(1, 1.2, 1)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fwq2y"]
+streams_count = 2
+stream_0/stream = ExtResource("11_klkqt")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("12_cuerh")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ssh0o"]
+random_pitch = 1.5
+streams_count = 9
+stream_0/stream = ExtResource("11_eejdu")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("12_muo5v")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("13_6hxwe")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("14_77tvt")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("15_oj6ei")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("16_08d74")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("17_u8k4t")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("18_putma")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("19_wr32t")
+stream_8/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qjnxc"]
+streams_count = 4
+stream_0/stream = ExtResource("11_7xwn7")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("12_6cxrj")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("13_ohqtr")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("14_hkdiy")
+stream_3/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_456pj"]
+streams_count = 2
+stream_0/stream = ExtResource("27_3o8go")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("28_pxqso")
+stream_1/weight = 1.0
+
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 2147483648
+collision_layer = 2147483664
 collision_mask = 5
 floor_constant_speed = true
 floor_block_on_wall = false
@@ -73,6 +138,7 @@ current = true
 fov = 110.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Body/Head/Tilt/FPCamera"]
+z_index = -5
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -329,6 +395,29 @@ autostart = true
 script = ExtResource("8_k3xws")
 
 [node name="deathmenu" parent="." instance=ExtResource("10_umbqb")]
+
+[node name="FallDamage" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_fwq2y")
+volume_db = 9.23
+bus = &"SFX"
+
+[node name="Punch" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_ssh0o")
+bus = &"SFX"
+
+[node name="PlayerHurtVoice" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_qjnxc")
+volume_db = -4.13
+bus = &"SFX"
+
+[node name="HealthLoss" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_xdltw")
+volume_db = -2.335
+bus = &"SFX"
+
+[node name="DeathVoice" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_456pj")
+bus = &"SFX"
 
 [connection signal="timeout" from="AttackIKTimer" to="." method="_on_attack_ik_timer_timeout"]
 [connection signal="timeout" from="PlayerTickrate" to="." method="_on_player_tickrate_timeout"]

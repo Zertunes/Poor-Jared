@@ -134,19 +134,22 @@ node_connections = [&"attack_crouch_time_scale", 0, &"attack_crouch", &"attack_e
 
 [node name="Skin" instance=ExtResource("1_hht73")]
 
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/rotation = Quaternion(-0.710469, -0.044919, 0.0127981, 0.702177)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/scale = Vector3(1, 1, 1)
-bones/2/rotation = Quaternion(0.0716071, 0.0100891, 0.0192776, 0.997196)
-bones/4/rotation = Quaternion(-0.0986173, 0.00533132, 0.00115486, 0.995111)
+bones/2/rotation = Quaternion(0.0297515, 0.0107119, 0.0252374, 0.999181)
+bones/4/rotation = Quaternion(-0.066543, 0.00236747, -0.00236016, 0.997778)
 bones/6/rotation = Quaternion(0.623538, 0.365477, -0.56938, 0.391706)
 bones/6/scale = Vector3(1, 1, 1)
 bones/7/position = Vector3(-9.32109, 10.621, 0.106886)
-bones/7/rotation = Quaternion(0.306996, -0.024174, 0.279831, 0.909321)
+bones/7/rotation = Quaternion(0.309307, 0.0264937, 0.229744, 0.922413)
 bones/7/scale = Vector3(1, 1, 1)
 bones/8/position = Vector3(1.0412e-06, 15.813, -7.61641e-06)
-bones/8/rotation = Quaternion(0.721956, -0.182697, -0.56321, -0.358045)
+bones/8/rotation = Quaternion(0.713012, -0.192414, -0.558241, -0.378098)
 bones/9/rotation = Quaternion(-0.240551, -0.681691, 0.0910378, 0.684942)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/scale = Vector3(1, 1, 1)
@@ -165,9 +168,9 @@ bones/20/scale = Vector3(1, 1, 1)
 bones/21/rotation = Quaternion(0.418215, -0.109771, 0.315335, 0.844755)
 bones/22/rotation = Quaternion(0.585855, -0.42223, 0.548227, 0.421834)
 bones/23/position = Vector3(6.88007, 12.279, -1.53301)
-bones/23/rotation = Quaternion(0.255399, 0.0784912, -0.266509, 0.926058)
+bones/23/rotation = Quaternion(0.270615, 0.0134037, -0.218164, 0.937546)
 bones/23/scale = Vector3(1, 1, 1)
-bones/24/rotation = Quaternion(0.259856, -0.027633, 0.770472, -0.58145)
+bones/24/rotation = Quaternion(0.232344, -0.0251001, 0.743994, -0.625987)
 bones/25/position = Vector3(6.92251e-06, 14.4901, -1.16726e-05)
 bones/25/rotation = Quaternion(-0.131983, 0.262866, -0.481177, 0.825803)
 bones/25/scale = Vector3(1, 1, 1)

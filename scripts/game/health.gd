@@ -6,6 +6,7 @@ extends Node
 @onready var damage_vignette = $"../Body/Head/Tilt/Damage Vignette"
 @onready var damage_vignette_color = Color(1, 1, 1, 0)
 @onready var dead = false
+@onready var edelta = 0
 
 # Health
 @export var max_health: int = 100
@@ -28,11 +29,14 @@ func _ready():
 
 func _process(delta):
 	#auto_bunny_hopping = GlobalDebug.get_auto_bunny_hopping()
+	edelta = delta
 	pass
 
 # Method to apply damage
 func do_damage(amount: int):
 	current_health -= amount
+	$"../HealthLoss".play()
+	$"../PlayerHurtVoice".play()
 	if current_health <= 0:
 		dead = true
 		emit_signal("player_died")
@@ -80,7 +84,7 @@ func player_fall_damage():
 	# Check if the player is falling
 	if not player.is_on_floor() and player.velocity.y < 0:
 		# Accumulate fall distance
-		fallDistance += -player.velocity.y * player.edelta
+		fallDistance += -player.velocity.y * edelta
 		#print(fallDistance)
 	else:
 		player_fall_damage_calculate()
@@ -91,6 +95,7 @@ func player_fall_damage_calculate():
 	if fallDistance > fallDistanceThreshold:
 		var damage = (fallDistance - fallDistanceThreshold) * fallDamageMultiplier
 		# Apply fall damage to the player
+		$"../FallDamage".play()
 		do_damage(damage)
 		# Remove speed
 		player.velocity = Vector3(0, 0, 0)

@@ -25,9 +25,8 @@ run/main_scene="res://scenes/test.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="poorjared"
 config/features=PackedStringArray("4.2", "Forward Plus")
-boot_splash/bg_color=Color(0, 0.0705882, 0.0784314, 1)
-boot_splash/show_image=false
-boot_splash/image="res://icon.png"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://sprites/PoorJaredBootArtwork.png"
 config/icon="res://icon.svg"
 config/macos_native_icon="res://icon.icns"
 config/windows_native_icon="res://icon.ico"
@@ -38,7 +37,6 @@ GlobalOptions="*res://scripts/menu/global_options.gd"
 SaveOptions="*res://scripts/menu/save_options.gd"
 SaveKeybinds="*res://scripts/menu/save_keybinds.gd"
 DiscordSDKLoader="*res://addons/discord-sdk-gd/nodes/core_updater.gd"
-SoundManager="*res://addons/sound_manager/sound_manager.gd"
 Panku="*res://addons/panku_console/console.tscn"
 GlobalDebug="*res://scripts/menu/global_debug.gd"
 
@@ -119,7 +117,7 @@ perspective={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://text/translations.de.translation", "res://text/translations.en.translation", "res://text/translations.fr.translation", "res://text/translations.ja.translation", "res://text/translations.pt.translation", "res://text/translations.sr.translation", "res://text/translations.pr.translation")
+locale/translations=PackedStringArray("res://text/translations.de.translation", "res://text/translations.en.translation", "res://text/translations.fr.translation", "res://text/translations.ja.translation", "res://text/translations.pt.translation", "res://text/translations.sr.translation", "res://text/translations.pr.translation", "res://text/translations.ro.translation")
 
 [physics]
 

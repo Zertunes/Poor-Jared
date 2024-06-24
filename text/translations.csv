@@ -1,87 +1,89 @@
-,en,pt,ja,sr,de,fr,pr
-§ui§options_menu,Options Menu,Menu de Opções,オプションメニュー,Мени опција,Optionsmenü,Menu des options,Meni do Opemanadoghs
-§ui§video_options,Video,Vídeo,ビデオ,Видео,Video,Vidéo,Videi
-§ui§audio_options,Audio,Áudio,オーディオ,Звук,Audio,Audio,Audi
-§ui§gameplay_options,Gameplay,Jogabilidade,ゲームプレイ,Играње,Gameplay,Jouabilité,Jogabilididogh
-§op§display_mode,Display Mode,Modo de Exibição,ディスプレイモード,Режим приказа,Anzeigemodus,Mode d'affichage,Modi di Exibinadogh
-§op§vsync,VSync,VSync,VSync（垂直同期）,VSync,VSync,VSync,VSync
-§op§max_fps,Max FPS,FPS Máximo,最大FPS,Макс. FPS,Max FPS,Max FPS,FPS Maxidogh
-§op§bloom,Bloom,Bloom,ブルーム,Блум,Bloom,Bloom,Bloom
-§op§brightness,Brightness,Brilho,明るさ,Осветљеност,Helligkeit,Luminosité,Brilhidogh
-§op§chromatic_aberration,Chromatic Aberration,Aberração Cromática,クロマティック異常,Хроматска аберација,Chromatische Aberration,Aberration chromatique,Aberramanadogh Cromati
-§op§unfocus_pause,Unfocus Pause,Pausar Fora de Foco,非焦点時の一時停止,Пауза без фокуса,Pause außer Fokus,Pause sans mise au point,Pausaw Fori di Foqui
-§op§master_volume,Master Volume,Volume Principal,マスターボリューム,Главни звук,Hauptlautstärke,Volume principal,Volumi Principili
-§op§music_volume,Music Volume,Música,音楽,Јачина музике,Musiklautstärke,Volume de la musique,Musiqui
-§op§sfx_volume,SFX Volume,Efeitos Sonoros,効果音,Специјални Ефекти,SFX-Lautstärke,Effets Sonores,Efetis Sonorodogh
-§op§fov,FOV,FOV,FOV (視野角),FOV,FOV,FOV,FOV
-§op§mouse_sensitivity,Mouse Sensitivity,Sensibilidade do Rato,マウス感度,Брзина миша,Mausempfindlichkeit,Sensibilité de la souris,Sensibilididogh do Rati
-§op§display_fps,Display FPS,Exibir FPS,FPSの表示,Прикажи FPS,FPS-Anzeige,Afficher FPS,Exibir FPS
-§op§display_speed,Display Speed,Exibir Velocidade,速度の表示,Приказ брзине,Geschwindigkeitsanzeige,Afficher la vitesse,Exibiw Velocididogh
-§op§view_bobbing,View Bobbing,Balanço da Visão,視点の揺れ,Потрес камере,View Bobbing (Blickwackeln),Hochements de tête,Balanosogh di Vimadogh
-§op§speed_changes_fov,Speed Changes Fov,Velocidade Muda FOV,速度変更時のFOV,Промена брзине мења FOV,Geschwindigkeitsänderung FOV,Changements de vitesse modifiant le FOV,Velocididogh Mudi FOV
-§op§sideways_camera_tilt,Sideways Camera Tilt,Inclinação Lateral da Câmera,横向きのカメラ傾斜,Косо окренута камера,Seitliche Kameraneigung,Inclinaison de la caméra latérale,Inclinanadogh Laterili di Cameri
-§op§language,Language,Idioma,言語,Језик,Sprache,Langue,Linguagim
-§ob§windowed,Windowed,Janela,ウィンドウモード,У прозору,Fenstermodus,En fenêtré,Janeli
-§ob§fullscreen,Fullscreen,Ecrã Inteiro,フルスクリーン,Цео екран,Vollbild,Plein écran,Ecrosogh Intirogh
-§ob§max,MAX,MAX,最大,МАКС,MAX,MAX,MAX
-§ob§quake_pro,QUAKE PRO,GARRAFÃO,QUAKE PRO,квака про,QUAKE PRO,QUAKE PRO,Neutevolagesti
-§ob§zoomer,ZOOMER,BINÓCULOS,ズーマー,з у м,ZOOMER,ZOOMER,Bugigueogh
-§bt§go_back,Back,Voltar,戻る,Назад,Zurück,Retour,Voltaw
-§bt§controls,Keybinds,Controlos,コントロール,Контроле,Steuerung,Contrôles,Controlis
-§ui§game_menu,Game Menu,Menu do Jogo,ゲームメニュー,Мени Игрице,Spielmenü,Menu de jeu,Meni do Jogogh
-§bt§resume,Back to Game,Voltar ao Jogo,ゲームに戻る,Назад у игру,Zurück zum Spiel,Retour au jeu,Voltaw aw Jogogh
-§bt§options,Options,Opções,オプション,Подешавања,Optionen,Options,Opemanadoghs
-§bt§exit,Exit Game,Sair do Jogo,ゲームを終了,Излаз из игре,Spiel beenden,Quitter le jeu,Saiw do Jogogh
-§ui§controls_menu,Keybinds Menu,Menu de Controlos,コントロールメニュー,Мени контрола,Steuerungsmenü,Menu des contrôles,Menu de Controloghs
-§ui§movement,Movement,Movimentação,移動,Кретање,Bewegung,Mouvement,Movimentanadogh
-§ct§forward,Forward,Avançar,前進,Напред,Vorwärts,Avancer,Avanosow
-§ct§backward,Backward,Recuar,後退,Назад,Rückwärts,Reculer,Requaw
-§ct§left,Left,Esquerda,左,Лево,Links,Gauche,Esquerdi
-§ct§right,Right,Direita,右,Десно,Rechts,Droite,Direiti
-§ct§jump,Jump,Saltar,ジャンプ,Скок,Springen,Sauter,Saltaw
-§ct§crouch,Crouch,Agachar,しゃがむ,Клекнути,Ducken,S'accroupir,Agachaw
-§ct§sprint,Sprint,Correr,スプリント,Трчање,Sprinten,Sprint,Correw
-§ct§pause,Pause,Pausar,一時停止,Пауза,Pause,Pause,Pausaw
-§ct§debug_console,Debug Console,Consola de Desenvolvedor,開発者コンソール,Конзола за програмере,Entwicklerkonsole,Console développeur,Consoli di Chacane
-§dg§todor_greeting,Hey there! Your face looks new around here. Welcome to our lively city!,Olá! Pareces ser novo por aqui. Bem-vindo à nossa alegre cidade!,こんにちは！新しいお顔が見えてうれしいな。元気な街にようこそ！,,,,Olas! Parecive sew novogh pow aqui. Benvinido ha nossa alegre vili!
-§dg§todor_greeting2,"In this town, people are friendly and love chatting with each other. It's a real community vibe.","Nesta vila, as pessoas são amigáveis e adoram conversar umas com as outras. É como uma grande família!",この街の人たちはみんなフレンドリーでおしゃべり好きなんだよ。まるで大きな家族のような雰囲気が漂っているんだ。,,,,"Nestili vili, as altas mado amigabili e adorah conversaw umas coh as outras. Hi como uma grandi famili!"
-§dg§todor_greeting3,"You know, if you're ever in need of some quick cash, folks might toss your way some odd jobs. It's a great way to get by.","Sabes, se alguma vez precisares de dinheiro rápido, as pessoas podem oferecer-te alguns trabalhos estranhos. É uma ótima maneira de conseguir trocos.",必要なときには、すぐお金が必要になることもあるでしょう。みんな、時々おもしろい仕事をくれることがあるんだ。それが生計を立てるちょっとした楽しい方法だよ。,,,,"Sabive, se alguma vey precisarive de dinheirogh rapididogh, as altas podeh oferecew-te alguns trabawas estranhas. Hi uma otima maneira de conseguiw trocowes."
-§dg§todor_greeting4,"Feel free to explore the city at your own pace. Cars aren't a common sight around here, so you're free to run around without worry.","Sê livre para explorar a cidade ao teu ritmo. Não é costume a passagem de carros, então podes correr por aí sem preocupações.",ゆっくりと街を歩いてみて。この辺りではあまり車は見かけないから、思う存分楽しんでね。,,,,"Sê livre para explorar a vili ao teu ritmo. Não é costume a passagem de carros, então podes correr por aí sem preocupações."
-§dg§todor_greeting5,"If times get tough, collecting recyclables and doing odd jobs can help you scrape together a bit of coin. We've all been there, mate. And hey, we're always ready to help out a fellow struggler.","Quando os tempos ficarem difíceis, recolher recicláveis e fazer trabalhos estranhos pode ajudar a juntar algumas moedas. Já todos passámos por isso, mano. E, ei, estamos sempre prontos para ajudar um companheiro em apuros.",困った時は、リサイクル可能なものを集めておかしな仕事をして、少しのコインを稼ぐのも一つの方法だよ。我々も皆同じ経験があります。ねえ、仲間を手伝うのはいつでもできるんだよ。,,,,"Quando os tempos ficarem difíceis, recolher reciclabilis e fazer trabalhos estranhos pode ajudar a juntar algumas moedas. Já todos passámos por isso, mano. Ei, estamos sempre prontos para ajudar um companheiro em apuros."
-§dg§player_ask_money,How do I get money?,Como consigo dinheiro?,,,,,Como consigo money?
-§dg§player_ask_crafting,How does crafting work?,Como é que o crafting funciona?,,,,,Como é que o craftiw funciona?
-§dg§todor_money,"Hey again! If you're looking to fill your pockets, there are a couple of ways to make a quick buck around here.","Olá de novo! Se estás a querer encher os bolsos, há algumas maneiras de ganhar uns trocos rápidos por aqui.",もう一度こんにちは！ポケットをいっぱいにする方法をお探しの場合、ここではいくつかの方法があります。,,,,"Olá de novo! Se estás a querer encher os bolsos, há algumas maneiras de ganhar uns trocos rapididos por aqui."
-§dg§todor_money2,"First off, keep an eye out for any scrap lying around the city. Grab those discarded items, and you can sell them at the local shops. It's not glamorous, but every little bit adds up.","Primeiro, mantém os olhos abertos para qualquer tralha espalhada pela cidade. Apanha esses objetos desperdiçados e podes vendê-los nas lojas locais. Não é fantástico, mas, como se diz, grão a grão, a galinha enche o papo.",ますます重要なのは、街のあちこちにあるくずを見逃さないようにすることです。それらを拾って、地元の店で売ることができます。派手ではないけれど、少しずつ積み重ねていけば大丈夫ですよ。,,,,"Primeiro, mantem os olhos abertos para qualquer tralha espalhada pela vili. Apanha esses objetos desperdiçados e podes vendê-los nas lojas locais. Naw i fantastico, mas, como se diz, grão a grão, a galinha enche o papo."
-§dg§todor_money3,"Another option is taking on odd jobs from the folks around town. They might need help with deliveries, chores, or who knows what. It's a good way to earn some extra cash and get to know the community.","Outra opção é pegar em trabalhos estranhos das pessoas da cidade. Podem precisar de ajuda com entregas, tarefas, ou sei lá o quê. É uma boa forma de ganhar algum dinheiro extra e conhecer a comunidade.",もう一つの選択肢は、町の人々から奇妙な仕事を引き受けることです。配達や雑用で手を貸してくれるかもしれません。それは追加でお金を稼ぐだけでなく、コミュニティを知る良い方法でもあります。,,,,"Outra opção é pegar em trabalhos estranhos das pessoas da vili. Podem precisar de ajuda com entregas, tarefas, ou sei lá o quê. É uma boa forma de ganhar algum money extra e conhecer a comunidade."
-§dg§todor_money4,"So, whether you're collecting scrap or taking on jobs, you'll be stacking up that moolah in no time. Good luck out there!","Portanto, quer estejas a recolher lixo ou a assumir tarefas, vais acumular uns quantos paus num instante. Boa sorte por aí!",だから、くずを集めたり、仕事を引き受けたり、どっちにしろお金がすぐに増えるからね。頑張って！,,,,"Portanto, quer estejas a recolher lixo ou a assumir tarefas, vais acumular uns quantos paus num instante. Boa sorte por aí!"
-§dg§todor_crafting,"Hey, friend! So, you're itching to craft some useful stuff, huh? Well, it's pretty simple once you get the hang of it.","Olá, amigo! Então, estás ansioso para criar umas coisas úteis, né? Bem, é bastante simples assim que apanhas o jeito.",こんにちは、友達！役立つものを作りたくなる気持ち、わかるよ。慣れればかなり簡単だから。,,,,"Olá, amigo! Então, estás ansioso para criar umas coisas úteis, né? Bem, é bastante simpleiw assim que apanhas o jeito."
-§dg§todor_crafting2,"First things first, you'll need some tools. A Saw for wood, Hammer for metal, and a Pocket Knife for fabrics. Oh, and don't forget about Duct Tape - that's your handyman's best friend.","Primeiro e antes de mais, precisas de algumas ferramentas. Uma serra para a madeira, martelo para o metal, e uma faca de bolso para os tecidos. Ah, e não te esqueças da Fita Cola, ela arranja tudo.",まず最初に、道具が必要だよ。木材用のノコギリ、金属用のハンマー、生地用のポケットナイフ。あ、それからダクトテープも忘れずに - それがおまかせの相棒さ。,,,,"Primeiro e antes de mais, precisas de algumas ferramentas. Uma serra para a madeira, marteli para o metal, e uma faca de bolso para os tecidos. Ah, e não te esqueças da Fita Cola, ela arranja tudo."
-§dg§todor_crafting3,"Now, let me show you the ropes of scraping. Take a Medium Backpack, use your Pocket Knife, and voila - you got yourself 5 Cloth. Smash up a Toy with a Hammer, and bam, 2 Plastic. Hit some Silver Cutlery with a Hammer for 2 Metal, and a Wooden Pencil plus a Saw equals 1 Wood. Easy, right?","Agora, deixa-me mostrar-te a base sobre a reciclagem. Pega numa Mochila Média, usa a tua Faca de Bolso e voilà - tens 5 Tecidos. Esmigalha um Brinquedo com um Martelo, e bam, 2 Plásticos. Bate em talheres de prata com um Martelo para 2 Metais, e um Lápis de Madeira mais uma Serra dá-te 1 Madeira. Simples, né?",さて、くずの取り扱い方を見せてくれるよ。中サイズのリュックを取り、ポケットナイフを使って、ほら、5枚の布ができた。おもちゃをハンマーでたたけば、2つのプラスチック。シルバーカトラリーをハンマーでたたけば、2つの金属。木の鉛筆とノコギリで1つの木材。簡単でしょ？,,,,"Agora, deixa-me mostrar-te a base sobre a reciclagem. Pega numa Mochila Média, usa a tua Faca de Bolso e voilà - tens 5 Tecidos. Esmigalha um Brinquedo com um Martelo, e bam, 2 Plásticos. Bate em talheres de prata com um Martelo para 2 Metais, e um Lápis de Madeira mais uma Serra dá-te 1 Madeira. Simples, né?"
-§dg§todor_crafting4,"Now, onto the fun part - crafting! Combine your Saw, Hammer, Pocket Knife, and that piece of Wood, and you've got yourself a Toolbox. That bad boy can make all sorts of things that need tools.","Agora, para a parte divertida - a criação! Combina a tua Serra, Martelo, Faca de Bolso, e aquele pedaço de Madeira, e terás uma Caixa de Ferramentas. Este mauzão pode fazer todo o tipo de coisas que precisam de ferramentas.",さて、楽しい部分に入っていこう！クラフティングの時間だよ！ノコギリ、ハンマー、ポケットナイフ、そしてその木材を組み合わせれば、工具が必要なオブジェクトを作ることができるよ。,,,,"Agora, para a parte divertida - a criação! Combina a tua Serra, Martelo, Faca de Bolso, e aquele pedaço de Madeira, e terás uma Caixa de Ferramentas. Este mauzão pode fazer todo o tipo de coisas que precisam de ferramentas."
-§dg§todor_crafting5,"Need to patch yourself up? Mix 8 Cloth and a strip of Tape for a Bandage. Feeling crafty with time? Use 4 Metal, an Electronic, and a Hammer to whip up a Clock.","Precisas de te curar? Mistura 8 Tecidos e um pedaço de Fita Cola para uma Bandagem. Apetece-te criar ""tempo""? Usa 4 Metais, um Eletrónico e um Martelo para criar um Relógio.",自分を修復したいときは？8つの布とテープのストリップを混ぜてバンデージができるよ。時間をかけたいと思ったら？4つの金属、1つのエレクトロニクス、ハンマーで時計を作ってみて。,,,,"Precisas de te curar? Mistura 8 Tecidos e um pedaço de Fita Cola para uma Bandagem. Apetece-te criar ""tempo""? Usa 4 Metais, um Eletrónico e um Martelo para criar um Relógio."
-§dg§todor_crafting6,"Feeling tired? Craft some Cardboards with 2 Card, or go all out with 2 Card and 3 Newspapers for a cozier snooze. For the ultimate nap setup, try 10 Fabrics, a strip of Tape, and 3 Plastic for a Sleeping Bag.","Cansado? Cria algumas Caixas de Cartão com 2 Cartões, ou guarda tudo para o melhor com 2 Cartões e 3 Jornais para uma sesta mais confortável. Para o setup de sesta definitivo, experimenta 10 Tecidos, uma tira de Fita Cola e 3 Plásticos para um Saco de Dormir.",疲れている？2つのカードでダンボールを作るか、2つのカードと3つの新聞で快適な居眠りができるようになる。究極の昼寝セットアップに挑戦するなら、10枚の生地、テープの一筋、そして3つのプラスチックでスリーピングバッグを作ってみて。,,,,"Cansado? Cria algumas Caixas de Cartão com 2 Cartões, ou guarda tudo para o melhor com 2 Cartões e 3 Jornais para uma sesta mais confortável. Para o setup de sesta definitivo, experimenta 10 Tecidos, uma tira de Fita Cola e 3 Plásticos para um Saco de Dormir."
-§dg§todor_crafting7,"Oh, and if you're in the mood for a cozy fire, gather 4 Wood, and you'll have yourself a Bonfire. And there you have it, the basics of turning junk into treasure! Happy crafting!","Ah, e se estiveres com vontade de uma fogueira acolhedora, junta 4 Madeiras, e terás uma Fogueira. E aqui tens, o básico de transformar tralha em tesouro! Boa criação!",ああ、もし居心地の良い火が欲しいなら、4つの木材を集めれば、焚き火ができますよ。ここでゴミを宝物に変える基本があります！楽しいクラフティングを！,,,,
-§gg§stamina,Stamina,Fôlego,スタミナ,Издржљивост,Ausdauer,Endurance,Fôlego
-§gg§health,Health,Saúde,健康,Здравље,Gesundheit,Santé,Saúde
-§gg§coins,Coins,Moedas,コイン,Новчићи, Münzen,Pièces,Moedas
-§gg§inventory, Inventory,Inventário,インベントリ,Инвентар,Inventar,Inventaire,Inventário
-§gg§day,Day,Dia,日,Дан,Tag,Jour,Dia
-§gg§AM,AM,DA MANHÃ,午前,УЈУТРО,VORMITTAGS,DU MATIN,DA MANHÃ
-§gg§PM,PM,DA TARDE,午後,ПОПОДНЕ,NACHMITTAGS,DE L'APRÈS-MIDI,DA TARDE
-§gg§water,Water,Água,水,Вода,Wasser,Eau,Água
-§gg§food,Food,Comida,食べ物,Храна,Essen,Nourriture,Comida
-§bt§menu,Exit to the Menu,Sair para o Menu,メニューに戻る,Изађи у мени,Zum Menü zurückkehren,Retourner au Menu,Saiw po Meni
-§ui§exit_sure,Are you sure you want to exit this play section? Your progress will not save!,Tens a certeza que desejas sair desta sessão de jogo? O teu progresso não será salvo!,このプレイセクションを終了してもよろしいですか？進行状況は保存されません！,Да ли сте сигурни да желите да изађете из овог дела игре? Ваш напредак неће бити сачуван!,"Sind Sie sicher, dass Sie diesen Spielabschnitt verlassen möchten? Ihr Fortschritt wird nicht gespeichert!",Êtes-vous sûr de vouloir quitter cette section de jeu ? Votre progression ne sera pas sauvegardée !,Tens a certeza que desejas sair desta sessão de jogo? O teu progresso não será salvo!
-§bt§yes,Yes,Sim,はい,Да,Ja,Oui,Sim
-§bt§no,No,Não,いいえ,Не,Nein,Non,Não
-§ct§attack,Attack,Atacar,攻撃,Напад,Angriff,Attaque,Atacar
-§ct§perspective,Perspective,Perspectiva,視点,Перспектива,Perspektive,Perspective,Perspectiva
-§ui§lobby,Join a Lobby,Entrar num Lobby,ロビーに参加する,Придружи се лобију,Einer Lobby beitreten,Rejoindre un salon,Entrar num Lobby
-§ui§address,Put the address here,Colocar o endereço aqui,ここにアドレスを入力してください,Унесите адресу овде,Adresse hier eingeben,Mettez l'adresse ici,Colocar o endereço aqui
-§bt§join,Join,Entrar,参加する,Придружи се,Beitreten,Rejoindre,Entrar
-§bt§singleplayer,Singleplayer,Um Jogador, シングルプレイヤー,Један играч,Einzelspieler,Joueur seul,Um Jogador
-§bt§host,Host,Anfitrião, ホスト,Домаћин,Gastgeber,Hôte,Anfitrião
-§bt§multiplayer,Multiplayer,Multijogador,マルチプレイヤー,Више играча,Mehrspieler,Multijoueur,Multijogador
-§bt§credits,Credits,Créditos,クレジット,Кредити,Mitwirkende,Crédits,Creditos
-§bt§respawn,Respawn,Reaparecer,リスポーン,Поновно оживљавање,Wiederbeleben,Réapparaitre,Reaparecew
-§ui§dead,You Died!,Tu Morreste!,あなたは死んだ,Умрли Сте!,Du bist Gestorben!,Vous êtes Mort!,Tu Morreste!
+,en,pt,ja,sr,de,fr,pr,ro
+§ui§options_menu,Options Menu,Menu de Opções,オプションメニュー,Мени опција,Optionsmenü,Menu d’Options,Meni do Opemanadoghs,Meniu de Optioni
+§ui§video_options,Video,Vídeo,ビデオ,Видео,Video,Vidéo,Videi,Video
+§ui§audio_options,Audio,Áudio,オーディオ,Звук,Audio,Audio,Audi,Audio
+§ui§gameplay_options,Gameplay,Jogabilidade,ゲームプレイ,Играње,Gameplay,Jouabilité,Jogabilididogh,Gameplay
+§op§display_mode,Display Mode,Modo de Exibição,ディスプレイモード,Режим приказа,Anzeigemodus,Mode d'affichage,Modi di Exibinadogh,Modul de afișare 
+§op§vsync,VSync,VSync,VSync（垂直同期）,VSync,VSync,VSync,VSync,VSync
+§op§max_fps,Max FPS,FPS Máximo,最大FPS,Макс. FPS,Max FPS,Max FPS,FPS Maxidogh,Max FPS
+§op§bloom,Bloom,Bloom,ブルーム,Блум,Bloom,Bloom,Bloom,Bloom
+§op§brightness,Brightness,Brilho,明るさ,Осветљеност,Helligkeit,Luminosité,Brilhidogh,Luminozitate
+§op§chromatic_aberration,Chromatic Aberration,Aberração Cromática,クロマティック異常,Хроматска аберација,Chromatische Aberration,Aberration chromatique,Aberramanadogh Cromati,Aberație Cromatică
+§op§unfocus_pause,Unfocus Pause,Pausar Fora de Foco,非焦点時の一時停止,Пауза без фокуса,Pause außer Fokus,Pause sans focus,Pausaw Fori di Foqui,Pauză fără focalizare
+§op§master_volume,Master Volume,Volume Principal,マスターボリューム,Главни звук,Hauptlautstärke,Volume principal,Volumi Principili,Volum Principal
+§op§music_volume,Music Volume,Música,音楽,Јачина музике,Musiklautstärke,Volume de la musique,Musiqui,Musică
+§op§sfx_volume,SFX Volume,Efeitos Sonoros,効果音,Специјални Ефекти,SFX-Lautstärke,Effets Sonores,Efetis Sonorodogh,Efecte Sonore
+§op§fov,FOV,FOV,FOV (視野角),FOV,FOV,FOV,FOV,FOV
+§op§mouse_sensitivity,Mouse Sensitivity,Sensibilidade do Rato,マウス感度,Брзина миша,Mausempfindlichkeit,Sensibilité de la souris,Sensibilididogh do Rati,Sensibilitate de la Maus
+§op§display_fps,Display FPS,Exibir FPS,FPSの表示,Прикажи FPS,FPS-Anzeige,Afficher FPS,Exibir FPS,Arată FPS
+§op§display_speed,Display Speed,Exibir Velocidade,速度の表示,Приказ брзине,Geschwindigkeitsanzeige,Afficher la vitesse,Exibiw Velocididogh,Arată Viteza
+§op§view_bobbing,View Bobbing,Balanço da Visão,視点の揺れ,Потрес камере,View Bobbing (Blickwackeln),Hochements de tête,Balanosogh di Vimadogh,View Bobbing
+§op§speed_changes_fov,Speed Changes Fov,Velocidade Muda FOV,速度変更時のFOV,Промена брзине мења FOV,Geschwindigkeitsänderung FOV,Changements de vitesse modifiant le FOV,Velocididogh Mudi FOV,Viteza Scinbă FOV
+§op§sideways_camera_tilt,Sideways Camera Tilt,Inclinação Lateral da Câmera,横向きのカメラ傾斜,Косо окренута камера,Seitliche Kameraneigung,Inclinaison de la caméra latérale,Inclinanadogh Laterili di Cameri,Inclinație Laterală de Cameră
+§op§language,Language,Idioma,言語,Језик,Sprache,Langue,Linguagim,Limbă
+§ob§windowed,Windowed,Janela,ウィンドウモード,У прозору,Fenstermodus,En fenêtré,Janeli,Geam
+§ob§fullscreen,Fullscreen,Ecrã Inteiro,フルスクリーン,Цео екран,Vollbild,Plein écran,Ecrosogh Intirogh,Ecran complet
+§ob§max,MAX,MAX,最大,МАКС,MAX,MAX,MAX,MAX
+§ob§quake_pro,QUAKE PRO,GARRAFÃO,QUAKE PRO,квака про,QUAKE PRO,QUAKE PRO,Neutevolagesti,QUAKE PRO
+§ob§zoomer,ZOOMER,BINÓCULOS,ズーマー,з у м,ZOOMER,Zoomer,Bugigueogh,Zoom
+§bt§go_back,Back,Voltar,戻る,Назад,Zurück,Retour,Voltaw,Inapoii
+§bt§controls,Keybinds,Controlos,コントロール,Контроле,Steuerung,Contrôles,Controlis,Controle
+§ui§game_menu,Game Menu,Menu do Jogo,ゲームメニュー,Мени Игрице,Spielmenü,Menu de jeu,Meni do Jogogh,Meniu de Joc
+§bt§resume,Back to Game,Voltar ao Jogo,ゲームに戻る,Назад у игру,Zurück zum Spiel,Retour au jeu,Voltaw aw Jogogh,Inapoii la Joc
+§bt§options,Options,Opções,オプション,Подешавања,Optionen,Options,Opemanadoghs,Opționi
+§bt§exit,Exit Game,Sair do Jogo,ゲームを終了,Излаз из игре,Spiel beenden,Quitter le jeu,Saiw do Jogogh,Iesi din joc
+§ui§controls_menu,Keybinds Menu,Menu de Controlos,コントロールメニュー,Мени контрола,Steuerungsmenü,Menu des contrôles,Menu de Controloghs,Meniu de Controle
+§ui§movement,Movement,Movimentação,移動,Кретање,Bewegung,Mouvement,Movimentanadogh,Mișcarea
+§ct§forward,Forward,Avançar,前進,Напред,Vorwärts,Avancer,Avanosow,Inainte
+§ct§backward,Backward,Recuar,後退,Назад,Rückwärts,Reculer,Requaw,Inapoii
+§ct§left,Left,Esquerda,左,Лево,Links,Gauche,Esquerdi,Stânga
+§ct§right,Right,Direita,右,Десно,Rechts,Droite,Direiti,Dreapta
+§ct§jump,Jump,Saltar,ジャンプ,Скок,Springen,Sauter,Saltaw,Sari
+§ct§crouch,Crouch,Agachar,しゃがむ,Клекнути,Ducken,S'accroupir,Agachaw,Genuflexiune 
+§ct§sprint,Sprint,Correr,スプリント,Трчање,Sprinten,Sprint,Correw,Aleargă
+§ct§pause,Pause,Pausar,一時停止,Пауза,Pause,Pause,Pausaw,Pauză
+§ct§debug_console,Debug Console,Consola de Desenvolvedor,開発者コンソール,Конзола за програмере,Entwicklerkonsole,Console de développeur,Consoli di Chacane,Consola de Developăr
+§dg§todor_greeting,Hey there! Your face looks new around here. Welcome to our lively city!,Olá! Pareces ser novo por aqui. Bem-vindo à nossa alegre cidade!,こんにちは！新しいお顔が見えてうれしいな。元気な街にようこそ！,,,,Olas! Parecive sew novogh pow aqui. Benvinido ha nossa alegre vili!,
+§dg§todor_greeting2,"In this town, people are friendly and love chatting with each other. It's a real community vibe.","Nesta vila, as pessoas são amigáveis e adoram conversar umas com as outras. É como uma grande família!",この街の人たちはみんなフレンドリーでおしゃべり好きなんだよ。まるで大きな家族のような雰囲気が漂っているんだ。,,,,"Nestili vili, as altas mado amigabili e adorah conversaw umas coh as outras. Hi como uma grandi famili!",
+§dg§todor_greeting3,"You know, if you're ever in need of some quick cash, folks might toss your way some odd jobs. It's a great way to get by.","Sabes, se alguma vez precisares de dinheiro rápido, as pessoas podem oferecer-te alguns trabalhos estranhos. É uma ótima maneira de conseguir trocos.",必要なときには、すぐお金が必要になることもあるでしょう。みんな、時々おもしろい仕事をくれることがあるんだ。それが生計を立てるちょっとした楽しい方法だよ。,,,,"Sabive, se alguma vey precisarive de dinheirogh rapididogh, as altas podeh oferecew-te alguns trabawas estranhas. Hi uma otima maneira de conseguiw trocowes.",
+§dg§todor_greeting4,"Feel free to explore the city at your own pace. Cars aren't a common sight around here, so you're free to run around without worry.","Sê livre para explorar a cidade ao teu ritmo. Não é costume a passagem de carros, então podes correr por aí sem preocupações.",ゆっくりと街を歩いてみて。この辺りではあまり車は見かけないから、思う存分楽しんでね。,,,,"Sê livre para explorar a vili ao teu ritmo. Não é costume a passagem de carros, então podes correr por aí sem preocupações.",
+§dg§todor_greeting5,"If times get tough, collecting recyclables and doing odd jobs can help you scrape together a bit of coin. We've all been there, mate. And hey, we're always ready to help out a fellow struggler.","Quando os tempos ficarem difíceis, recolher recicláveis e fazer trabalhos estranhos pode ajudar a juntar algumas moedas. Já todos passámos por isso, mano. E, ei, estamos sempre prontos para ajudar um companheiro em apuros.",困った時は、リサイクル可能なものを集めておかしな仕事をして、少しのコインを稼ぐのも一つの方法だよ。我々も皆同じ経験があります。ねえ、仲間を手伝うのはいつでもできるんだよ。,,,,"Quando os tempos ficarem difíceis, recolher reciclabilis e fazer trabalhos estranhos pode ajudar a juntar algumas moedas. Já todos passámos por isso, mano. Ei, estamos sempre prontos para ajudar um companheiro em apuros.",
+§dg§player_ask_money,How do I get money?,Como consigo dinheiro?,,,,,Como consigo money?,
+§dg§player_ask_crafting,How does crafting work?,Como é que o crafting funciona?,,,,,Como é que o craftiw funciona?,
+§dg§todor_money,"Hey again! If you're looking to fill your pockets, there are a couple of ways to make a quick buck around here.","Olá de novo! Se estás a querer encher os bolsos, há algumas maneiras de ganhar uns trocos rápidos por aqui.",もう一度こんにちは！ポケットをいっぱいにする方法をお探しの場合、ここではいくつかの方法があります。,,,,"Olá de novo! Se estás a querer encher os bolsos, há algumas maneiras de ganhar uns trocos rapididos por aqui.",
+§dg§todor_money2,"First off, keep an eye out for any scrap lying around the city. Grab those discarded items, and you can sell them at the local shops. It's not glamorous, but every little bit adds up.","Primeiro, mantém os olhos abertos para qualquer tralha espalhada pela cidade. Apanha esses objetos desperdiçados e podes vendê-los nas lojas locais. Não é fantástico, mas, como se diz, grão a grão, a galinha enche o papo.",ますます重要なのは、街のあちこちにあるくずを見逃さないようにすることです。それらを拾って、地元の店で売ることができます。派手ではないけれど、少しずつ積み重ねていけば大丈夫ですよ。,,,,"Primeiro, mantem os olhos abertos para qualquer tralha espalhada pela vili. Apanha esses objetos desperdiçados e podes vendê-los nas lojas locais. Naw i fantastico, mas, como se diz, grão a grão, a galinha enche o papo.",
+§dg§todor_money3,"Another option is taking on odd jobs from the folks around town. They might need help with deliveries, chores, or who knows what. It's a good way to earn some extra cash and get to know the community.","Outra opção é pegar em trabalhos estranhos das pessoas da cidade. Podem precisar de ajuda com entregas, tarefas, ou sei lá o quê. É uma boa forma de ganhar algum dinheiro extra e conhecer a comunidade.",もう一つの選択肢は、町の人々から奇妙な仕事を引き受けることです。配達や雑用で手を貸してくれるかもしれません。それは追加でお金を稼ぐだけでなく、コミュニティを知る良い方法でもあります。,,,,"Outra opção é pegar em trabalhos estranhos das pessoas da vili. Podem precisar de ajuda com entregas, tarefas, ou sei lá o quê. É uma boa forma de ganhar algum money extra e conhecer a comunidade.",
+§dg§todor_money4,"So, whether you're collecting scrap or taking on jobs, you'll be stacking up that moolah in no time. Good luck out there!","Portanto, quer estejas a recolher lixo ou a assumir tarefas, vais acumular uns quantos paus num instante. Boa sorte por aí!",だから、くずを集めたり、仕事を引き受けたり、どっちにしろお金がすぐに増えるからね。頑張って！,,,,"Portanto, quer estejas a recolher lixo ou a assumir tarefas, vais acumular uns quantos paus num instante. Boa sorte por aí!",
+§dg§todor_crafting,"Hey, friend! So, you're itching to craft some useful stuff, huh? Well, it's pretty simple once you get the hang of it.","Olá, amigo! Então, estás ansioso para criar umas coisas úteis, né? Bem, é bastante simples assim que apanhas o jeito.",こんにちは、友達！役立つものを作りたくなる気持ち、わかるよ。慣れればかなり簡単だから。,,,,"Olá, amigo! Então, estás ansioso para criar umas coisas úteis, né? Bem, é bastante simpleiw assim que apanhas o jeito.",
+§dg§todor_crafting2,"First things first, you'll need some tools. A Saw for wood, Hammer for metal, and a Pocket Knife for fabrics. Oh, and don't forget about Duct Tape - that's your handyman's best friend.","Primeiro e antes de mais, precisas de algumas ferramentas. Uma serra para a madeira, martelo para o metal, e uma faca de bolso para os tecidos. Ah, e não te esqueças da Fita Cola, ela arranja tudo.",まず最初に、道具が必要だよ。木材用のノコギリ、金属用のハンマー、生地用のポケットナイフ。あ、それからダクトテープも忘れずに - それがおまかせの相棒さ。,,,,"Primeiro e antes de mais, precisas de algumas ferramentas. Uma serra para a madeira, marteli para o metal, e uma faca de bolso para os tecidos. Ah, e não te esqueças da Fita Cola, ela arranja tudo.",
+§dg§todor_crafting3,"Now, let me show you the ropes of scraping. Take a Medium Backpack, use your Pocket Knife, and voila - you got yourself 5 Cloth. Smash up a Toy with a Hammer, and bam, 2 Plastic. Hit some Silver Cutlery with a Hammer for 2 Metal, and a Wooden Pencil plus a Saw equals 1 Wood. Easy, right?","Agora, deixa-me mostrar-te a base sobre a reciclagem. Pega numa Mochila Média, usa a tua Faca de Bolso e voilà - tens 5 Tecidos. Esmigalha um Brinquedo com um Martelo, e bam, 2 Plásticos. Bate em talheres de prata com um Martelo para 2 Metais, e um Lápis de Madeira mais uma Serra dá-te 1 Madeira. Simples, né?",さて、くずの取り扱い方を見せてくれるよ。中サイズのリュックを取り、ポケットナイフを使って、ほら、5枚の布ができた。おもちゃをハンマーでたたけば、2つのプラスチック。シルバーカトラリーをハンマーでたたけば、2つの金属。木の鉛筆とノコギリで1つの木材。簡単でしょ？,,,,"Agora, deixa-me mostrar-te a base sobre a reciclagem. Pega numa Mochila Média, usa a tua Faca de Bolso e voilà - tens 5 Tecidos. Esmigalha um Brinquedo com um Martelo, e bam, 2 Plásticos. Bate em talheres de prata com um Martelo para 2 Metais, e um Lápis de Madeira mais uma Serra dá-te 1 Madeira. Simples, né?",
+§dg§todor_crafting4,"Now, onto the fun part - crafting! Combine your Saw, Hammer, Pocket Knife, and that piece of Wood, and you've got yourself a Toolbox. That bad boy can make all sorts of things that need tools.","Agora, para a parte divertida - a criação! Combina a tua Serra, Martelo, Faca de Bolso, e aquele pedaço de Madeira, e terás uma Caixa de Ferramentas. Este mauzão pode fazer todo o tipo de coisas que precisam de ferramentas.",さて、楽しい部分に入っていこう！クラフティングの時間だよ！ノコギリ、ハンマー、ポケットナイフ、そしてその木材を組み合わせれば、工具が必要なオブジェクトを作ることができるよ。,,,,"Agora, para a parte divertida - a criação! Combina a tua Serra, Martelo, Faca de Bolso, e aquele pedaço de Madeira, e terás uma Caixa de Ferramentas. Este mauzão pode fazer todo o tipo de coisas que precisam de ferramentas.",
+§dg§todor_crafting5,"Need to patch yourself up? Mix 8 Cloth and a strip of Tape for a Bandage. Feeling crafty with time? Use 4 Metal, an Electronic, and a Hammer to whip up a Clock.","Precisas de te curar? Mistura 8 Tecidos e um pedaço de Fita Cola para uma Bandagem. Apetece-te criar ""tempo""? Usa 4 Metais, um Eletrónico e um Martelo para criar um Relógio.",自分を修復したいときは？8つの布とテープのストリップを混ぜてバンデージができるよ。時間をかけたいと思ったら？4つの金属、1つのエレクトロニクス、ハンマーで時計を作ってみて。,,,,"Precisas de te curar? Mistura 8 Tecidos e um pedaço de Fita Cola para uma Bandagem. Apetece-te criar ""tempo""? Usa 4 Metais, um Eletrónico e um Martelo para criar um Relógio.",
+§dg§todor_crafting6,"Feeling tired? Craft some Cardboards with 2 Card, or go all out with 2 Card and 3 Newspapers for a cozier snooze. For the ultimate nap setup, try 10 Fabrics, a strip of Tape, and 3 Plastic for a Sleeping Bag.","Cansado? Cria algumas Caixas de Cartão com 2 Cartões, ou guarda tudo para o melhor com 2 Cartões e 3 Jornais para uma sesta mais confortável. Para o setup de sesta definitivo, experimenta 10 Tecidos, uma tira de Fita Cola e 3 Plásticos para um Saco de Dormir.",疲れている？2つのカードでダンボールを作るか、2つのカードと3つの新聞で快適な居眠りができるようになる。究極の昼寝セットアップに挑戦するなら、10枚の生地、テープの一筋、そして3つのプラスチックでスリーピングバッグを作ってみて。,,,,"Cansado? Cria algumas Caixas de Cartão com 2 Cartões, ou guarda tudo para o melhor com 2 Cartões e 3 Jornais para uma sesta mais confortável. Para o setup de sesta definitivo, experimenta 10 Tecidos, uma tira de Fita Cola e 3 Plásticos para um Saco de Dormir.",
+§dg§todor_crafting7,"Oh, and if you're in the mood for a cozy fire, gather 4 Wood, and you'll have yourself a Bonfire. And there you have it, the basics of turning junk into treasure! Happy crafting!","Ah, e se estiveres com vontade de uma fogueira acolhedora, junta 4 Madeiras, e terás uma Fogueira. E aqui tens, o básico de transformar tralha em tesouro! Boa criação!",ああ、もし居心地の良い火が欲しいなら、4つの木材を集めれば、焚き火ができますよ。ここでゴミを宝物に変える基本があります！楽しいクラフティングを！,,,,,
+§gg§stamina,Stamina,Fôlego,スタミナ,Издржљивост,Ausdauer,Endurance,Fulegi,Rezistență
+§gg§health,Health,Saúde,健康,Здравље,Gesundheit,Santé,Saudi,Viață
+§gg§coins,Coins,Moedas,コイン,Новчићи, Münzen,Pièces,Moedis,Piese
+§gg§inventory, Inventory,Inventário,インベントリ,Инвентар,Inventar,Inventaire,Inventari,Inventar
+§gg§day,Day,Dia,日,Дан,Tag,Jour,Dia,Ziuă
+§gg§AM,AM,DA MANHÃ,午前,УЈУТРО,VORMITTAGS,DU MATIN,DI MANHAH,DIMINIAȚA
+§gg§PM,PM,DA TARDE,午後,ПОПОДНЕ,NACHMITTAGS,DU SOIR,DI TARDI,PM
+§gg§water,Water,Água,水,Вода,Wasser,Eau,Agaw,Apă
+§gg§food,Food,Comida,食べ物,Храна,Essen,Nourriture,Comidi,Mâncare
+§bt§menu,Exit to the Menu,Sair para o Menu,メニューに戻る,Изађи у мени,Zum Menü zurückkehren,Retourner au Menu,Saiw po Meni,Inainte la Meniu
+§ui§exit_sure,Are you sure you want to exit this play section? Your progress will not save!,Tens a certeza que desejas sair desta sessão de jogo? O teu progresso não será salvo!,このプレイセクションを終了してもよろしいですか？進行状況は保存されません！,Да ли сте сигурни да желите да изађете из овог дела игре? Ваш напредак неће бити сачуван!,"Sind Sie sicher, dass Sie diesen Spielabschnitt verlassen möchten? Ihr Fortschritt wird nicht gespeichert!",Êtes-vous sûr de vouloir quitter cette section de jeu ? Votre progression ne sera pas sauvegardée !,Tens a certeza que desejas sair desta sessão de jogo? O teu progresso não será salvo!,Sunteti singurii că vreţi să iesiţi din sesie? Progresia voastră nu o să fie salvată!
+§bt§yes,Yes,Sim,はい,Да,Ja,Oui,Siah,Da
+§bt§no,No,Não,いいえ,Не,Nein,Non,Nadoh,Nu
+§ct§attack,Attack,Atacar,攻撃,Напад,Angriff,Attaque,Atacaw,Atacă
+§ct§perspective,Perspective,Perspectiva,視点,Перспектива,Perspektive,Perspective,Perspecitivi,Perspectivă
+§ui§lobby,Join a Lobby,Entrar num Lobby,ロビーに参加する,Придружи се лобију,Einer Lobby beitreten,Rejoindre un salon,Entraw nuah  Lobby,intră intr-un Lobby
+§ui§address,Put the address here,Colocar o endereço aqui,ここにアドレスを入力してください,Унесите адресу овде,Adresse hier eingeben,Mettez l'adresse ici,Colocaw o enderosogh aqui,Puneți adresa aicea
+§bt§join,Join,Entrar,参加する,Придружи се,Beitreten,Rejoindre,Entraw,Intră
+§bt§singleplayer,Singleplayer,Um Jogador, シングルプレイヤー,Један играч,Einzelspieler,Jouer Seul,Uah Jogadow,Jocați Singuri
+§bt§host,Host,Anfitrião, ホスト,Домаћин,Gastgeber,Hôte,Anfitiridogh,Gazdă
+§bt§multiplayer,Multiplayer,Multijogador,マルチプレイヤー,Више играча,Mehrspieler,Multijoueur,Multijogadow,Multiplayer
+§bt§credits,Credits,Créditos,クレジット,Кредити,Mitwirkende,Crédits,Creditis,Credite
+§bt§respawn,Respawn,Reaparecer,リスポーン,Поновно оживљавање,Wiederbeleben,Réapparaitre,Reaparecew,Reapară
+§ui§dead,You Died!,Tu Morreste!,あなたは死んだ,Умрли Сте!,Du bist Gestorben!,Vous êtes Mort!,Ti Morresti!,Ați Morit!
+§ct§keybind_text,"Press any key,,, :)",Pressione algo... :),任意のキーを押してください... :),Претисните било који тастер... :),Drück auf die taste... :),Appuyez une touche... :),Pressioni algi... :),Apăsați o tastă... :)
+§ui§exit_sure_menu,You want to leave the game?,Pretende sair do jogo?,ゲームを終了しますか？,Желите ли да изађете из игре?,Willst du das Spiel verlassen?,Voulez-vous vraiment quitter?,Pretendi saiw di jogi?,Sunteți sigurii că vreți să iesiți?

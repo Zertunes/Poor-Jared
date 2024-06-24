@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://tc88ne1wwnds"]
+[gd_scene load_steps=15 format=3 uid="uid://tc88ne1wwnds"]
 
 [ext_resource type="PackedScene" uid="uid://dswljdtrqluro" path="res://scenes/misc/world_environment.tscn" id="1_5a6lb"]
 [ext_resource type="PackedScene" uid="uid://csv4fcxceavtq" path="res://scenes/test/floor.tscn" id="1_iqwv3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ca3k6l8tgc0pr" path="res://addons/kenney_prototype_textures/dark/texture_07.png" id="3_npqoe"]
 [ext_resource type="PackedScene" uid="uid://dspw0lxyvi2jg" path="res://scenes/menus/join_lobby.tscn" id="4_41bsx"]
 [ext_resource type="PackedScene" uid="uid://clo5exbsylp7k" path="res://scenes/menus/gamemenu.tscn" id="6_ex0ji"]
+[ext_resource type="PackedScene" uid="uid://b8vw12uqktt5t" path="res://scenes/misc/ragdoll.tscn" id="8_s6fqm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qcini"]
 size = Vector3(32, 1, 32)
@@ -672,6 +673,9 @@ curve = SubResource("Curve3D_6wrmy")
 [node name="JoinLobby" parent="." instance=ExtResource("4_41bsx")]
 
 [node name="GameMenu" parent="." instance=ExtResource("6_ex0ji")]
+
+[node name="Ragdoll" parent="." instance=ExtResource("8_s6fqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51207, -0.00196703, -58.3814)
 
 [editable path="Geometry/floors/wall39"]
 [editable path="Geometry/floors/wall40"]

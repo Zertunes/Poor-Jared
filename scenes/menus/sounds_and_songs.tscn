@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dieqkr5b1pfc"]
+
+[ext_resource type="AudioStream" uid="uid://dydc78gmoaxo8" path="res://songs/MainMenu.wav" id="1_rmj37"]
+[ext_resource type="AudioStream" uid="uid://dl74kp6jhajon" path="res://sounds/impact/crack1.wav" id="2_k0gcg"]
+[ext_resource type="AudioStream" uid="uid://duha73bwy08w6" path="res://sounds/impact/puht1.wav" id="3_24b4p"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_s2l55"]
+random_pitch = 1.5
+streams_count = 1
+stream_0/stream = ExtResource("2_k0gcg")
+stream_0/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jw3kh"]
+random_pitch = 1.5
+streams_count = 1
+stream_0/stream = ExtResource("3_24b4p")
+stream_0/weight = 1.0
+
+[node name="Sounds and Songs" type="Node"]
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1_rmj37")
+autoplay = true
+bus = &"Music"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_s2l55")
+bus = &"SFX"
+
+[node name="ButtonBackSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_jw3kh")
+bus = &"SFX"

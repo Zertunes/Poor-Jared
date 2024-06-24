@@ -2,6 +2,8 @@ extends Node
 
 signal disconnect_player(peer_id)
 
+signal on_host_disconnect
+
 @onready var keybindings = [
 	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Forward/Label/Keybindings,
 	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Backward/Label/Keybindings,
@@ -23,6 +25,10 @@ signal disconnect_player(peer_id)
 	"key_select_menu": $GameMenu/KeySelectMenu,
 	"confirm_menu": $GameMenu/ConfirmMenu
 }
+
+@onready var mainmenumusic = $"Sounds and Songs/MainMenuMusic"
+@onready var buttonsound = $"Sounds and Songs/ButtonSound"
+@onready var buttonbacksound = $"Sounds and Songs/ButtonBackSound"
 
 var player_on: bool = false
 var pause: int = 0
@@ -56,8 +62,11 @@ func _interactive_shell_visibility_changed(visible):
 func _process(delta):
 	if pause == 0:
 		paused = false
+		mainmenumusic.stop()
 	else:
 		paused = true
+		if mainmenumusic.playing == false:
+			mainmenumusic.play(108.0)
 	
 	if singleplayer == true: # pauses, literally, if singleplayer
 		if paused == true:
@@ -168,11 +177,9 @@ func _on_unfocus_pause_toggled(toggle):
 
 func _on_yes_button_pressed():
 	if confirmtype == 1:
-		emit_signal("disconnect_player", multiplayer.get_unique_id())
-		get_tree().quit()
+		emit_signal("on_host_disconnect")
 	elif confirmtype == 2:
 		emit_signal("disconnect_player", multiplayer.get_unique_id())
-		get_tree().change_scene_to_file("res://scenes/test.tscn")
 
 func _on_no_button_pressed():
 	confirmtype = 0

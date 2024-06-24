@@ -1,12 +1,15 @@
-[gd_scene format=3 uid="uid://b5688bakdd1ly"]
+[gd_scene load_steps=2 format=3 uid="uid://b5688bakdd1ly"]
+
+[ext_resource type="Script" path="res://scenes/menus/deathmenu.gd" id="1_2fiyn"]
 
 [node name="deathmenu" type="Node"]
+script = ExtResource("1_2fiyn")
 
 [node name="DeathMenu" type="CanvasLayer" parent="."]
 layer = 100
-visible = false
 
-[node name="Label" type="Label" parent="DeathMenu"]
+[node name="DeathLabel" type="Label" parent="DeathMenu"]
+visible = false
 offset_left = 383.0
 offset_top = 140.0
 offset_right = 577.0
@@ -15,7 +18,8 @@ text = "§ui§dead"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PauseMenu" type="PanelContainer" parent="DeathMenu"]
+[node name="DeathMenu" type="PanelContainer" parent="DeathMenu"]
+visible = false
 self_modulate = Color(1, 0, 0, 1)
 anchors_preset = 8
 anchor_left = 0.5
@@ -29,7 +33,7 @@ offset_bottom = 97.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="DeathMenu/PauseMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="DeathMenu/DeathMenu"]
 layout_direction = 1
 layout_mode = 2
 theme_override_constants/margin_left = 15
@@ -37,26 +41,89 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DeathMenu/PauseMenu/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="DeathMenu/DeathMenu/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="ResumeButton" type="Button" parent="DeathMenu/PauseMenu/MarginContainer/VBoxContainer"]
+[node name="RespawnButton" type="Button" parent="DeathMenu/DeathMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "§bt§respawn"
 flat = true
 
-[node name="MenuButton" type="Button" parent="DeathMenu/PauseMenu/MarginContainer/VBoxContainer"]
+[node name="MenuButton" type="Button" parent="DeathMenu/DeathMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "§bt§menu"
 flat = true
 
-[node name="ExitButton" type="Button" parent="DeathMenu/PauseMenu/MarginContainer/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="DeathMenu/DeathMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "§bt§exit"
+flat = true
+
+[node name="ConfirmLabel" type="Label" parent="DeathMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.0
+offset_top = -93.5
+offset_right = 352.0
+offset_bottom = -18.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(156, 12)
+text = "§ui§exit_sure"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmMenu" type="PanelContainer" parent="DeathMenu"]
+self_modulate = Color(1, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -30.0
+offset_right = 156.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DeathMenu/ConfirmMenu"]
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeathMenu/ConfirmMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DeathMenu/ConfirmMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 110
+alignment = 1
+
+[node name="YesButton" type="Button" parent="DeathMenu/ConfirmMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "§bt§yes"
+flat = true
+
+[node name="NoButton" type="Button" parent="DeathMenu/ConfirmMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "§bt§no"
 flat = true
 
 [node name="Background" type="CanvasLayer" parent="DeathMenu"]
@@ -76,3 +143,9 @@ visible = false
 layout_direction = 1
 layout_mode = 2
 color = Color(0.607843, 0, 0, 0.231373)
+
+[connection signal="pressed" from="DeathMenu/DeathMenu/MarginContainer/VBoxContainer/RespawnButton" to="." method="_on_respawn_button_pressed"]
+[connection signal="pressed" from="DeathMenu/DeathMenu/MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="DeathMenu/DeathMenu/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="DeathMenu/ConfirmMenu/MarginContainer/VBoxContainer/HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="DeathMenu/ConfirmMenu/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]

@@ -75,7 +75,7 @@ func _load_saved_options():
 	
 	unfocus_pause_button.button_pressed = SaveOptions.game_options_data.unfocus_pause
 	GlobalOptions.toggle_unfocus_pause(SaveOptions.game_options_data.unfocus_pause)
-	language_button.select(SaveOptions.game_options_data.language if SaveOptions.game_options_data.language<7 else 0)
+	language_button.select(SaveOptions.game_options_data.language if SaveOptions.game_options_data.language<8 else 0)
 	GlobalOptions.toggle_language(SaveOptions.game_options_data.language)
 
 func _load_saved_options_ingame():

@@ -46,7 +46,7 @@ extends CharacterBody3D
 }
 @onready var punch_ray = $Body/Head/Tilt/FPCamera/punch_ray
 
-var edelta = 0
+@onready var edelta = 0
 
 # View Bobbing
 var bobbing_frequency = 2.0
@@ -78,6 +78,7 @@ var perspective: int = 1
 
 # Health
 @onready var health = $Health
+@onready var ragdoll = preload("res://scenes/misc/ragdoll.tscn")
 
 # --------------[Movement Physics]--------------
 # Gravity from project's settings
@@ -155,10 +156,18 @@ func _on_player_died():
 	#health.do_damage(20)
 	deathmenu.background.show()
 	deathmenu.death_menu.show()
-	# Handle player death (e.g., respawn, game over)
+	mesh.hide()
+	view_model_rig.visible = false
+	
+	$DeathVoice.play()
+	
+	# Instantiate the ragdoll scene and set its position to the player's current position
+	var ragdoll_instance = ragdoll.instantiate()
+	ragdoll_instance.global_transform = self.global_transform
+	get_parent().add_child(ragdoll_instance)
+	
 func _on_health_changed(new_health):
 	#print("Health changed to: ", new_health)
-	# Update health UI
 	pass
 
 # This controls hiding and displaying stuff on start,
@@ -175,9 +184,14 @@ func loading_hiding(hide: bool):
 		# Hides the Stamina bar
 		stamina_bar.visible = false
 		
+		# Hides player GUI so it doesn't multiply on multiplayer
+		HUD.hide()
+		$Body/Head/Tilt/Vignette.hide()
+		
+		
+		# Hide the death screen
 		deathmenu.background.hide()
 		deathmenu.death_menu.hide()
-		
 	if hide == false: # This is after hiding, to show. (Local)
 		# Shows 1st person view model for local player
 		view_model_camera.set_cull_mask_value(2, true)
@@ -190,6 +204,10 @@ func loading_hiding(hide: bool):
 		#mesh.hide()
 		# Shows the Stamina bar
 		stamina_bar.visible = true
+		
+		# Shows GUI after hiding it so you can see it...
+		HUD.show()
+		$Body/Head/Tilt/Vignette.show()
 
 # ==================== [Debug] ====================
 func debug_checker():
@@ -235,10 +253,12 @@ func fov_change_option() -> void:
 		var velocity_clamped = clamp(velocity.length(), 0.5, top_speed_air * 2)
 		var target_fov = fov_base + fov_change * velocity_clamped
 		if run == true and crouching_collision.disabled == true:
-			if not (( velocity * Vector3(0, 0, 1) ).length()) == 0:
-				target_fov = fov_base + (fov_change * velocity_clamped) * 3
-			else:
-				target_fov = fov_base + fov_change * velocity_clamped
+			target_fov = fov_base + (fov_change * velocity_clamped) * 3
+			# I don't rememver why I used to only do it on the Z axis before? What was my past self thinking?
+			#if not (( velocity * Vector3(0, 0, 1) ).length()) == 0:
+				#target_fov = fov_base + (fov_change * velocity_clamped) * 3
+			#else:
+				#target_fov = fov_base + fov_change * velocity_clamped
 		else:
 			target_fov = fov_base + fov_change * velocity_clamped
 		camera.fov = lerp(camera.fov, target_fov, edelta * 8.0)
@@ -569,6 +589,7 @@ func player_attacking():
 			attacking = true
 			attack_ik_timer.start()
 			player_attacking_func()
+			$Punch.play()
 		
 		mesh_3rd_animation.set("parameters/attack_event/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 	else:
@@ -582,6 +603,7 @@ func player_attacking():
 			attacking = true
 			attack_ik_timer.start()
 			player_attacking_func()
+			$Punch.play()
 		
 		mesh_3rd_animation.set("parameters/attack_event_crouch/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 func player_attacking_ik(play: bool):
