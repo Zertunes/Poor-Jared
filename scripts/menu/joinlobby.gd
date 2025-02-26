@@ -4,7 +4,7 @@ signal player_created
 
 @onready var game_menu = get_parent().get_node("GameMenu")
 @onready var join_menu = $JoinMenu
-@onready var death_menu = get_node("JoinLobby/deathmenu")
+#@onready var death_menu = get_node("JoinLobby/deathmenu")
 @onready var address_entry = $JoinMenu/JoinMenu/MarginContainer/VBoxContainer/AddressEntry
 @onready var main_menu = $MainMenu
 @onready var background = $BGImage
@@ -13,6 +13,8 @@ signal player_created
 @onready var op_control = $Options/ControlsMenu
 @onready var op_key = $Options/KeySelectMenu
 @onready var exit = $Exit
+@onready var mainmenu = preload("res://scenes/world/city/city.tscn")
+@export var DISCORD: Node
 
 @onready var keybindings = [
 	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Forward/Label/Keybindings,
@@ -23,14 +25,20 @@ signal player_created
 	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Crouch/Label/Keybindings,
 	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Sprint/Label/Keybindings,
 	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Pause/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console/Label/Keybindings
+	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console/Label/Keybindings,
+	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Attack/Label/Keybindings,
+	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Perspective/Label/Keybindings,
+	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact/Label/Keybindings
 ]
 
 @onready var mainmenumusic = $"Sounds and Songs/MainMenuMusic"
 @onready var buttonsound = $"Sounds and Songs/ButtonSound"
 @onready var buttonbacksound = $"Sounds and Songs/ButtonBackSound"
+#@onready var keyenter = $"Sounds and Songs/KeyEnterSound"
 
-const Player = preload("res://scenes/misc/player.tscn")
+@onready var titleanimation = $MainMenu/TitleAnimation
+
+const Player = preload("res://scenes/player/player.tscn")
 const PORT = 6969
 var enet_peer = ENetMultiplayerPeer.new()
 var upnp = null
@@ -40,12 +48,13 @@ var upnp = null
 #		get_tree().quit()
 
 func _ready():
-	discord_presence()
+	DISCORD.discord_presence()
+	
 	game_menu.disconnect_player.connect(_disconnect_player)
 	game_menu.on_host_disconnect.connect(_on_host_disconnect)
 	
 	for keybinding in keybindings:
-		keybinding.button_keybind.connect(_button_keybind)
+		keybinding.button_keybind.connect(_button_keybind) # If there is a null instance here, make sure that all of the keybindings are located at $Options
 		keybinding.button_keybind_off.connect(_button_keybind_off)
 	
 	join_menu.hide()
@@ -53,27 +62,39 @@ func _ready():
 	exit.hide()
 	main_menu.show()
 	background.show()
+	
+	_set_animation_for_locale(TranslationServer.get_locale())
+	
+	await get_tree().create_timer(0.3).timeout
+	mainmenumusic.play()
+	titleanimation.play()
+	_set_animation_for_locale(TranslationServer.get_locale())
+	Player.instantiate().add_to_group("player")
+	Player.instantiate().add_to_group("players")
+
+func _set_animation_for_locale(locale):
+	match locale:
+		"en":
+			titleanimation.animation = "en"
+		"pt":
+			titleanimation.animation = "pt"
+		"fr":
+			titleanimation.animation = "fr"
+		"de":
+			titleanimation.animation = "de"
+		"sr":
+			titleanimation.animation = "sr"
+		"ja":
+			titleanimation.animation = "ja"
+		"pr":
+			titleanimation.animation = "pr"
+		"ro":
+			titleanimation.animation = "ro"
 
 #func connect_death_menu():
 	#death_menu.disconnect_player.connect(_disconnect_player)
 	#death_menu.on_host_disconnect.connect(_on_host_disconnect)
 	#pass
-
-func discord_presence():
-	discord_sdk.app_id = 1165719657815220296 # Application ID
-	discord_sdk.details = "In The Main Menu"
-	#discord_sdk.state = "Yes, I'm making a game in Godot."
-	
-	discord_sdk.large_image = "poorjared_singleplayer" # Image key from "Art Assets"
-	#discord_sdk.large_image = "placeholder" # Image key from "Art Assets"
-	#discord_sdk.large_image_text = "YOOO! Wait, you saw this?"
-	#discord_sdk.small_image = "placeholder_small" # Image key from "Art Assets"
-	#discord_sdk.small_image_text = "Among us???"
-	
-	discord_sdk.start_timestamp = int(Time.get_unix_time_from_system()) # "02:46 elapsed"
-	# discord_sdk.end_timestamp = int(Time.get_unix_time_from_system()) + 3600 # +1 hour in unix time / "01:00 remaining"
-	
-	discord_sdk.refresh() # Always refresh after changing the values!
 
 func _on_host_button_pressed():
 	buttonsound.play()
@@ -95,9 +116,7 @@ func _on_host_button_pressed():
 	
 	await get_tree().create_timer(0.00001).timeout
 	game_menu.singleplayer = false
-	discord_sdk.details = "Playing Multiplayer"
-	discord_sdk.large_image = "poorjared_multiplayer"
-	discord_sdk.refresh()
+	DISCORD.multi()
 	
 	#connect_death_menu()
 
@@ -115,9 +134,7 @@ func _on_join_button_pressed():
 	
 	await get_tree().create_timer(0.00001).timeout
 	game_menu.singleplayer = false
-	discord_sdk.details = "Playing Multiplayer"
-	discord_sdk.large_image = "poorjared_multiplayer"
-	discord_sdk.refresh()
+	DISCORD.multi()
 	
 	#connect_death_menu()
 
@@ -125,7 +142,7 @@ func add_player(peer_id):
 	var player = Player.instantiate()
 	player.name = str(peer_id)
 	add_child(player)
-	player.add_to_group("players") # Add player to group
+	player.add_to_group("playerclient") # Add player to group
 
 func remove_player(peer_id):
 	var player = get_node_or_null(str(peer_id))
@@ -133,6 +150,10 @@ func remove_player(peer_id):
 		player.queue_free()
 
 func _disconnect_player(peer_id):
+	if game_menu.singleplayer == true:
+		get_tree().reload_current_scene()
+		return
+	
 	# Close the connection
 	if multiplayer.is_server():
 		# Notify all clients to go back
@@ -141,11 +162,12 @@ func _disconnect_player(peer_id):
 		else:
 			rpc("change_scene_of_all_the_clients")
 		
-		get_tree().change_scene_to_file("res://scenes/test.tscn")
+		get_tree().change_scene_to_packed(mainmenu)
+		game_menu.joinlobby = true
 		
 		# If UPnP is set up, remove all players and delete the port mapping
 		for player in get_children():
-				if player.is_in_group("players"):
+				if player.is_in_group("playerclient"):
 					player.queue_free()
 		if upnp:
 			upnp.delete_port_mapping(PORT)
@@ -165,19 +187,18 @@ func _disconnect_player(peer_id):
 		remove_player(peer_id)
 		enet_peer.disconnect_peer(multiplayer.get_unique_id(), true)
 		await get_tree().create_timer(2).timeout # --------------------------------------------------------
-		get_tree().change_scene_to_file("res://scenes/test.tscn")
+		get_tree().change_scene_to_packed(mainmenu)
 		print($"../")
 	
 	# Reset the game menu state
 	game_menu.joinlobby = true
 	game_menu.singleplayer = false
-	discord_sdk.details = "In The Main Menu"
-	discord_sdk.large_image = "poorjared_singleplayer"
-	discord_sdk.refresh()
+	DISCORD.menu()
 
 @rpc ("any_peer", "call_remote") func change_scene_of_all_the_clients():
 	enet_peer.disconnect_peer(multiplayer.get_unique_id(), true)
-	get_tree().change_scene_to_file("res://scenes/test.tscn")
+	get_tree().change_scene_to_packed(mainmenu)
+	game_menu.joinlobby = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_host_disconnect():
@@ -263,9 +284,7 @@ func _on_single_button_pressed():
 	
 	await get_tree().create_timer(0.00001).timeout
 	game_menu.singleplayer = true
-	discord_sdk.details = "Playing Singleplayer"
-	discord_sdk.large_image = "poorjared_yee"
-	discord_sdk.refresh()
+	DISCORD.single()
 	
 	#connect_death_menu()
 
@@ -306,6 +325,7 @@ func _input(event):
 				options_menu.hide()
 				main_menu.show()
 				exit.hide()
+				_set_animation_for_locale(TranslationServer.get_locale())
 			if op_control and !op_key.visible:
 				buttonbacksound.play()
 				op.show()
@@ -324,6 +344,8 @@ func _on_back_button_options_pressed():
 	op.hide()
 	main_menu.show()
 	exit.hide()
+	
+	_set_animation_for_locale(TranslationServer.get_locale())
 
 func _on_controls_button_pressed():
 	buttonsound.play()
@@ -336,11 +358,11 @@ func _on_back_button_controls_options_pressed():
 	op.show()
 
 func _button_keybind():
-	buttonsound.play()
+	#buttonsound.play()
 	op_key.show()
 
 func _button_keybind_off():
-	buttonbacksound.play() # Maybe a key sound?
+	#keyenter.play() # Maybe a key sound? # I was looking for this comment, thank you "me" from the past. # I'm sorry guys but I had to comment this because now I'm gonna put this on the actual bindbuttons.gd ;-;
 	op_key.hide()
 
 func _on_back_button_pressed():

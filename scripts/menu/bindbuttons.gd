@@ -56,6 +56,7 @@ func display_keys():
 		blank2 = 0
 
 func _on_bind_button_toggled(button_pressed):
+	$"../../../../../../../../../../Sounds and Songs/ButtonSound".play()
 	if entering == 1:
 		emit_signal("button_keybind")
 		entering = 0
@@ -67,6 +68,7 @@ func _on_bind_button_toggled(button_pressed):
 		display_keys()
 
 func _on_bind_button_2_toggled(button_pressed):
+	$"../../../../../../../../../../Sounds and Songs/ButtonSound".play()
 	if entering == 1:
 		emit_signal("button_keybind")
 		entering = 0
@@ -82,12 +84,14 @@ func _input(key):
 		if button1.button_pressed:
 			remap_key(key, 1)
 			button1.button_pressed = false
+			$"../../../../../../../../../../Sounds and Songs/MouseSound".play()
 			emit_signal("button_keybind_off")
 			entering = 1
 		
 		if button2.button_pressed:
 			remap_key(key, 2)
 			button2.button_pressed = false
+			$"../../../../../../../../../../Sounds and Songs/MouseSound".play()
 			emit_signal("button_keybind_off")
 			entering = 1
 			_key_checker()
@@ -96,12 +100,14 @@ func _unhandled_key_input(event):
 	if button1.button_pressed:
 		remap_key(event, 1)
 		button1.button_pressed = false
+		$"../../../../../../../../../../Sounds and Songs/KeyEnterSound".play()
 		emit_signal("button_keybind_off")
 		entering = 1
 	
 	if button2.button_pressed:
 		remap_key(event, 2)
 		button2.button_pressed = false
+		$"../../../../../../../../../../Sounds and Songs/KeyEnterSound".play()
 		emit_signal("button_keybind_off")
 		entering = 1
 		_key_checker()
@@ -208,6 +214,7 @@ func _on_unbind_button_2_mouse_exited():
 
 
 func _on_unbind_button_pressed():
+	$"../../../../../../../../../../Sounds and Songs/ButtonBackSound".play()
 	blank1 = 1
 	un_button1.hide()
 	InputMap.action_erase_event(action, first)
@@ -217,6 +224,7 @@ func _on_unbind_button_pressed():
 	SaveKeybinds.save_keymap()
 
 func _on_unbind_button_2_pressed():
+	$"../../../../../../../../../../Sounds and Songs/ButtonBackSound".play()
 	blank2 = 1
 	un_button2.hide()
 	InputMap.action_erase_event(action, second)

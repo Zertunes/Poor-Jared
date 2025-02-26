@@ -57,7 +57,7 @@ func init_module():
 	# load data
 	load_window_data(window)
 	get_module_opt().font_size = load_module_data("font_size", 14)
-	get_module_opt().screen_overlay = load_module_data("screen_overlay", ScreenOverlayDisplayMode.AlwaysShow)
+	get_module_opt().screen_overlay = load_module_data("screen_overlay", ScreenOverlayDisplayMode.ShowIfShellVisible) # I changed this so it, by default, has the output hidden # consoledefault
 	get_module_opt().screen_overlay_alpha = load_module_data("screen_overlay_alpha", 0.3)
 	get_module_opt().screen_overlay_font_size = load_module_data("screen_overlay_font_size", 13)
 	get_module_opt().screen_overlay_font_shadow = load_module_data("screen_overlay_font_shadow", false)

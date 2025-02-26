@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://selek1wef3jo"
+uid="uid://ba46omsm5ux6r"
 path="res://.godot/imported/City.blend-a7977465ef98bf93ae7c08d901853e77.scn"
 
 [deps]
@@ -29,7 +29,14 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Window": {
+"use_external/enabled": true,
+"use_external/path": ""
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

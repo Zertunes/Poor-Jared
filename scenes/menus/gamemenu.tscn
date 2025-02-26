@@ -139,10 +139,9 @@ offset_left = 174.0
 offset_top = -2.0
 offset_right = 372.0
 offset_bottom = 29.0
-item_count = 2
 selected = 0
+item_count = 2
 popup/item_0/text = "§ob§windowed"
-popup/item_0/id = 0
 popup/item_1/text = "§ob§fullscreen"
 popup/item_1/id = 1
 
@@ -275,10 +274,9 @@ offset_left = 174.0
 offset_top = -2.0
 offset_right = 372.0
 offset_bottom = 29.0
-item_count = 8
 selected = 0
+item_count = 8
 popup/item_0/text = "English"
-popup/item_0/id = 0
 popup/item_1/text = "Português"
 popup/item_1/id = 1
 popup/item_2/text = "Српски"
@@ -817,6 +815,23 @@ offset_right = 138.0
 offset_bottom = -2.0
 action = "perspective"
 
+[node name="Interact" type="GridContainer" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact"]
+layout_mode = 2
+text = "§ct§interact"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact/Label" instance=ExtResource("3_5jct8")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "interact"
+
 [node name="ConfirmMenu" type="PanelContainer" parent="GameMenu"]
 visible = false
 self_modulate = Color(0, 0, 0, 1)
@@ -945,6 +960,7 @@ color = Color(0, 0, 0, 0.231373)
 [connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="GameMenu/PauseMenu/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="item_focused" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/DisplayMode/Label/DisplayModeButton" to="GameMenu/OptionsMenu" method="_on_display_mode_button_item_focused"]
 [connection signal="item_selected" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/DisplayMode/Label/DisplayModeButton" to="GameMenu/OptionsMenu" method="_on_display_mode_button_item_selected"]
 [connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/VSync/Label/VSyncButton" to="GameMenu/OptionsMenu" method="_on_v_sync_button_toggled"]
 [connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/MaxFPS/Label/MaxFPSText" to="GameMenu/OptionsMenu" method="_on_max_fps_text_focus_exited"]
@@ -956,6 +972,7 @@ color = Color(0, 0, 0, 0.231373)
 [connection signal="value_changed" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Brightness/Label/BrightnessSlider" to="GameMenu/OptionsMenu" method="_on_brightness_slider_value_changed"]
 [connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/ChromaticAberration/Label/ChromaticAbberationButton" to="GameMenu/OptionsMenu" method="_on_chromatic_abberation_button_toggled"]
 [connection signal="toggled" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/UnfocusPause/Label/UnfocusPauseButton" to="GameMenu/OptionsMenu" method="_on_unfocus_pause_button_toggled"]
+[connection signal="item_focused" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Language/Label/LanguageButton" to="GameMenu/OptionsMenu" method="_on_language_button_item_focused"]
 [connection signal="item_selected" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Language/Label/LanguageButton" to="GameMenu/OptionsMenu" method="_on_language_button_item_selected"]
 [connection signal="focus_exited" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume/Label/MasterVolumeText" to="GameMenu/OptionsMenu" method="_on_master_volume_text_focus_exited"]
 [connection signal="text_submitted" from="GameMenu/OptionsMenu/MarginContainer/VBoxContainer/Label/Audio&GameplayMarginContainer/VBoxContainer/MasterVolume/Label/MasterVolumeText" to="GameMenu/OptionsMenu" method="_on_master_volume_text_text_submitted"]

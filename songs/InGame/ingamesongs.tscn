@@ -1,0 +1,81 @@
+[gd_scene load_steps=17 format=3 uid="uid://bvyranj4sxns8"]
+
+[ext_resource type="Script" path="res://addons/AdaptiSound/Nodes/AdaptiTrack/AdaptiTrack.gd" id="1_5lc4p"]
+[ext_resource type="AudioStream" uid="uid://cthx5mwruthu4" path="res://songs/InGame/Daylight.wav" id="2_kspxy"]
+[ext_resource type="Script" path="res://addons/AdaptiSound/Nodes/AdaptiTrack/LayerResource.gd" id="3_g4o6m"]
+[ext_resource type="AudioStream" uid="uid://b5vbuqlmfal1g" path="res://songs/InGame/Mall.wav" id="4_j0oay"]
+[ext_resource type="AudioStream" uid="uid://bxkq87ufkukwo" path="res://songs/InGame/Night.wav" id="5_bde65"]
+[ext_resource type="AudioStream" uid="uid://dnxqnn7qv0vk7" path="res://songs/InGame/Parkour.wav" id="6_sxy7k"]
+[ext_resource type="AudioStream" uid="uid://bcbp1i8kms0ht" path="res://songs/InGame/Shop.wav" id="7_62ffi"]
+[ext_resource type="Script" path="res://addons/AdaptiSound/Nodes/AdaptiTrack/LoopResource.gd" id="8_20ph1"]
+[ext_resource type="AudioStream" uid="uid://dr5hl7wdywtvm" path="res://songs/InGame/Park.wav" id="8_wwoqp"]
+
+[sub_resource type="Resource" id="Resource_ajoay"]
+resource_name = "LayerRes"
+script = ExtResource("3_g4o6m")
+audio_stream = ExtResource("2_kspxy")
+layer_name = "Daylight"
+mute = true
+loop = true
+groups = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_cx2ld"]
+resource_name = "LayerRes"
+script = ExtResource("3_g4o6m")
+audio_stream = ExtResource("4_j0oay")
+layer_name = "Mall"
+mute = true
+loop = true
+groups = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_chl5m"]
+resource_name = "LayerRes"
+script = ExtResource("3_g4o6m")
+audio_stream = ExtResource("5_bde65")
+layer_name = "Night"
+mute = true
+loop = true
+groups = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_skm8t"]
+resource_name = "LayerRes"
+script = ExtResource("3_g4o6m")
+audio_stream = ExtResource("6_sxy7k")
+layer_name = "Parkour"
+mute = true
+loop = true
+groups = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_kjuw3"]
+resource_name = "LayerRes"
+script = ExtResource("3_g4o6m")
+audio_stream = ExtResource("7_62ffi")
+layer_name = "Shop"
+mute = true
+loop = true
+groups = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_mw0vd"]
+resource_name = "LayerRes"
+script = ExtResource("3_g4o6m")
+audio_stream = ExtResource("8_wwoqp")
+layer_name = "Park"
+mute = true
+loop = true
+groups = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_oya32"]
+resource_name = "LoopRes"
+script = ExtResource("8_20ph1")
+layers = Array[ExtResource("3_g4o6m")]([SubResource("Resource_ajoay"), SubResource("Resource_cx2ld"), SubResource("Resource_chl5m"), SubResource("Resource_skm8t"), SubResource("Resource_kjuw3"), SubResource("Resource_mw0vd")])
+random_sequence = false
+first_playback_idx = -1
+bpm = 120.0
+metric = 4
+total_beat_count = 0
+keys_loop_in_measure = ""
+keys_end_in_measure = ""
+
+[node name="AdaptiTrack" type="Node"]
+script = ExtResource("1_5lc4p")
+loops = Array[ExtResource("8_20ph1")]([SubResource("Resource_oya32")])

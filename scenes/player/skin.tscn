@@ -1,0 +1,248 @@
+[gd_scene load_steps=28 format=3 uid="uid://b7onwqvcmwg8r"]
+
+[ext_resource type="PackedScene" uid="uid://bjpgee28aep1c" path="res://models/Player.blend" id="1_gr1ie"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nftvh"]
+animation = &"Attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3sxbb"]
+animation = &"Crouching Attack"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_4xgfx"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_mbepa"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Head", "Armature/Skeleton3D:Hips", "Armature/Skeleton3D:LeftArm", "Armature/Skeleton3D:LeftForeArm", "Armature/Skeleton3D:LeftHand", "Armature/Skeleton3D:LeftHandIndex1", "Armature/Skeleton3D:LeftHandIndex2", "Armature/Skeleton3D:LeftHandIndex3", "Armature/Skeleton3D:LeftHandMiddle1", "Armature/Skeleton3D:LeftHandMiddle2", "Armature/Skeleton3D:LeftHandMiddle3", "Armature/Skeleton3D:LeftHandMiddle4", "Armature/Skeleton3D:LeftHandThumb1", "Armature/Skeleton3D:LeftHandThumb2", "Armature/Skeleton3D:LeftHandThumb3", "Armature/Skeleton3D:LeftShoulder", "Armature/Skeleton3D:Neck", "Armature/Skeleton3D:RightArm", "Armature/Skeleton3D:RightForeArm", "Armature/Skeleton3D:RightHand", "Armature/Skeleton3D:RightHandIndex1", "Armature/Skeleton3D:RightHandIndex2", "Armature/Skeleton3D:RightHandIndex3", "Armature/Skeleton3D:RightHandIndex4", "Armature/Skeleton3D:RightHandMiddle1", "Armature/Skeleton3D:RightHandMiddle2", "Armature/Skeleton3D:RightHandMiddle3", "Armature/Skeleton3D:RightHandMiddle4", "Armature/Skeleton3D:RightHandThumb1", "Armature/Skeleton3D:RightHandThumb2", "Armature/Skeleton3D:RightHandThumb3", "Armature/Skeleton3D:RightShoulder", "Armature/Skeleton3D:Spine", "Armature/Skeleton3D:SpineCenter", "Armature/Skeleton3D:SpineUp"]
+fadein_time = 0.05
+fadeout_time = 0.05
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_tjoxd"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Head", "Armature/Skeleton3D:Hips", "Armature/Skeleton3D:LeftArm", "Armature/Skeleton3D:LeftForeArm", "Armature/Skeleton3D:LeftHand", "Armature/Skeleton3D:LeftHandIndex1", "Armature/Skeleton3D:LeftHandIndex2", "Armature/Skeleton3D:LeftHandIndex3", "Armature/Skeleton3D:LeftHandMiddle1", "Armature/Skeleton3D:LeftHandMiddle2", "Armature/Skeleton3D:LeftHandMiddle3", "Armature/Skeleton3D:LeftHandMiddle4", "Armature/Skeleton3D:LeftHandThumb1", "Armature/Skeleton3D:LeftHandThumb2", "Armature/Skeleton3D:LeftHandThumb3", "Armature/Skeleton3D:LeftShoulder", "Armature/Skeleton3D:Neck", "Armature/Skeleton3D:RightArm", "Armature/Skeleton3D:RightForeArm", "Armature/Skeleton3D:RightHand", "Armature/Skeleton3D:RightHandIndex1", "Armature/Skeleton3D:RightHandIndex2", "Armature/Skeleton3D:RightHandIndex3", "Armature/Skeleton3D:RightHandIndex4", "Armature/Skeleton3D:RightHandMiddle1", "Armature/Skeleton3D:RightHandMiddle2", "Armature/Skeleton3D:RightHandMiddle3", "Armature/Skeleton3D:RightHandMiddle4", "Armature/Skeleton3D:RightHandThumb1", "Armature/Skeleton3D:RightHandThumb2", "Armature/Skeleton3D:RightHandThumb3", "Armature/Skeleton3D:RightHandThumb4", "Armature/Skeleton3D:RightShoulder", "Armature/Skeleton3D:Spine", "Armature/Skeleton3D:SpineCenter", "Armature/Skeleton3D:SpineUp"]
+fadeout_time = 0.05
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_tt6fn"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ahvb2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3gbqf"]
+animation = &"Crouching Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b4pni"]
+animation = &"Crouching Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_br612"]
+animation = &"Crouching Forward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1vl7q"]
+animation = &"Crouching Backward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ohp8h"]
+animation = &"Crouching"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_a45v3"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_3gbqf")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_b4pni")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_br612")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_1vl7q")
+blend_point_3/pos = Vector2(0, 1)
+blend_point_4/node = SubResource("AnimationNodeAnimation_ohp8h")
+blend_point_4/pos = Vector2(0, 0)
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_y2d1b"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3q4pi"]
+animation = &"Jumping"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_454c7"]
+fadein_time = 0.1
+fadeout_time = 0.1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y47ai"]
+animation = &"Landing"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_lvk1l"]
+fadein_time = 0.05
+fadeout_time = 0.15
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hd1eg"]
+animation = &"Moving Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_58w78"]
+animation = &"Moving Forward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xbejc"]
+animation = &"Moving Backward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d78yj"]
+animation = &"Moving Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bqssj"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ylmtd"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_hd1eg")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_58w78")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_xbejc")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_d78yj")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_bqssj")
+blend_point_4/pos = Vector2(0, 0)
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ksg0l"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2hcjo"]
+graph_offset = Vector2(-307.907, -107.105)
+nodes/attack/node = SubResource("AnimationNodeAnimation_nftvh")
+nodes/attack/position = Vector2(380, 40)
+nodes/attack_crouch/node = SubResource("AnimationNodeAnimation_3sxbb")
+nodes/attack_crouch/position = Vector2(260, 400)
+nodes/attack_crouch_time_scale/node = SubResource("AnimationNodeTimeScale_4xgfx")
+nodes/attack_crouch_time_scale/position = Vector2(463.158, 400)
+nodes/attack_event/node = SubResource("AnimationNodeOneShot_mbepa")
+nodes/attack_event/position = Vector2(720, -120)
+nodes/attack_event_crouch/node = SubResource("AnimationNodeOneShot_tjoxd")
+nodes/attack_event_crouch/position = Vector2(700, 180)
+nodes/attack_time_scale/node = SubResource("AnimationNodeTimeScale_tt6fn")
+nodes/attack_time_scale/position = Vector2(520, 40)
+nodes/crouch_event/node = SubResource("AnimationNodeBlend2_ahvb2")
+nodes/crouch_event/position = Vector2(920, 80)
+nodes/crouched/node = SubResource("AnimationNodeBlendSpace2D_a45v3")
+nodes/crouched/position = Vector2(300, 200)
+nodes/crouched_time_scale/node = SubResource("AnimationNodeTimeScale_y2d1b")
+nodes/crouched_time_scale/position = Vector2(480, 220)
+nodes/jump/node = SubResource("AnimationNodeAnimation_3q4pi")
+nodes/jump/position = Vector2(920, 340)
+nodes/jump_event/node = SubResource("AnimationNodeOneShot_454c7")
+nodes/jump_event/position = Vector2(1080, 140)
+nodes/land/node = SubResource("AnimationNodeAnimation_y47ai")
+nodes/land/position = Vector2(1100, 380)
+nodes/land_event/node = SubResource("AnimationNodeOneShot_lvk1l")
+nodes/land_event/position = Vector2(1240, 200)
+nodes/output/position = Vector2(1440, 220)
+nodes/walking/node = SubResource("AnimationNodeBlendSpace2D_ylmtd")
+nodes/walking/position = Vector2(340, -140)
+nodes/walking_time_scale/node = SubResource("AnimationNodeTimeScale_ksg0l")
+nodes/walking_time_scale/position = Vector2(500, -120)
+node_connections = [&"attack_crouch_time_scale", 0, &"attack_crouch", &"attack_event", 0, &"walking_time_scale", &"attack_event", 1, &"attack_time_scale", &"attack_event_crouch", 0, &"crouched_time_scale", &"attack_event_crouch", 1, &"attack_crouch_time_scale", &"attack_time_scale", 0, &"attack", &"crouch_event", 0, &"attack_event", &"crouch_event", 1, &"attack_event_crouch", &"crouched_time_scale", 0, &"crouched", &"jump_event", 0, &"crouch_event", &"jump_event", 1, &"jump", &"land_event", 0, &"jump_event", &"land_event", 1, &"land", &"output", 0, &"land_event", &"walking_time_scale", 0, &"walking"]
+
+[node name="Skin" instance=ExtResource("1_gr1ie")]
+
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/rotation = Quaternion(-0.710469, -0.044919, 0.0127981, 0.702177)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(0.102465, 0.00961712, 0.0148498, 0.994579)
+bones/4/rotation = Quaternion(-0.122263, 0.00751889, 0.00375275, 0.992462)
+bones/6/rotation = Quaternion(0.623538, 0.365477, -0.56938, 0.391706)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/position = Vector3(-9.32109, 10.621, 0.106886)
+bones/7/rotation = Quaternion(0.304253, -0.061526, 0.315891, 0.896581)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/position = Vector3(1.0412e-06, 15.813, -7.61641e-06)
+bones/8/rotation = Quaternion(0.728336, -0.175388, -0.566691, -0.342969)
+bones/9/rotation = Quaternion(-0.240551, -0.681691, 0.0910378, 0.684942)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/rotation = Quaternion(-0.0373968, 0.0179957, 0.0741303, 0.996385)
+bones/12/rotation = Quaternion(0.000308057, -0.0236671, 0.028878, 0.999303)
+bones/13/rotation = Quaternion(-4.01633e-09, -1.19209e-07, 1.06578e-07, 1)
+bones/15/rotation = Quaternion(0.533186, -0.0466924, -0.264439, 0.80225)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/rotation = Quaternion(0.242914, 0.0828839, -0.474254, 0.842144)
+bones/16/scale = Vector3(1, 1, 1)
+bones/18/rotation = Quaternion(0.0985257, -0.0079921, -0.232368, 0.967592)
+bones/19/position = Vector3(0.235989, 4.93113, 0.0388287)
+bones/19/rotation = Quaternion(0.660751, 0.210795, -0.117102, 0.710817)
+bones/20/position = Vector3(-0.0664134, 4.2299, -0.0154148)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/rotation = Quaternion(0.418215, -0.109771, 0.315335, 0.844755)
+bones/22/rotation = Quaternion(0.585855, -0.42223, 0.548227, 0.421834)
+bones/23/position = Vector3(6.88007, 12.279, -1.53301)
+bones/23/rotation = Quaternion(0.243022, 0.126216, -0.301031, 0.91345)
+bones/23/scale = Vector3(1, 1, 1)
+bones/24/rotation = Quaternion(0.279613, -0.0294436, 0.788333, -0.547248)
+bones/25/position = Vector3(6.92251e-06, 14.4901, -1.16726e-05)
+bones/25/rotation = Quaternion(-0.131983, 0.262866, -0.481177, 0.825803)
+bones/25/scale = Vector3(1, 1, 1)
+bones/26/scale = Vector3(1, 1, 1)
+bones/27/rotation = Quaternion(-0.0254155, -0.0189544, -0.0586387, 0.997776)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/position = Vector3(-0.464366, 3.23948, 0.090521)
+bones/29/rotation = Quaternion(5.08968e-07, -4.11645e-07, -1.47149e-07, 1)
+bones/30/rotation = Quaternion(0.193446, 0.0729451, 0.170159, 0.963485)
+bones/30/scale = Vector3(1, 1, 1)
+bones/31/position = Vector3(-0.143342, 4.57094, 0.0124204)
+bones/31/scale = Vector3(1, 1, 1)
+bones/32/position = Vector3(0.069623, 4.30245, -0.013852)
+bones/32/rotation = Quaternion(0.148438, 0.174975, 0.380212, 0.895984)
+bones/32/scale = Vector3(1, 1, 1)
+bones/33/rotation = Quaternion(0.0939201, -0.0142473, 0.131047, 0.986814)
+bones/34/rotation = Quaternion(0.146257, 0.00445671, 0.188949, 0.971024)
+bones/35/scale = Vector3(1, 1, 1)
+bones/36/position = Vector3(-0.0314738, 4.59052, 0.00606945)
+bones/36/scale = Vector3(1, 1, 1)
+bones/37/position = Vector3(0.137518, 3.28082, -0.0302666)
+bones/37/rotation = Quaternion(0.174272, 0.386726, 0.35049, 0.835002)
+bones/38/rotation = Quaternion(0.00144163, 0.117404, 0.988144, -0.0989253)
+bones/40/rotation = Quaternion(0.370442, -0.0906075, 0.103985, 0.918559)
+bones/41/scale = Vector3(1, 1, 1)
+bones/43/scale = Vector3(1.00001, 1, 1.00001)
+bones/44/rotation = Quaternion(-0.101053, 0.0228105, 0.116601, 0.987761)
+bones/44/scale = Vector3(1, 1, 1)
+bones/45/scale = Vector3(1, 1, 1)
+bones/46/rotation = Quaternion(0.473504, 0.0714138, 0.0647641, 0.8755)
+bones/46/scale = Vector3(1, 1, 1)
+
+[node name="Player" parent="Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.42109e-14, 0, -1.42109e-14, 1, 0, 0, 0)
+
+[node name="HeadIK" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="1"]
+process_priority = 1
+root_bone = &"Neck"
+tip_bone = &"Head"
+target_node = NodePath("../../../Marker3DHeadTarget")
+
+[node name="HandAttackIK" type="SkeletonIK3D" parent="Armature/Skeleton3D" index="2"]
+process_priority = 1
+root_bone = &"Hips"
+tip_bone = &"Spine"
+target_node = NodePath("../../../Marker3DHandAttackTarget")
+
+[node name="Marker3DHeadTarget" type="Marker3D" parent="." index="1"]
+transform = Transform3D(0.01, 0, 0, 0, -1.19209e-09, -0.01, 0, 0.01, -1.19209e-09, 0, 1.33783, -4.26326e-14)
+
+[node name="Marker3DHandAttackTarget" type="Marker3D" parent="." index="2"]
+transform = Transform3D(0.01, 0, 0, 0, -1.19209e-09, -0.01, 0, 0.01, -1.19209e-09, 0, 1.33783, -4.26326e-14)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="4"]
+tree_root = SubResource("AnimationNodeBlendTree_2hcjo")
+anim_player = NodePath("../AnimationPlayer")
+parameters/attack_crouch_time_scale/scale = 0.25
+parameters/attack_event/active = false
+parameters/attack_event/internal_active = false
+parameters/attack_event/request = 0
+parameters/attack_event_crouch/active = false
+parameters/attack_event_crouch/internal_active = false
+parameters/attack_event_crouch/request = 0
+parameters/attack_time_scale/scale = 0.25
+parameters/crouch_event/blend_amount = 0.0
+parameters/crouched/blend_position = Vector2(0, 0)
+parameters/crouched_time_scale/scale = 2.0
+parameters/jump_event/active = false
+parameters/jump_event/internal_active = false
+parameters/jump_event/request = 0
+parameters/land_event/active = false
+parameters/land_event/internal_active = false
+parameters/land_event/request = 0
+parameters/walking/blend_position = Vector2(0, 0)
+parameters/walking_time_scale/scale = 2.0

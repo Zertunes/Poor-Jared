@@ -1,0 +1,136 @@
+[gd_scene load_steps=18 format=3 uid="uid://b0spl57utgwmj"]
+
+[ext_resource type="Script" path="res://scripts/world/city.gd" id="1_g06sk"]
+[ext_resource type="PackedScene" uid="uid://dswljdtrqluro" path="res://scenes/world/world_environment.tscn" id="2_ihxar"]
+[ext_resource type="PackedScene" uid="uid://ba46omsm5ux6r" path="res://models/City.blend" id="3_miv5l"]
+[ext_resource type="PackedScene" uid="uid://dspw0lxyvi2jg" path="res://scenes/menus/join_lobby.tscn" id="4_fawqb"]
+[ext_resource type="PackedScene" uid="uid://clo5exbsylp7k" path="res://scenes/menus/gamemenu.tscn" id="5_51hav"]
+[ext_resource type="PackedScene" uid="uid://25aencb0uo07" path="res://scenes/world/city/radioeasteregg.tscn" id="6_v3fj8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bp5bs"]
+size = Vector3(13.9893, 17.5959, 132.812)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_obskn"]
+size = Vector3(14.3895, 17.5959, 4.83682)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rjrsg"]
+size = Vector3(61.6488, 17.5959, 27.8362)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pmm3b"]
+size = Vector3(104.829, 25.4642, 56.5729)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tg2jb"]
+size = Vector3(39.7311, 16.4185, 32.9955)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rnrn2"]
+size = Vector3(27.6668, 16.4185, 12.4002)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_47hnf"]
+size = Vector3(15.3994, 16.4185, 17.1417)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02n4o"]
+size = Vector3(15.3994, 16.4185, 16.3998)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e2ldw"]
+size = Vector3(16.2804, 8.13997, 7.74751)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gfrws"]
+size = Vector3(67.4142, 30.1776, 50.2266)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uet7a"]
+size = Vector3(82.6355, 30.1776, 64.7461)
+
+[node name="City" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.219484, 0.186256, 0.0824356)
+script = ExtResource("1_g06sk")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("../JoinLobby")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_ihxar")]
+
+[node name="City" parent="." instance=ExtResource("3_miv5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.41914)
+
+[node name="JoinLobby" parent="." instance=ExtResource("4_fawqb")]
+
+[node name="GameMenu" parent="." instance=ExtResource("5_51hav")]
+
+[node name="Radio" parent="." instance=ExtResource("6_v3fj8")]
+transform = Transform3D(-0.222004, 0, 0.557418, 0, 0.6, 0, -0.557418, 0, -0.222004, 69.0868, -0.597923, -60.2709)
+
+[node name="Songs" type="Node3D" parent="."]
+
+[node name="Daylight" type="Area3D" parent="Songs"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="Daylight" type="CollisionShape3D" parent="Songs/Daylight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7014, 8.29794, -13.0954)
+shape = SubResource("BoxShape3D_bp5bs")
+
+[node name="Daylight4" type="CollisionShape3D" parent="Songs/Daylight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9695, 8.29794, -0.219074)
+shape = SubResource("BoxShape3D_obskn")
+
+[node name="Daylight2" type="CollisionShape3D" parent="Songs/Daylight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5311, 8.29794, 39.3925)
+shape = SubResource("BoxShape3D_rjrsg")
+
+[node name="Daylight3" type="CollisionShape3D" parent="Songs/Daylight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9788, 12.6617, -53.7511)
+shape = SubResource("BoxShape3D_pmm3b")
+
+[node name="Shop" type="Area3D" parent="Songs"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="Shop" type="CollisionShape3D" parent="Songs/Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.4478, 8.13417, 9.07465)
+shape = SubResource("BoxShape3D_tg2jb")
+
+[node name="Shop3" type="CollisionShape3D" parent="Songs/Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.4157, 8.13417, -19.1792)
+shape = SubResource("BoxShape3D_rnrn2")
+
+[node name="Shop2" type="CollisionShape3D" parent="Songs/Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92373, 8.13417, -11.7924)
+shape = SubResource("BoxShape3D_47hnf")
+
+[node name="Shop4" type="CollisionShape3D" parent="Songs/Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92373, 8.13417, 11.7133)
+shape = SubResource("BoxShape3D_02n4o")
+
+[node name="BlackMarket" type="Area3D" parent="Songs"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="BlackMarket" type="CollisionShape3D" parent="Songs/BlackMarket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2802, 3.99491, -9.71131)
+shape = SubResource("BoxShape3D_e2ldw")
+
+[node name="Mall" type="Area3D" parent="Songs"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="Mall" type="CollisionShape3D" parent="Songs/Mall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3047, 15.0137, -43.0732)
+shape = SubResource("BoxShape3D_gfrws")
+
+[node name="Park" type="Area3D" parent="Songs"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="Park" type="CollisionShape3D" parent="Songs/Park"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.6941, 15.0137, 14.5426)
+shape = SubResource("BoxShape3D_uet7a")
+
+[connection signal="body_entered" from="Songs/Daylight" to="." method="_on_daylight_body_entered"]
+[connection signal="body_entered" from="Songs/Shop" to="." method="_on_shop_body_entered"]
+[connection signal="body_entered" from="Songs/BlackMarket" to="." method="_on_black_market_body_entered"]
+[connection signal="body_entered" from="Songs/Mall" to="." method="_on_mall_body_entered"]
+[connection signal="body_entered" from="Songs/Park" to="." method="_on_park_body_entered"]

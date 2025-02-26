@@ -1,5 +1,7 @@
 extends Node
 
+signal language_change()
+
 signal fps_displayed(value)
 signal bloom_toggled(value)
 signal brightness_updated(value)
@@ -131,3 +133,5 @@ func toggle_language(index):
 	
 	SaveOptions.game_options_data.language = index
 	SaveOptions.save_data()
+	
+	emit_signal("language_change")

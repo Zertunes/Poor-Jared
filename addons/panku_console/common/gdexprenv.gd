@@ -61,15 +61,20 @@ func get_base_instance():
 func register_env(env_name:String, env:Object):
 	_envs[env_name] = env
 #	output("[color=green][Info][/color] [b]%s[/b] env loaded!"%env_name)
+	#await wait_for_script(env)
 	if env is Node:
 		env.tree_exiting.connect(
 			func(): remove_env(env_name)
 		)
-	if env.get_script():
+	if env != null and env.get_script():
 		var env_info = extract_info_from_script(env.get_script())
 		for k in env_info:
 			var keyword = "%s.%s" % [env_name, k]
 			_envs_info[keyword] = env_info[k]
+
+#func wait_for_script(env: Object) -> void:
+	#while env.get_script() == null:
+		#await get_tree().create_timer(0.1).timeout
 
 ## Return the environment object or [code]null[/code] by its name.
 func get_env(env_name:String) -> Node:

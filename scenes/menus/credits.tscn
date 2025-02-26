@@ -16,7 +16,49 @@ outline_color = Color(0, 0, 0, 1)
 [node name="Credits" type="Node2D"]
 script = ExtResource("1_37rt2")
 
+[node name="CreditsTextRich" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 140.0
+offset_top = 617.0
+offset_right = 818.0
+offset_bottom = 1318.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/bold_italics_font_size = 46
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[center] [font=res://text/NotoSans-Bold.ttf] [color=a0ffff]  [b]Game Developer,
+3D & 2D Artist/Animator,
+Audio Engineer[/b]
+Sérgio Antunes 
+
+[b]Music Composers[/b]
+Sérgio Antunes [i](Main Menu and Credits)[/i]
+Lazar Mladenović [i](All 4 Gameplay songs)[/i]
+
+[b]Translators[/b]
+Sérgio Antunes [i](Portuguese, English, Japanese & Chamanadough)[/i]
+Luis Rodrigues [i](German)[/i]
+Rayan B. Milosav [i](French & Romanian)[/i]
+Lazar Mladenović [i](Serbian)[/i]
+Ricardo Guerra & Diogo Olas [i](Chamanadough)[/i]
+Nikolina Vel [i](German)[/i]
+
+[b]Special thanks to[/b]
+Ricardo Guerra [i](Gives nice ideas and is always ready to help)[/i]
+Diogo Olas [i](The voice behind \"Poor Jared\", on death)[/i]
+Luis Rodrigues [i](Good friend for support and brainstorming)[/i]
+\"My Friends and Family\", of course - Sérgio
+[b][i]& YOU <3[/i][/b]"
+
 [node name="CreditsText" type="Label" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -46,9 +88,9 @@ Ricardo Guerra & Diogo Olas (Chamanadough)
 Nikolina Vel (German)
 
 Special thanks to
-Ricardo Guerra
-Diogo Olas
-Luis Rodrigues
+Ricardo Guerra (Gives nice ideas and is always ready to help)
+Diogo Olas (The voice behind \"Poor Jared\", on death)
+Luis Rodrigues (Good friend for support and brainstorming)
 \"My Friends and Family\", of course - Sérgio
 & YOU <3"
 label_settings = SubResource("LabelSettings_4b8cg")

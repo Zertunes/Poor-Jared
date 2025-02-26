@@ -13,7 +13,10 @@ signal on_host_disconnect
 	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Crouch/Label/Keybindings,
 	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Sprint/Label/Keybindings,
 	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Pause/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console/Label/Keybindings
+	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console/Label/Keybindings,
+	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Attack/Label/Keybindings,
+	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Perspective/Label/Keybindings,
+	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact/Label/Keybindings
 ]
 
 @onready var menus = {
@@ -29,6 +32,7 @@ signal on_host_disconnect
 @onready var mainmenumusic = $"Sounds and Songs/MainMenuMusic"
 @onready var buttonsound = $"Sounds and Songs/ButtonSound"
 @onready var buttonbacksound = $"Sounds and Songs/ButtonBackSound"
+@onready var keyenter = $"Sounds and Songs/KeyEnterSound"
 
 var player_on: bool = false
 var pause: int = 0
@@ -50,7 +54,7 @@ func _ready():
 	pause = 0
 	
 	for keybinding in keybindings:
-		keybinding.button_keybind.connect(_button_keybind)
+		keybinding.button_keybind.connect(_button_keybind) # If there is a null instance here, make sure that all of the keybindings are located at $GameMenu
 		keybinding.button_keybind_off.connect(_button_keybind_off)
 	
 	GlobalOptions.unfocus_pause_toggled.connect(_on_unfocus_pause_toggled)
@@ -99,6 +103,7 @@ func _input(event):
 			if pause == 0:
 				pause += 1
 			elif pause >= 1:
+				buttonbacksound.play()
 				pause -= 1
 		if event.is_action_pressed("toggle_console"):
 			if pause == 0:
@@ -140,22 +145,28 @@ func hide_menus():
 		menu.hide()
 
 func _on_resume_button_pressed():
+	buttonbacksound.play()
 	pause = 0
 
 func _on_options_button_pressed():
+	buttonsound.play()
 	pause += 1
 
 func _on_controls_button_pressed():
+	buttonsound.play()
 	pause += 1
 
 func _on_back_button_options_pressed():
+	buttonbacksound.play()
 	pause -= 1
 
 func _on_exit_button_pressed():
+	buttonbacksound.play()
 	confirmtype = 1
 	#get_tree().quit()
 
 func _on_menu_button_pressed():
+	buttonbacksound.play()
 	confirmtype = 2
 	pass
 
@@ -164,10 +175,12 @@ func _player_created():
 	player_on = true
 
 func _button_keybind():
+	#buttonsound.play()
 	pause += 1
 	menus.key_select_menu.visible = true
 
 func _button_keybind_off():
+	#keyenter.play()
 	pause -= 1
 	menus.key_select_menu.visible = false
 
@@ -177,9 +190,13 @@ func _on_unfocus_pause_toggled(toggle):
 
 func _on_yes_button_pressed():
 	if confirmtype == 1:
+		buttonbacksound.play()
+		await get_tree().create_timer(0.3).timeout
 		emit_signal("on_host_disconnect")
 	elif confirmtype == 2:
+		buttonbacksound.play()
 		emit_signal("disconnect_player", multiplayer.get_unique_id())
 
 func _on_no_button_pressed():
+	buttonsound.play()
 	confirmtype = 0

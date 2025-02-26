@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://y0xwxuxwabo6"]
+
+[ext_resource type="Script" path="res://addons/AdaptiSound/Nodes/AdaptiTrack/AdaptiTrack.gd" id="1_glnnm"]
+[ext_resource type="AudioStream" uid="uid://bxkq87ufkukwo" path="res://songs/InGame/Night.wav" id="2_d46pp"]
+[ext_resource type="Script" path="res://addons/AdaptiSound/Nodes/AdaptiTrack/LayerResource.gd" id="3_opraq"]
+[ext_resource type="Script" path="res://addons/AdaptiSound/Nodes/AdaptiTrack/LoopResource.gd" id="4_ud7fh"]
+
+[sub_resource type="Resource" id="Resource_qqplc"]
+resource_name = "LayerRes"
+script = ExtResource("3_opraq")
+audio_stream = ExtResource("2_d46pp")
+layer_name = "Night"
+mute = false
+loop = true
+groups = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_3u5xf"]
+resource_name = "LoopRes"
+script = ExtResource("4_ud7fh")
+layers = Array[ExtResource("3_opraq")]([SubResource("Resource_qqplc")])
+random_sequence = false
+first_playback_idx = -1
+bpm = 120.0
+metric = 4
+total_beat_count = 0
+keys_loop_in_measure = ""
+keys_end_in_measure = ""
+
+[node name="AdaptiTrack" type="Node"]
+script = ExtResource("1_glnnm")
+loops = Array[ExtResource("4_ud7fh")]([SubResource("Resource_3u5xf")])

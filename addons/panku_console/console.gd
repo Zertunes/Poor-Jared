@@ -42,6 +42,8 @@ func _ready():
 	windows_manager = $LynxWindowsManager
 	var base_instance = preload("./common/repl_base_instance.gd").new()
 	base_instance._core = self
+	
+	# I added this cause it wouldn't stop crashing
 	gd_exprenv.set_base_instance(base_instance)
 
 	# add default input action if not defined by user

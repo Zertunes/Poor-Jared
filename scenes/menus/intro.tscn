@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://xgnghe31wcxr"]
+
+[ext_resource type="Script" path="res://scripts/menu/intro.gd" id="1_6lign"]
+[ext_resource type="Texture2D" uid="uid://cjotd4escm6nh" path="res://sprites/PoorJaredBootArtwork.png" id="2_y4xru"]
+[ext_resource type="Script" path="res://scripts/menu/dir_settings.gd" id="3_gewqk"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_4pn1k"]
+file = "intro.ogg"
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_6lign")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 548.0
+stream = SubResource("VideoStreamTheora_4pn1k")
+volume_db = -10.5
+bus = &"Music"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+scale = Vector2(0.96, 0.96)
+texture = ExtResource("2_y4xru")
+
+[node name="DirSettings" type="Node" parent="."]
+script = ExtResource("3_gewqk")

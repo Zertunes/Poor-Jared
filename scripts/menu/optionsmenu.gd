@@ -39,6 +39,12 @@ var sfx_volume_default = 50
 var fov_default = 70
 var mouse_sensitivity_default = 200
 
+@onready var mainmenumusic = $"../../Sounds and Songs/MainMenuMusic"
+@onready var buttonsound = $"../../Sounds and Songs/ButtonSound"
+@onready var buttonbacksound = $"../../Sounds and Songs/ButtonBackSound"
+@onready var keyenter = $"../../Sounds and Songs/KeyEnterSound"
+@onready var slidersound = $"../../Sounds and Songs/SliderSound"
+
 func _ready():
 	await get_tree().create_timer(0.00001).timeout
 	_load_saved_options()
@@ -99,15 +105,18 @@ func _load_saved_options_ingame():
 
 # ------------------------[VIDEO]---------------------------
 func _on_display_mode_button_item_selected(index):
+	buttonsound.play()
 	GlobalOptions.toggle_fullscreen(index)
 
 
 func _on_v_sync_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_vsync(button_pressed)
 
 
 
 func _on_max_fps_slider_value_changed(value):
+	slidersound.play()
 	GlobalOptions.set_max_fps(value)
 	
 	if value >= max_fps_slider.max_value:
@@ -116,6 +125,7 @@ func _on_max_fps_slider_value_changed(value):
 		max_fps_text.text = str(value)
 
 func _on_max_fps_text_text_submitted(new_text):
+	keyenter.play()
 	if new_text == "r":
 		new_text = max_fps_default
 	elif float(new_text) >= max_fps_slider.max_value:
@@ -141,14 +151,17 @@ func _on_max_fps_text_focus_exited():
 
 
 func _on_bloom_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_bloom(button_pressed)
 
 
 func _on_brightness_slider_value_changed(value):
+	slidersound.play()
 	GlobalOptions.update_brightness(value/100)
 	brightness_text.text = str(value)
 
 func _on_brightness_text_text_submitted(new_text):
+	keyenter.play()
 	if new_text == "r":
 		new_text = brightness_default
 	elif float(new_text) >= brightness_slider.max_value:
@@ -171,10 +184,12 @@ func _on_brightness_text_focus_exited():
 
 # ------------------------[AUDIO]---------------------------
 func _on_master_volume_slider_value_changed(value):
+	slidersound.play()
 	GlobalOptions.update_master_vol(value-60)
 	master_volume_text.text = str(value)
 
 func _on_master_volume_text_text_submitted(new_text):
+	keyenter.play()
 	if new_text == "r":
 		new_text = master_volume_default
 	elif float(new_text) >= master_volume_slider.max_value:
@@ -196,10 +211,12 @@ func _on_master_volume_text_focus_exited():
 
 
 func _on_music_volume_slider_value_changed(value):
+	slidersound.play()
 	GlobalOptions.update_music_vol(value-60)
 	music_volume_text.text = str(value)
 
 func _on_music_volume_text_text_submitted(new_text):
+	keyenter.play()
 	if new_text == "r":
 		new_text = music_volume_default
 	elif float(new_text) >= music_volume_slider.max_value:
@@ -221,10 +238,12 @@ func _on_music_volume_text_focus_exited():
 
 
 func _on_sfx_volume_slider_value_changed(value):
+	slidersound.play()
 	GlobalOptions.update_sfx_vol(value-60)
 	sfx_volume_text.text = str(value)
 
 func _on_sfx_volume_text_text_submitted(new_text):
+	keyenter.play()
 	if new_text == "r":
 		new_text = sfx_volume_default
 	elif float(new_text) >= sfx_volume_slider.max_value:
@@ -247,6 +266,7 @@ func _on_sfx_volume_text_focus_exited():
 
 # ------------------------[GAMEPLAY]---------------------------
 func _on_fov_slider_value_changed(value):
+	slidersound.play()
 	GlobalOptions.update_fov(value)
 	#var locale_translations = {
 		#"en": "§ob§quake_pro",
@@ -268,6 +288,7 @@ func _on_fov_slider_value_changed(value):
 		fov_text.text = str(value)
 
 func _on_fov_text_text_submitted(new_text):
+	keyenter.play()
 	if new_text == "r":
 		new_text = fov_default
 	elif float(new_text) >= fov_slider.max_value:
@@ -294,10 +315,12 @@ func _on_fov_text_focus_exited():
 
 
 func _on_sensitivity_slider_value_changed(value):
+	slidersound.play()
 	GlobalOptions.update_mouse_sens(value/100000)
 	sensitivity_text.text = str(value)
 
 func _on_sensitivity_text_text_submitted(new_text):
+	keyenter.play()
 	if new_text == "r":
 		new_text = mouse_sensitivity_default
 	elif float(new_text) >= sensitivity_slider.max_value:
@@ -319,29 +342,43 @@ func _on_sensitivity_text_focus_exited():
 
 
 func _on_display_fps_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_fps_display(button_pressed)
 
 
 func _on_display_speed_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_speed_display(button_pressed)
 
 
 func _on_view_bobbing_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_view_bobbing(button_pressed)
 
 
 func _on_fov_change_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_fov_change(button_pressed)
 
 func _on_sideways_tilt_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_sideways_tilt(button_pressed)
 
 func _on_chromatic_abberation_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_chromatic_abberation(button_pressed)
 
 func _on_unfocus_pause_button_toggled(button_pressed):
+	buttonsound.play()
 	GlobalOptions.toggle_unfocus_pause(button_pressed)
 
-
 func _on_language_button_item_selected(index):
+	buttonsound.play()
 	GlobalOptions.toggle_language(index)
+
+
+func _on_display_mode_button_item_focused(index):
+	buttonsound.play()
+
+func _on_language_button_item_focused(index):
+	buttonsound.play()

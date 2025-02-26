@@ -1,6 +1,6 @@
 class_name PankuConfig
 
-const FILE_NAME = "panku_config.cfg"
+const FILE_NAME = "console.cfg"
 const FILE_PATH = "user://" + FILE_NAME
 
 static func set_config(config:Dictionary):
