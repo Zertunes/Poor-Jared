@@ -1,0 +1,134 @@
+# --------   Translation   ---------
+language=Chamanadough
+locale=pr
+translator=Sérgio Antunes, Ricardo Guerra & Diogo Olas
+
+
+# --------   Options   ---------
+title.options=Meni do Opemanadoughs
+
+title.video=Videi
+video.display=Modi di Exibinadough
+video.display.desc=
+video.display.windowed=Janeli
+video.display.fullscreen=Ecrosough Intirough
+video.vsync=VSync
+video.vsync.desc=
+video.fps=FPS Maxidough
+video.fps.desc=
+video.fps.max=MAX
+video.bloom=Bloom
+video.bloom.desc=
+video.brightness=Brilhidough
+video.brightness.desc=
+video.chromatic=Aberramanadough Cromati
+video.chromatic.desc=
+video.unfocus=Pausaw Fori di Foqui
+video.unfocus.desc=
+video.language=Linguagim
+video.language.desc=
+
+title.volume=Audi
+volume.master=Volumi Principili
+volume.master.desc=
+volume.music=Musiqui
+volume.music.desc=
+volume.sfx=Efetis Sonorodough
+volume.sfx.desc=
+
+title.gameplay=Jogabilididough
+gameplay.fov=FOV
+gameplay.fov.desc=
+gameplay.fov.quake=Neutevolagesti
+gameplay.fov.zoomer=Bugigueough
+gameplay.sensitivity=Sensibilididough do Rati
+gameplay.sensitivity.desc=
+gameplay.showfps=Exibir FPS
+gameplay.showfps.desc=
+gameplay.showspeed=Exibiw Velocididough
+gameplay.showspeed.desc=
+gameplay.bobbing=Balanosough di Vimadough
+gameplay.bobbing.desc=
+gameplay.speedfov=Velocididough Mudi FOV
+gameplay.speedfov.desc=
+gameplay.sidewaystilt=Inclinanadough Laterili di Cameri
+gameplay.sidewaystilt.desc=
+
+
+# --------   Menu   ---------
+yes=Siah
+no=Nadoh
+back=Voltaw
+
+title.game=Meni do Jogough
+resume=Voltaw aw Jogough
+options=Opemanadoughs
+controls=Controlis
+exit.save=Saiw po Meni
+exit.save.ask=Tens a certeza que desejas sair desta sessão de jogo? O teu progresso não será salvo!
+exit.game=Saiw do Jogough
+exit.game.ask=Pretendi saiw di jogi?
+
+title.controls=Menu de Controloughs
+controls.text=Pressioni algi... :)
+title.movement=Movimentanadough
+controls.forward=Avanosow
+controls.backward=Requaw
+controls.left=Esquerdi
+controls.right=Direiti
+controls.jump=Saltaw
+controls.crouch=Agachaw
+controls.sprint=Correw
+
+controls.pause=Pausaw
+controls.console=Consoli di Chacane
+controls.interact=Interagiw
+controls.attack=Atacaw
+controls.perspective=Perspecitivi
+
+multiplayer=Multijogadow
+multiplayer.lobby=Entraw nuah  Lobby
+multiplayer.address=Colocaw o enderosough aqui
+multiplayer.join=Entraw
+multiplayer.host=Anfitiridough
+
+singleplayer=Uah Jogadow
+credits=Creditis
+
+
+# --------   Game   ---------
+stamina=Fulegi
+health=Saudi
+coins=Moedis
+inventory=Inventari
+
+day=Dia
+day.morning=DI MANHAH
+day.evening=DI TARDI
+
+water=Agaw
+food=Comidi
+
+dead=Ti Morresti!
+dead.respawn=Reaparecew
+
+
+# --------   Dialogue   ---------
+todor.greeting=Olas! Parecive sew novough pow aqui. Benvinido ha nossa alegre vili!
+todor.greeting2=Nestili vili, as altas mado amigabili e adorah conversaw umas coh as outras. Hi como uma grandi famili!
+todor.greeting3=Sabive, se alguma vey precisarive de dinheirough rapididough, as altas podeh oferecew-te alguns trabawas estranhas. Hi uma otima maneira de conseguiw trocowes.
+todor.greeting4=Sê livre para explorar a vili ao teu ritmo. Não é costume a passagem de carros, então podes correr por aí sem preocupações.
+todor.greeting5=Quando os tempos ficarem difíceis, recolher reciclabilis e fazer trabalhos estranhos pode ajudar a juntar algumas moedas. Já todos passámos por isso, mano. Ei, estamos sempre prontos para ajudar um companheiro em apuros.
+player.money=Como consigo money?
+player.crafting=Como é que o craftiw funciona?
+todor.money=Olá de novo! Se estás a querer encher os bolsos, há algumas maneiras de ganhar uns trocos rapididos por aqui.
+todor.money2=Primeiro, mantem os olhos abertos para qualquer tralha espalhada pela vili. Apanha esses objetos desperdiçados e podes vendê-los nas lojas locais. Naw i fantastico, mas, como se diz, grão a grão, a galinha enche o papo.
+todor.money3=Outra opção é pegar em trabalhos estranhos das pessoas da vili. Podem precisar de ajuda com entregas, tarefas, ou sei lá o quê. É uma boa forma de ganhar algum money extra e conhecer a comunidade.
+todor.money4=Portanto, quer estejas a recolher lixo ou a assumir tarefas, vais acumular uns quantos paus num instante. Boa sorte por aí!
+todor.crafting=Olá, amigo! Então, estás ansioso para criar umas coisas úteis, né? Bem, é bastante simpleiw assim que apanhas o jeito.
+todor.crafting2=Primeiro e antes de mais, precisas de algumas ferramentas. Uma serra para a madeira, marteli para o metal, e uma faca de bolso para os tecidos. Ah, e não te esqueças da Fita Cola, ela arranja tudo.
+todor.crafting3=Agora, deixa-me mostrar-te a base sobre a reciclagem. Pega numa Mochila Média, usa a tua Faca de Bolso e voilà - tens 5 Tecidos. Esmigalha um Brinquedo com um Martelo, e bam, 2 Plásticos. Bate em talheres de prata com um Martelo para 2 Metais, e um Lápis de Madeira mais uma Serra dá-te 1 Madeira. Simples, né?
+todor.crafting4=Agora, para a parte divertida - a criação! Combina a tua Serra, Martelo, Faca de Bolso, e aquele pedaço de Madeira, e terás uma Caixa de Ferramentas. Este mauzão pode fazer todo o tipo de coisas que precisam de ferramentas.
+todor.crafting5=Precisas de te curar? Mistura 8 Tecidos e um pedaço de Fita Cola para uma Bandagem. Apetece-te criar "tempo"? Usa 4 Metais, um Eletrónico e um Martelo para criar um Relógio.
+todor.crafting6=Cansado? Cria algumas Caixas de Cartão com 2 Cartões, ou guarda tudo para o melhor com 2 Cartões e 3 Jornais para uma sesta mais confortável. Para o setup de sesta definitivo, experimenta 10 Tecidos, uma tira de Fita Cola e 3 Plásticos para um Saco de Dormir.
+todor.crafting7=

@@ -117,7 +117,7 @@ func ground_move(delta):
 				gravity_vector = Vector3.UP * jump_force
 				PLAYER.velocity.y = jump_force
 				SOUNDS.jump.play()
-				if GlobalDebug.auto_bunny_hopping == true: 
+				if Debug.auto_bunny_hopping == true: 
 					jump_twice = false
 					#await get_tree().create_timer(0.1).timeout
 					#landing_animation_on_fall = true
@@ -210,7 +210,7 @@ func handle_gravity(delta):
 			ground_move(delta)
 	
 	# Don't jump twice
-	if PLAYER.is_on_floor() and jump_twice == true and not Input.is_action_pressed("jump") and GlobalDebug.auto_bunny_hopping == false:
+	if PLAYER.is_on_floor() and jump_twice == true and not Input.is_action_pressed("jump") and Debug.auto_bunny_hopping == false:
 		jump_twice = false
 	if PLAYER.is_on_floor() and TrdP.landing_animation_on_fall == true:
 		TrdP.mesh_3rd_animation.set("parameters/land_event/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
@@ -222,7 +222,7 @@ func handle_gravity(delta):
 # This can be bad if I had cars or other object that push the player.
 # It's a solid fix and not fluid, so crouching and uncrouching mid air is affected.
 func cap_air_speed():
-	if GlobalDebug.enable_bunny_hopping == true:
+	if Debug.enable_bunny_hopping == true:
 		return
 	var horizontal_velocity = Vector3(PLAYER.velocity.x, 0, PLAYER.velocity.z)
 	if horizontal_velocity.length() >= air_speed_cap:

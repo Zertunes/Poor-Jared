@@ -4,28 +4,13 @@ signal disconnect_player(peer_id)
 
 signal on_host_disconnect
 
-@onready var keybindings = [
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Forward/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Backward/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Left/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Right/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Jump/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Crouch/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Sprint/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Pause/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Attack/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Perspective/Label/Keybindings,
-	$GameMenu/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact/Label/Keybindings
-]
-
 @onready var menus = {
 	"game_menu": $GameMenu,
 	"pause_menu": $GameMenu/PauseMenu,
-	"options_menu": $GameMenu/OptionsMenu,
+	"options_menu": $GameMenu/Options/OptionsMenu,
 	"background": $GameMenu/Background,
-	"controls_menu": $GameMenu/ControlsMenu,
-	"key_select_menu": $GameMenu/KeySelectMenu,
+	"controls_menu": $GameMenu/Options/ControlsMenu,
+	"key_select_menu": $GameMenu/Options/KeySelectMenu,
 	"confirm_menu": $GameMenu/ConfirmMenu
 }
 
@@ -33,6 +18,7 @@ signal on_host_disconnect
 @onready var buttonsound = $"Sounds and Songs/ButtonSound"
 @onready var buttonbacksound = $"Sounds and Songs/ButtonBackSound"
 @onready var keyenter = $"Sounds and Songs/KeyEnterSound"
+@onready var options = $GameMenu/Options
 
 var player_on: bool = false
 var pause: int = 0
@@ -53,12 +39,14 @@ func _ready():
 	hide_menus()
 	pause = 0
 	
-	for keybinding in keybindings:
-		keybinding.button_keybind.connect(_button_keybind) # If there is a null instance here, make sure that all of the keybindings are located at $GameMenu
-		keybinding.button_keybind_off.connect(_button_keybind_off)
-	
-	GlobalOptions.unfocus_pause_toggled.connect(_on_unfocus_pause_toggled)
+	Options.unfocus_pause_toggled.connect(_on_unfocus_pause_toggled)
 	Panku.interactive_shell_visibility_changed.connect(_interactive_shell_visibility_changed)
+	
+	options.on_back1.connect(_on_back_button_options_pressed)
+	options.on_back2.connect(_on_back_button_options_pressed)
+	options.on_controls.connect(_on_controls_button_pressed)
+	options.on_keybind.connect(_button_keybind)
+	options.on_keybind_off.connect(_button_keybind_off)
 
 func _interactive_shell_visibility_changed(visible):
 	console_window = visible

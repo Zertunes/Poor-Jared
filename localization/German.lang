@@ -1,0 +1,135 @@
+# --------   Translation   ---------
+language=Deutsch
+locale=de
+translator=Luis Rodrigues & Nikolina Vel
+by=Von
+
+
+# --------   Options   ---------
+title.options=Optionsmenü
+
+title.video=Video
+video.display=Anzeigemodus
+video.display.desc=Ändert die Art und Weise, wie das Spiel auf dem Bildschirm angezeigt wird.
+video.display.windowed=Fenstermodus
+video.display.fullscreen=Vollbild
+video.vsync=VSync
+video.vsync.desc=Reduziert Bildschirmrisse, indem Frames mit Ihrem Monitor synchronisiert werden.
+video.fps=Max FPS
+video.fps.desc=Legt das Frame-Limit des Spiels fest.
+video.fps.max=MAX
+video.bloom=Bloom
+video.bloom.desc=Fügt hellen Bereichen einen weichen Glanz für einen filmischeren Effekt hinzu.
+video.brightness=Helligkeit
+video.brightness.desc=Ändert die Helligkeit des Spiels für bessere Sichtbarkeit.
+video.chromatic=Chromatische Aberration
+video.chromatic.desc=Fügt einen subtilen Farbsaumeffekt für einen stilisierten Look hinzu.
+video.unfocus=Pause außer Fokus
+video.unfocus.desc=Hält das Spiel an, wenn es nicht im Fokus ist.
+video.language=Sprache
+video.language.desc=Die Sprache, in der das Spiel angezeigt wird.
+
+title.volume=Audio
+volume.master=Hauptlautstärke
+volume.master.desc=Ändert die Gesamtlautstärke des Spiels.
+volume.music=Musiklautstärke
+volume.music.desc=Ändert die Lautstärke von Hintergrundmusik und Soundtracks.
+volume.sfx=SFX-Lautstärke
+volume.sfx.desc=Ändert die Lautstärke von Soundeffekten wie Schritten und Interaktionen.
+
+title.gameplay=Gameplay
+gameplay.fov=FOV
+gameplay.fov.desc=Legt das Sichtfeld fest, das der Spieler sehen kann.
+gameplay.fov.quake=QUAKE PRO
+gameplay.fov.zoomer=ZOOMER
+gameplay.sensitivity=Mausempfindlichkeit
+gameplay.sensitivity.desc=Ändert die Geschwindigkeit der Kamerabewegung mit der Maus.
+gameplay.showfps=FPS-Anzeige
+gameplay.showfps.desc=Zeigt die aktuellen Frames pro Sekunde des Spiels auf dem Bildschirm an.
+gameplay.showspeed=Geschwindigkeitsanzeige
+gameplay.showspeed.desc=Zeigt die Geschwindigkeit des Spielers auf dem Bildschirm an.
+gameplay.bobbing=View Bobbing (Blickwackeln)
+gameplay.bobbing.desc=Ermöglicht Kopfbewegungen beim Gehen oder Laufen für eine realistischere Erfahrung.
+gameplay.speedfov=Geschwindigkeitsänderung FOV
+gameplay.speedfov.desc=Verändert das Sichtfeld basierend auf der Bewegungsgeschwindigkeit des Spielers.
+gameplay.sidewaystilt=Seitliche Kameraneigung
+gameplay.sidewaystilt.desc=Neigt die Kamera basierend auf der Strafrichtigung des Spielers.
+
+
+# --------   Menu   ---------
+yes=Ja
+no=Nein
+back=Zurück
+
+title.game=Spielmenü
+resume=Zurück zum Spiel
+options=Optionen
+controls=Steuerung
+exit.save=Zum Menü zurückkehren
+exit.save.ask=Sind Sie sicher, dass Sie diesen Spielabschnitt verlassen möchten? Ihr Fortschritt wird nicht gespeichert!
+exit.game=Spiel beenden
+exit.game.ask=Willst du das Spiel verlassen?
+
+title.controls=Steuerungsmenü
+controls.text=Drück auf die Taste... :)
+title.movement=Bewegung
+controls.forward=Vorwärts
+controls.backward=Rückwärts
+controls.left=Links
+controls.right=Rechts
+controls.jump=Springen
+controls.crouch=Ducken
+controls.sprint=Sprinten
+
+controls.pause=Pause
+controls.console=Entwicklerkonsole
+controls.interact=Interagieren
+controls.attack=Angriff
+controls.perspective=Perspektive
+
+multiplayer=Mehrspieler
+multiplayer.lobby=Einer Lobby beitreten
+multiplayer.address=Adresse hier eingeben
+multiplayer.join=Beitreten
+multiplayer.host=Gastgeber
+
+singleplayer=Einzelspieler
+credits=Mitwirkende
+
+
+# --------   Game   ---------
+stamina=Ausdauer
+health=Gesundheit
+coins=Münzen
+inventory=Inventar
+
+day=Tag
+day.morning=VORMITTAGS
+day.evening=NACHMITTAGS
+
+water=Wasser
+food=Essen
+
+dead=Du bist Gestorben!
+dead.respawn=Wiederbeleben
+
+
+# --------   Dialogue   ---------
+todor.greeting=
+todor.greeting2=
+todor.greeting3=
+todor.greeting4=
+todor.greeting5=
+player.money=
+player.crafting=
+todor.money=
+todor.money2=
+todor.money3=
+todor.money4=
+todor.crafting=
+todor.crafting2=
+todor.crafting3=
+todor.crafting4=
+todor.crafting5=
+todor.crafting6=
+todor.crafting7=

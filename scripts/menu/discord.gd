@@ -1,7 +1,7 @@
 extends Node
 
 func discord_presence():
-	if Preferences.user_data.discord == 0: return
+	if not Preferences.user_data.discord: return
 	discord_sdk.app_id = 1165719657815220296 # Application ID
 	discord_sdk.details = "In The Main Menu"
 	#discord_sdk.state = "Yes, I'm making a game in Godot."
@@ -18,19 +18,19 @@ func discord_presence():
 	discord_sdk.refresh() # Always refresh after changing the values!
 
 func multi():
-	if Preferences.user_data.discord == 0: return
+	if not Preferences.user_data.discord: return
 	discord_sdk.details = "Playing Multiplayer"
 	discord_sdk.large_image = "poorjared_multiplayer"
 	discord_sdk.refresh()
 
 func single():
-	if Preferences.user_data.discord == 0: return
+	if not Preferences.user_data.discord: return
 	discord_sdk.details = "Playing Singleplayer"
 	discord_sdk.large_image = "poorjared_yee"
 	discord_sdk.refresh()
 
 func menu():
-	if Preferences.user_data.discord == 0: return
+	if not Preferences.user_data.discord: return
 	discord_sdk.details = "In The Main Menu"
 	discord_sdk.large_image = "poorjared_singleplayer"
 	discord_sdk.refresh()

@@ -24,7 +24,7 @@ var perspective: int = 1
 
 
 func perspective_switch():
-	if GlobalDebug.noclip == false:
+	if Debug.noclip == false:
 		if HEALTH.dead == false:
 			if Input.is_action_just_pressed("perspective"):
 				perspective += 1

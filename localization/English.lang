@@ -1,0 +1,135 @@
+# --------   Translation   ---------
+language=English
+locale=en
+translator=Sérgio Antunes
+by=By
+
+
+# --------   Options   ---------
+title.options=Options Menu
+
+title.video=Video
+video.display=Display Mode
+video.display.desc=Changes the way the game will be displayed on screen.
+video.display.windowed=Windowed
+video.display.fullscreen=Fullscreen
+video.vsync=VSync
+video.vsync.desc=Reduces screen tearing by syncing frames with your monitor.
+video.fps=Max FPS
+video.fps.desc=Sets the game's frame rate limit.
+video.fps.max=MAX
+video.bloom=Bloom
+video.bloom.desc=Adds a soft glow to bright areas for a more cinematic effect.
+video.brightness=Brightness
+video.brightness.desc=Changes the game's brightness level for better visibility.
+video.chromatic=Chromatic Aberration
+video.chromatic.desc=Adds a subtle color fringing effect for a more stylized look.
+video.unfocus=Unfocus Pause
+video.unfocus.desc=Pauses the game when it is out of focus.
+video.language=Language
+video.language.desc=The language the game will be displaying.
+
+title.volume=Audio
+volume.master=Master Volume
+volume.master.desc=Changes the overall volume of the game.
+volume.music=Music Volume
+volume.music.desc=Changes the volume of background music and soundtracks.
+volume.sfx=SFX Volume
+volume.sfx.desc=Changes the volume of sound effects, such as footsteps and interactions.
+
+title.gameplay=Gameplay
+gameplay.fov=FOV
+gameplay.fov.desc=Sets the base field of view that the player can see.
+gameplay.fov.quake=QUAKE PRO
+gameplay.fov.zoomer=ZOOMER
+gameplay.sensitivity=Mouse Sensitivity
+gameplay.sensitivity.desc=Changes the speed of camera movement with the mouse.
+gameplay.showfps=Display FPS
+gameplay.showfps.desc=Shows the game's current frames per second on screen.
+gameplay.showspeed=Display Speed
+gameplay.showspeed.desc=Shows the player's speed on screen.
+gameplay.bobbing=View Bobbing
+gameplay.bobbing.desc=Enables head movement when walking or running for a more immersive experience.
+gameplay.speedfov=Speed Changes FOV
+gameplay.speedfov.desc=Warps the field of view based on the player's movement speed.
+gameplay.sidewaystilt=Sideways Camera Tilt
+gameplay.sidewaystilt.desc=Tilts the camera based on the player's strafing direction.
+
+
+# --------   Menu   ---------
+yes=Yes
+no=No
+back=Back
+
+title.game=Game Menu
+resume=Back to Game
+options=Options
+controls=Keybinds
+exit.save=Exit to the Menu
+exit.save.ask=Are you sure you want to exit this play section? Your progress will not save!
+exit.game=Exit Game
+exit.game.ask=Do you want to leave the game?
+
+title.controls=Keybinds Menu
+controls.text=Press any key... :)
+title.movement=Movement
+controls.forward=Forward
+controls.backward=Backward
+controls.left=Left
+controls.right=Right
+controls.jump=Jump
+controls.crouch=Crouch
+controls.sprint=Sprint
+
+controls.pause=Pause
+controls.console=Debug Console
+controls.interact=Interact
+controls.attack=Attack
+controls.perspective=Perspective
+
+multiplayer=Multiplayer
+multiplayer.lobby=Join a Lobby
+multiplayer.address=Put the address here
+multiplayer.join=Join
+multiplayer.host=Host
+
+singleplayer=Singleplayer
+credits=Credits
+
+
+# --------   Game   ---------
+stamina=Stamina
+health=Health
+coins=Coins
+inventory=Inventory
+
+day=Day
+day.morning=AM
+day.evening=PM
+
+water=Water
+food=Food
+
+dead=You Died!
+dead.respawn=Respawn
+
+
+# --------   Dialogue   ---------
+todor.greeting=Hey there! Your face looks new around here. Welcome to our lively city!
+todor.greeting2=In this town, people are friendly and love chatting with each other. It's a real community vibe.
+todor.greeting3=You know, if you're ever in need of some quick cash, folks might toss your way some odd jobs. It's a great way to get by.
+todor.greeting4=Feel free to explore the city at your own pace. Cars aren't a common sight around here, so you're free to run around without worry.
+todor.greeting5=If times get tough, collecting recyclables and doing odd jobs can help you scrape together a bit of coin. We've all been there, mate. And hey, we're always ready to help out a fellow struggler.
+player.money=How do I get money?
+player.crafting=How does crafting work?
+todor.money=Hey again! If you're looking to fill your pockets, there are a couple of ways to make a quick buck around here.
+todor.money2=First off, keep an eye out for any scrap lying around the city. Grab those discarded items, and you can sell them at the local shops. It's not glamorous, but every little bit adds up.
+todor.money3=Another option is taking on odd jobs from the folks around town. They might need help with deliveries, chores, or who knows what. It's a good way to earn some extra cash and get to know the community.
+todor.money4=So, whether you're collecting scrap or taking on jobs, you'll be stacking up that moolah in no time. Good luck out there!
+todor.crafting=Hey, friend! So, you're itching to craft some useful stuff, huh? Well, it's pretty simple once you get the hang of it.
+todor.crafting2=First things first, you'll need some tools. A Saw for wood, Hammer for metal, and a Pocket Knife for fabrics. Oh, and don't forget about Duct Tape - that's your handyman's best friend.
+todor.crafting3=Now, let me show you the ropes of scraping. Take a Medium Backpack, use your Pocket Knife, and voila - you got yourself 5 Cloth. Smash up a Toy with a Hammer, and bam, 2 Plastic. Hit some Silver Cutlery with a Hammer for 2 Metal, and a Wooden Pencil plus a Saw equals 1 Wood. Easy, right?
+todor.crafting4=Now, onto the fun part - crafting! Combine your Saw, Hammer, Pocket Knife, and that piece of Wood, and you've got yourself a Toolbox. That bad boy can make all sorts of things that need tools.
+todor.crafting5=Need to patch yourself up? Mix 8 Cloth and a strip of Tape for a Bandage. Feeling crafty with time? Use 4 Metal, an Electronic, and a Hammer to whip up a Clock.
+todor.crafting6=Feeling tired? Craft some Cardboards with 2 Card, or go all out with 2 Card and 3 Newspapers for a cozier snooze. For the ultimate nap setup, try 10 Fabrics, a strip of Tape, and 3 Plastic for a Sleeping Bag.
+todor.crafting7=Oh, and if you're in the mood for a cozy fire, gather 4 Wood, and you'll have yourself a Bonfire. And there you have it, the basics of turning junk into treasure! Happy crafting!

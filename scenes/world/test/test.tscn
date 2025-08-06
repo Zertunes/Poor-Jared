@@ -40,12 +40,12 @@ uv2_triplanar = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.219484, 0.186256, 0.0824356)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 481.0
-offset_top = -32.0
-offset_right = 995.0
-offset_bottom = 166.0
+offset_left = 465.0
+offset_top = -34.0
+offset_right = 1004.0
+offset_bottom = 164.0
 rotation = 0.32351
-text = "BALLS?"
+text = "BEANS?"
 label_settings = SubResource("LabelSettings_aci0g")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]

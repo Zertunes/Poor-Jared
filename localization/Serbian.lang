@@ -1,0 +1,135 @@
+# --------   Translation   ---------
+language=Српски
+locale=sr
+translator=Lazar Mladenović
+by=Од
+
+
+# --------   Options   ---------
+title.options=Мени опција
+
+title.video=Видео
+video.display=Режим приказа
+video.display.desc=
+video.display.windowed=У прозору
+video.display.fullscreen=Цео екран
+video.vsync=VSync
+video.vsync.desc=
+video.fps=Макс. FPS
+video.fps.desc=
+video.fps.max=МАКС
+video.bloom=Блум
+video.bloom.desc=
+video.brightness=Осветљеност
+video.brightness.desc=
+video.chromatic=Хроматска аберација
+video.chromatic.desc=
+video.unfocus=Пауза без фокуса
+video.unfocus.desc=
+video.language=Језик
+video.language.desc=
+
+title.volume=Звук
+volume.master=Главни звук
+volume.master.desc=
+volume.music=Јачина музике
+volume.music.desc=
+volume.sfx=Специјални Ефекти
+volume.sfx.desc=
+
+title.gameplay=Играње
+gameplay.fov=FOV
+gameplay.fov.desc=
+gameplay.fov.quake=квака про
+gameplay.fov.zoomer=з у м
+gameplay.sensitivity=Брзина миша
+gameplay.sensitivity.desc=
+gameplay.showfps=Прикажи FPS
+gameplay.showfps.desc=
+gameplay.showspeed=Приказ брзине
+gameplay.showspeed.desc=
+gameplay.bobbing=Потрес камере
+gameplay.bobbing.desc=
+gameplay.speedfov=Промена брзине мења FOV
+gameplay.speedfov.desc=
+gameplay.sidewaystilt=Косо окренута камера
+gameplay.sidewaystilt.desc=
+
+
+# --------   Menu   ---------
+yes=Да
+no=Не
+back=Назад
+
+title.game=Мени Игрице
+resume=Назад у игру
+options=Подешавања
+controls=Контроле
+exit.save=Изађи у мени
+exit.save.ask=Да ли сте сигурни да желите да изађете из овог дела игре? Ваш напредак неће бити сачуван!
+exit.game=Излаз из игре
+exit.game.ask=Желите ли да изађете из игре?
+
+title.controls=Мени контрола
+controls.text=Претисните било који тастер... :)
+title.movement=Кретање
+controls.forward=Напред
+controls.backward=Назад
+controls.left=Лево
+controls.right=Десно
+controls.jump=Скок
+controls.crouch=Клекнути
+controls.sprint=Трчање
+
+controls.pause=Пауза
+controls.console=Конзола за програмере
+controls.interact=Интеракција
+controls.attack=Напад
+controls.perspective=Перспектива
+
+multiplayer=Више играча
+multiplayer.lobby=Придружи се лобију
+multiplayer.address=Унесите адресу овде
+multiplayer.join=Придружи се
+multiplayer.host=Домаћин
+
+singleplayer=Један играч
+credits=Кредити
+
+
+# --------   Game   ---------
+stamina=Издржљивост
+health=Здравље
+coins=Новчићи
+inventory=Инвентар
+
+day=Дан
+day.morning=УЈУТРО
+day.evening=ПОПОДНЕ
+
+water=Вода
+food=Храна
+
+dead=Умрли Сте!
+dead.respawn=Поновно оживљавање
+
+
+# --------   Dialogue   ---------
+todor.greeting=
+todor.greeting2=
+todor.greeting3=
+todor.greeting4=
+todor.greeting5=
+player.money=
+player.crafting=
+todor.money=
+todor.money2=
+todor.money3=
+todor.money4=
+todor.crafting=
+todor.crafting2=
+todor.crafting3=
+todor.crafting4=
+todor.crafting5=
+todor.crafting6=
+todor.crafting7=

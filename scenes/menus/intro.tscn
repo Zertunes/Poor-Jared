@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/menu/intro.gd" id="1_6lign"]
 [ext_resource type="Texture2D" uid="uid://cjotd4escm6nh" path="res://sprites/PoorJaredBootArtwork.png" id="2_y4xru"]
-[ext_resource type="Script" path="res://scripts/menu/dir_settings.gd" id="3_gewqk"]
+[ext_resource type="Script" path="res://globals/Preferences.gd" id="3_gewqk"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_4pn1k"]
 file = "intro.ogg"

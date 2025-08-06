@@ -14,7 +14,7 @@ offset_left = 383.0
 offset_top = 140.0
 offset_right = 577.0
 offset_bottom = 163.0
-text = "§ui§dead"
+text = "dead"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -48,19 +48,19 @@ theme_override_constants/separation = 15
 [node name="RespawnButton" type="Button" parent="DeathMenu/DeathMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "§bt§respawn"
+text = "dead.respawn"
 flat = true
 
 [node name="MenuButton" type="Button" parent="DeathMenu/DeathMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "§bt§menu"
+text = "exit.save"
 flat = true
 
 [node name="ExitButton" type="Button" parent="DeathMenu/DeathMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "§bt§exit"
+text = "exit.game"
 flat = true
 
 [node name="ConfirmLabel" type="Label" parent="DeathMenu"]
@@ -76,7 +76,7 @@ offset_bottom = -18.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(156, 12)
-text = "§ui§exit_sure"
+text = "exit.save.ask"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -116,14 +116,14 @@ alignment = 1
 [node name="YesButton" type="Button" parent="DeathMenu/ConfirmMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "§bt§yes"
+text = "yes"
 flat = true
 
 [node name="NoButton" type="Button" parent="DeathMenu/ConfirmMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "§bt§no"
+text = "no"
 flat = true
 
 [node name="Background" type="CanvasLayer" parent="DeathMenu"]

@@ -1,0 +1,289 @@
+[gd_scene load_steps=2 format=3 uid="uid://cogi1y0f2ofjh"]
+
+[ext_resource type="PackedScene" uid="uid://b6t76frtkf8c2" path="res://scenes/menus/bind_buttons.tscn" id="1_sis7b"]
+
+[node name="ControlsMenu" type="PanelContainer"]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -270.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "title.controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VideoMarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Label"]
+layout_mode = 2
+offset_top = 16.0
+offset_right = 465.0
+offset_bottom = 723.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Movement" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "title.movement"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Forward" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Forward"]
+layout_mode = 2
+text = "controls.forward"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Forward/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+
+[node name="Backward" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Backward"]
+layout_mode = 2
+text = "controls.backward"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Backward/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "backward"
+
+[node name="Left" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Left"]
+layout_mode = 2
+text = "controls.left"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Left/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "left"
+
+[node name="Right" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Right"]
+layout_mode = 2
+text = "controls.right"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Right/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "right"
+
+[node name="Jump" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Jump"]
+layout_mode = 2
+text = "controls.jump"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Jump/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "jump"
+
+[node name="Crouch" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Crouch"]
+layout_mode = 2
+text = "controls.crouch"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Crouch/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "crouch"
+
+[node name="Sprint" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Sprint"]
+layout_mode = 2
+text = "controls.sprint"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Sprint/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "sprint"
+
+[node name="BackButtonOptions" type="Button" parent="MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 447.0
+offset_right = 117.0
+offset_bottom = 490.0
+text = "back"
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 17.0
+offset_right = 928.0
+offset_bottom = 653.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Label/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="gameplay" type="Label" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "title.gameplay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pause" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Pause"]
+layout_mode = 2
+text = "controls.pause"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Pause/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "pause"
+
+[node name="Console" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console"]
+layout_mode = 2
+text = "controls.console"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "toggle_console"
+
+[node name="Attack" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Attack"]
+layout_mode = 2
+text = "controls.attack"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Attack/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "attack"
+
+[node name="Perspective" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Perspective"]
+layout_mode = 2
+text = "controls.perspective"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Perspective/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "perspective"
+
+[node name="Interact" type="GridContainer" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact"]
+layout_mode = 2
+text = "controls.interact"
+vertical_alignment = 1
+
+[node name="Keybindings" parent="MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact/Label" instance=ExtResource("1_sis7b")]
+layout_mode = 1
+offset_left = 138.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = -2.0
+action = "interact"

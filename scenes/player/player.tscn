@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://cnftbq1lfurh2"]
+[gd_scene load_steps=66 format=3 uid="uid://cnftbq1lfurh2"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_mwvnk"]
 [ext_resource type="Texture2D" uid="uid://creg6n3xdh04a" path="res://crosshair.png" id="2_6au4q"]
@@ -12,26 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://b5688bakdd1ly" path="res://scenes/menus/deathmenu.tscn" id="10_umbqb"]
 [ext_resource type="AudioStream" uid="uid://d3u25gvaifgn5" path="res://sounds/player_voice/hurt1.wav" id="11_7xwn7"]
 [ext_resource type="Script" path="res://scripts/player/movement.gd" id="11_887y4"]
-[ext_resource type="AudioStream" uid="uid://c68axvqgv21xi" path="res://sounds/impact/punch1.wav" id="11_eejdu"]
 [ext_resource type="AudioStream" uid="uid://dl74kp6jhajon" path="res://sounds/impact/crack1.wav" id="11_klkqt"]
 [ext_resource type="Script" path="res://scripts/player/stamina.gd" id="11_n3rkx"]
-[ext_resource type="AudioStream" uid="uid://brdmiweh1r6cf" path="res://sounds/impact/squash1.wav" id="11_xdltw"]
 [ext_resource type="AudioStream" uid="uid://bbyxyophfyqki" path="res://sounds/player_voice/hurt2.wav" id="12_6cxrj"]
 [ext_resource type="AudioStream" uid="uid://b0crx5xl2uomo" path="res://sounds/impact/crack2.wav" id="12_cuerh"]
-[ext_resource type="AudioStream" uid="uid://bag1c1i2ibwor" path="res://sounds/impact/punch2.wav" id="12_muo5v"]
-[ext_resource type="AudioStream" uid="uid://cmayvifkxvsqt" path="res://sounds/impact/punch3.wav" id="13_6hxwe"]
 [ext_resource type="AudioStream" uid="uid://biy0yhh5nhown" path="res://sounds/player_voice/hurt3.wav" id="13_ohqtr"]
-[ext_resource type="AudioStream" uid="uid://grx5rc0dehjk" path="res://sounds/impact/punch4.wav" id="14_77tvt"]
 [ext_resource type="AudioStream" uid="uid://7o8ol63gy2bs" path="res://sounds/player_voice/hurt4.wav" id="14_hkdiy"]
 [ext_resource type="Script" path="res://scripts/player/first_person.gd" id="15_kkl38"]
 [ext_resource type="Script" path="res://scripts/player/third_person.gd" id="15_nvo82"]
-[ext_resource type="AudioStream" uid="uid://dovibsra18vrv" path="res://sounds/impact/punch5.wav" id="15_oj6ei"]
-[ext_resource type="AudioStream" uid="uid://moujgkwgjnfw" path="res://sounds/impact/punch6.wav" id="16_08d74"]
 [ext_resource type="Script" path="res://scripts/player/health.gd" id="17_86cid"]
 [ext_resource type="Script" path="res://scripts/player/blocking.gd" id="17_pjvks"]
-[ext_resource type="AudioStream" uid="uid://c487mh2d168q" path="res://sounds/impact/punch7.wav" id="17_u8k4t"]
-[ext_resource type="AudioStream" uid="uid://h7y4uo6g6b8c" path="res://sounds/impact/punch8.wav" id="18_putma"]
-[ext_resource type="AudioStream" uid="uid://dsk40hq6eskry" path="res://sounds/impact/punch9.wav" id="19_wr32t"]
 [ext_resource type="AudioStream" uid="uid://dajmox52xndy2" path="res://sounds/death/deathvoice1.wav" id="27_3o8go"]
 [ext_resource type="AudioStream" uid="uid://d3itd74cbeh2a" path="res://sounds/death/deathvoice3.wav" id="28_1eapc"]
 [ext_resource type="AudioStream" uid="uid://bm2iey28frti" path="res://sounds/death/deathvoice2.wav" id="28_pxqso"]
@@ -130,16 +120,8 @@ stream_1/stream = ExtResource("12_cuerh")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ssh0o"]
 random_pitch = 1.5
-streams_count = 9
-stream_0/stream = ExtResource("11_eejdu")
-stream_1/stream = ExtResource("12_muo5v")
-stream_2/stream = ExtResource("13_6hxwe")
-stream_3/stream = ExtResource("14_77tvt")
-stream_4/stream = ExtResource("15_oj6ei")
-stream_5/stream = ExtResource("16_08d74")
-stream_6/stream = ExtResource("17_u8k4t")
-stream_7/stream = ExtResource("18_putma")
-stream_8/stream = ExtResource("19_wr32t")
+streams_count = 1
+stream_0/stream = ExtResource("12_cuerh")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qjnxc"]
 streams_count = 4
@@ -593,7 +575,7 @@ HEALTH = NodePath("../Health")
 process_callback = 0
 wait_time = 0.03
 
-[node name="Sounds" type="Node" parent="." node_paths=PackedStringArray("PLAYER", "HEALTH", "fall_damage", "punch", "hurt_voice", "health_loss", "death_voice", "steps", "fall", "jump", "steps_timer")]
+[node name="Sounds" type="Node" parent="." node_paths=PackedStringArray("PLAYER", "HEALTH", "fall_damage", "punch", "hurt_voice", "health_loss", "death_voice", "steps", "fall", "jump", "steps_timer", "block")]
 script = ExtResource("48_1y0o8")
 PLAYER = NodePath("..")
 HEALTH = NodePath("../Health")
@@ -606,6 +588,7 @@ steps = NodePath("Steps")
 fall = NodePath("Fall")
 jump = NodePath("Jump")
 steps_timer = NodePath("Steps/StepsTimer")
+block = NodePath("Block")
 
 [node name="FallDamage" type="AudioStreamPlayer" parent="Sounds"]
 stream = SubResource("AudioStreamRandomizer_fwq2y")
@@ -622,8 +605,7 @@ volume_db = -4.13
 bus = &"SFX"
 
 [node name="HealthLoss" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource("11_xdltw")
-volume_db = -2.335
+stream = SubResource("AudioStreamRandomizer_ssh0o")
 bus = &"SFX"
 
 [node name="DeathVoice" type="AudioStreamPlayer" parent="Sounds"]
@@ -644,6 +626,10 @@ bus = &"SFX"
 
 [node name="Jump" type="AudioStreamPlayer" parent="Sounds"]
 stream = SubResource("AudioStreamRandomizer_gd2s4")
+bus = &"SFX"
+
+[node name="Block" type="AudioStreamPlayer" parent="Sounds"]
+stream = SubResource("AudioStreamRandomizer_ssh0o")
 bus = &"SFX"
 
 [connection signal="timeout" from="Attacking/AttackIKTimer" to="Attacking" method="_on_attack_ik_timer_timeout"]

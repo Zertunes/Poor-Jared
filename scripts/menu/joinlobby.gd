@@ -16,25 +16,11 @@ signal player_created
 @onready var mainmenu = preload("res://scenes/world/city/city.tscn")
 @export var DISCORD: Node
 
-@onready var keybindings = [
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Forward/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Backward/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Left/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Right/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Jump/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Crouch/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/VideoMarginContainer2/VBoxContainer/Sprint/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Pause/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Console/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Attack/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Perspective/Label/Keybindings,
-	$Options/ControlsMenu/MarginContainer/VBoxContainer/Label/MarginContainer/VBoxContainer/Interact/Label/Keybindings
-]
-
 @onready var mainmenumusic = $"Sounds and Songs/MainMenuMusic"
 @onready var buttonsound = $"Sounds and Songs/ButtonSound"
 @onready var buttonbacksound = $"Sounds and Songs/ButtonBackSound"
 #@onready var keyenter = $"Sounds and Songs/KeyEnterSound"
+@onready var options = $Options
 
 @onready var titleanimation = $MainMenu/TitleAnimation
 
@@ -53,9 +39,11 @@ func _ready():
 	game_menu.disconnect_player.connect(_disconnect_player)
 	game_menu.on_host_disconnect.connect(_on_host_disconnect)
 	
-	for keybinding in keybindings:
-		keybinding.button_keybind.connect(_button_keybind) # If there is a null instance here, make sure that all of the keybindings are located at $Options
-		keybinding.button_keybind_off.connect(_button_keybind_off)
+	options.on_back1.connect(_on_back_button_options_pressed)
+	options.on_back2.connect(_on_back_button_controls_options_pressed)
+	options.on_controls.connect(_on_controls_button_pressed)
+	options.on_keybind.connect(_button_keybind)
+	options.on_keybind_off.connect(_button_keybind_off)
 	
 	join_menu.hide()
 	options_menu.hide()

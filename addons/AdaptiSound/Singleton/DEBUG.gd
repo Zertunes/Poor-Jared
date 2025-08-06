@@ -2,4 +2,5 @@ extends Node
 
 func _print(value):
 	if AudioManager.debugging:
-		print(value)
+		if Preferences.user_data.debug:
+			print(value)

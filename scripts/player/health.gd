@@ -38,8 +38,8 @@ func _ready():
 func _process(delta):
 	#auto_bunny_hopping = GlobalDebug.get_auto_bunny_hopping()
 	edelta = delta
-	GlobalDebug.health = current_health
-	if GlobalDebug.noclip: return
+	Debug.health = current_health
+	if Debug.noclip: return
 	player_fall_damage()
 
 # Method to apply damage

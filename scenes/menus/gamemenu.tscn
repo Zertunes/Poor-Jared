@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://clo5exbsylp7k"]
 
 [ext_resource type="Script" path="res://scripts/menu/gamemenu.gd" id="1_855s1"]
-[ext_resource type="Script" path="res://scripts/menu/optionsmenu.gd" id="2_lpero"]
+[ext_resource type="PackedScene" uid="uid://cddoxkpcbhhcp" path="res://scenes/menus/optionsmenu.tscn" id="2_p5idw"]
 [ext_resource type="PackedScene" uid="uid://b6t76frtkf8c2" path="res://scenes/menus/bind_buttons.tscn" id="3_5jct8"]
 [ext_resource type="PackedScene" uid="uid://dieqkr5b1pfc" path="res://scenes/menus/sounds_and_songs.tscn" id="4_f86y5"]
 
@@ -17,6 +17,8 @@ script = ExtResource("1_855s1")
 
 [node name="GameMenu" type="CanvasLayer" parent="."]
 layer = 100
+
+[node name="Options" parent="GameMenu" instance=ExtResource("2_p5idw")]
 
 [node name="PauseMenu" type="PanelContainer" parent="GameMenu"]
 visible = false
@@ -72,6 +74,7 @@ size_flags_vertical = 3
 text = "§bt§exit"
 
 [node name="OptionsMenu" type="PanelContainer" parent="GameMenu"]
+visible = false
 self_modulate = Color(0, 0, 0, 1)
 anchors_preset = 8
 anchor_left = 0.5
@@ -86,7 +89,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 12
 size_flags_vertical = 12
-script = ExtResource("2_lpero")
 
 [node name="MarginContainer" type="MarginContainer" parent="GameMenu/OptionsMenu"]
 layout_mode = 2

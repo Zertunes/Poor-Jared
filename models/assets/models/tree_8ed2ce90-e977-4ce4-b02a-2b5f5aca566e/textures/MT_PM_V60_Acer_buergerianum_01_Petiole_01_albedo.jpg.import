@@ -3,25 +3,26 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct1voi26vqcj1"
-path="res://.godot/imported/MT_PM_V60_Acer_buergerianum_01_Petiole_01_albedo.jpg-39e23c44722f68104fed78e476564a1f.ctex"
+path.s3tc="res://.godot/imported/MT_PM_V60_Acer_buergerianum_01_Petiole_01_albedo.jpg-39e23c44722f68104fed78e476564a1f.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://models/assets/models/tree_8ed2ce90-e977-4ce4-b02a-2b5f5aca566e/textures/MT_PM_V60_Acer_buergerianum_01_Petiole_01_albedo.jpg"
-dest_files=["res://.godot/imported/MT_PM_V60_Acer_buergerianum_01_Petiole_01_albedo.jpg-39e23c44722f68104fed78e476564a1f.ctex"]
+dest_files=["res://.godot/imported/MT_PM_V60_Acer_buergerianum_01_Petiole_01_albedo.jpg-39e23c44722f68104fed78e476564a1f.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

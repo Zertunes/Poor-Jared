@@ -8,38 +8,44 @@ var game_options_data_default = {}
 func _ready():
 	load_options_data()
 
-
-
 func load_options_data():
 	default_options()
 	if not FileAccess.file_exists(SAVEOPTIONSFILE):
-		var game_options_save_write = FileAccess.open(SAVEOPTIONSFILE, FileAccess.WRITE_READ)
-		var json_string_save = JSON.stringify(default_options())
-		game_options_save_write.store_string(json_string_save)
-		print("Default data loaded because there was no file.")
-
-		while game_options_save_write.get_position() < game_options_save_write.get_length():
-			var json_string = game_options_save_write.get_line()
-			var json = JSON.new()
-			var parse_result = json.parse(json_string)
-			var file_result = json.get_data()
-			game_options_data = file_result
-		game_options_save_write.close()
-		
+		write_options()
 		save_data()
 	else:
-		var game_options_save_read = FileAccess.open(SAVEOPTIONSFILE, FileAccess.READ)
-		while game_options_save_read.get_position() < game_options_save_read.get_length():
-			var json_string = game_options_save_read.get_line()
-			var json = JSON.new()
-			var parse_result = json.parse(json_string)
-			var file_result = json.get_data()
-			game_options_data = file_result
-		game_options_save_read.close()
-		
+		read_options()
 		save_data()
+	
+	if game_options_data == null:
+		return
+
+func write_options():
+	var game_options_save_write = FileAccess.open(SAVEOPTIONSFILE, FileAccess.WRITE_READ)
+	var json_string_save = JSON.stringify(default_options())
+	game_options_save_write.store_string(json_string_save)
+	print("Default data loaded because there was no file.")
+	
+	while game_options_save_write.get_position() < game_options_save_write.get_length():
+		var json_string = game_options_save_write.get_line()
+		var json = JSON.new()
+		var parse_result = json.parse(json_string)
+		var file_result = json.get_data()
+		game_options_data = file_result
+	game_options_save_write.close()
+
+func read_options():
+	var game_options_save_read = FileAccess.open(SAVEOPTIONSFILE, FileAccess.READ)
+	while game_options_save_read.get_position() < game_options_save_read.get_length():
+		var json_string = game_options_save_read.get_line()
+		var json = JSON.new()
+		var parse_result = json.parse(json_string)
+		var file_result = json.get_data()
+		game_options_data = file_result
+	game_options_save_read.close()
 
 func default_options():
+	var local_language = OS.get_locale()
 	game_options_data_default = {
 		"display_mode": 0,
 		"vsync_on": true,
@@ -70,9 +76,11 @@ func default_options():
 		"sideways_tilt": true,
 		"chromatic_abberation": true,
 		"unfocus_pause": true,
-		"language": 0
+		"language": local_language
 		}
 	if not FileAccess.file_exists(SAVEOPTIONSFILE):
+		game_options_data = game_options_data_default
+	if game_options_data == null:
 		game_options_data = game_options_data_default
 
 func save_data():

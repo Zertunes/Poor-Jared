@@ -1,0 +1,135 @@
+# --------   Translation   ---------
+language=Français
+locale=fr
+translator=Rayan B. Milosav
+by=By
+
+
+# --------   Options   ---------
+title.options=Menu d’Options
+
+title.video=Vidéo
+video.display=Mode d'affichage
+video.display.desc=Change la façon dont le jeu sera affiché à l'écran.
+video.display.windowed=En fenêtré
+video.display.fullscreen=Plein écran
+video.vsync=VSync
+video.vsync.desc=Réduit le déchirement de l'écran en synchronisant les images avec votre moniteur.
+video.fps=Max FPS
+video.fps.desc=Définit la limite de la fréquence d'images du jeu.
+video.fps.max=MAX
+video.bloom=Bloom
+video.bloom.desc=Ajoute une lueur douce aux zones lumineuses pour un effet plus cinématographique.
+video.brightness=Luminosité
+video.brightness.desc=Ajuste la luminosité du jeu pour une meilleure visibilité.
+video.chromatic=Aberration chromatique
+video.chromatic.desc=Ajoute un léger effet de frange colorée pour un rendu plus stylisé.
+video.unfocus=Pause sans focus
+video.unfocus.desc=Met le jeu en pause lorsqu'il n'est plus au premier plan.
+video.language=Langue
+video.language.desc=La langue d'affichage du jeu.
+
+title.volume=Audio
+volume.master=Volume principal
+volume.master.desc=Ajuste le volume général du jeu.
+volume.music=Volume de la musique
+volume.music.desc=Ajuste le volume des musiques de fond et des bandes-son.
+volume.sfx=Effets Sonores
+volume.sfx.desc=Ajuste le volume des effets sonores, comme les bruits de pas et les interactions.
+
+title.gameplay=Jouabilité
+gameplay.fov=FOV
+gameplay.fov.desc=Définit le champ de vision de base du joueur.
+gameplay.fov.quake=QUAKE PRO
+gameplay.fov.zoomer=Zoomer
+gameplay.sensitivity=Sensibilité de la souris
+gameplay.sensitivity.desc=Ajuste la vitesse de déplacement de la caméra avec la souris.
+gameplay.showfps=Afficher FPS
+gameplay.showfps.desc=Affiche le nombre d'images par seconde actuel.
+gameplay.showspeed=Afficher la vitesse
+gameplay.showspeed.desc=Affiche la vitesse du joueur à l'écran.
+gameplay.bobbing=Hochements de tête
+gameplay.bobbing.desc=Active le mouvement de la tête lors de la marche ou de la course pour une expérience plus immersive.
+gameplay.speedfov=Changements de vitesse modifiant le FOV
+gameplay.speedfov.desc=Modifie le champ de vision en fonction de la vitesse du joueur.
+gameplay.sidewaystilt=Inclinaison de la caméra latérale
+gameplay.sidewaystilt.desc=Incline la caméra en fonction de la direction de déplacement du joueur.
+
+
+# --------   Menu   ---------
+yes=Oui
+no=Non
+back=Retour
+
+title.game=Menu de jeu
+resume=Retour au jeu
+options=Options
+controls=Contrôles
+exit.save=Retourner au Menu
+exit.save.ask=Êtes-vous sûr de vouloir quitter cette section de jeu ? Votre progression ne sera pas sauvegardée !
+exit.game=Quitter le jeu
+exit.game.ask=Voulez-vous vraiment quitter?
+
+title.controls=Menu des contrôles
+controls.text=Appuyez une touche... :)
+title.movement=Mouvement
+controls.forward=Avancer
+controls.backward=Reculer
+controls.left=Gauche
+controls.right=Droite
+controls.jump=Sauter
+controls.crouch=S'accroupir
+controls.sprint=Sprint
+
+controls.pause=Pause
+controls.console=Console de développeur
+controls.interact=Interagir
+controls.attack=Attaque
+controls.perspective=Perspective
+
+multiplayer=Multijoueur
+multiplayer.lobby=Rejoindre un salon
+multiplayer.address=Mettez l'adresse ici
+multiplayer.join=Rejoindre
+multiplayer.host=Hôte
+
+singleplayer=Jouer Seul
+credits=Crédits
+
+
+# --------   Game   ---------
+stamina=Endurance
+health=Santé
+coins=Pièces
+inventory=Inventaire
+
+day=Jour
+day.morning=DU MATIN
+day.evening=DU SOIR
+
+water=Eau
+food=Nourriture
+
+dead=Vous êtes Mort!
+dead.respawn=Réapparaitre
+
+
+# --------   Dialogue   ---------
+todor.greeting=
+todor.greeting2=
+todor.greeting3=
+todor.greeting4=
+todor.greeting5=
+player.money=
+player.crafting=
+todor.money=
+todor.money2=
+todor.money3=
+todor.money4=
+todor.crafting=
+todor.crafting2=
+todor.crafting3=
+todor.crafting4=
+todor.crafting5=
+todor.crafting6=
+todor.crafting7=

@@ -1,0 +1,135 @@
+# --------   Translation   ---------
+language=Português
+locale=pt
+translator=Sérgio Antunes
+by=Por
+
+
+# --------   Options   ---------
+title.options=Menu de Opções
+
+title.video=Vídeo
+video.display=Modo de Exibição
+video.display.desc=
+video.display.windowed=Janela
+video.display.fullscreen=Ecrã Inteiro
+video.vsync=VSync
+video.vsync.desc=
+video.fps=FPS Máximo
+video.fps.desc=
+video.fps.max=MAX
+video.bloom=Bloom
+video.bloom.desc=
+video.brightness=Brilho
+video.brightness.desc=
+video.chromatic=Aberração Cromática
+video.chromatic.desc=
+video.unfocus=Pausar Fora de Foco
+video.unfocus.desc=
+video.language=Idioma
+video.language.desc=
+
+title.volume=Áudio
+volume.master=Volume Principal
+volume.master.desc=
+volume.music=Música
+volume.music.desc=
+volume.sfx=Efeitos Sonoros
+volume.sfx.desc=
+
+title.gameplay=Jogabilidade
+gameplay.fov=FOV
+gameplay.fov.desc=
+gameplay.fov.quake=GARRAFÃO
+gameplay.fov.zoomer=BINÓCULOS
+gameplay.sensitivity=Sensibilidade do Rato
+gameplay.sensitivity.desc=
+gameplay.showfps=Exibir FPS
+gameplay.showfps.desc=
+gameplay.showspeed=Exibir Velocidade
+gameplay.showspeed.desc=
+gameplay.bobbing=Balanço da Visão
+gameplay.bobbing.desc=
+gameplay.speedfov=Velocidade Muda FOV
+gameplay.speedfov.desc=
+gameplay.sidewaystilt=Inclinação Lateral da Câmera
+gameplay.sidewaystilt.desc=
+
+
+# --------   Menu   ---------
+yes=Sim
+no=Não
+back=Voltar
+
+title.game=Menu do Jogo
+resume=Voltar ao Jogo
+options=Opções
+controls=Controlos
+exit.save=Sair para o Menu
+exit.save.ask=Tens a certeza que desejas sair desta sessão de jogo? O teu progresso não será salvo!
+exit.game=Sair do Jogo
+exit.game.ask=Pretende sair do jogo?
+
+title.controls=Menu de Controlos
+controls.text=Pressione algo... :)
+title.movement=Movimentação
+controls.forward=Avançar
+controls.backward=Recuar
+controls.left=Esquerda
+controls.right=Direita
+controls.jump=Saltar
+controls.crouch=Agachar
+controls.sprint=Correr
+
+controls.pause=Pausar
+controls.console=Consola de Desenvolvedor
+controls.interact=Interagir
+controls.attack=Atacar
+controls.perspective=Perspectiva
+
+multiplayer=Multijogador
+multiplayer.lobby=Entrar num Lobby
+multiplayer.address=Colocar o endereço aqui
+multiplayer.join=Entrar
+multiplayer.host=Anfitrião
+
+singleplayer=Um Jogador
+credits=Créditos
+
+
+# --------   Game   ---------
+stamina=Fôlego
+health=Saúde
+coins=Moedas
+inventory=Inventário
+
+day=Dia
+day.morning=DA MANHÃ
+day.evening=DA TARDE
+
+water=Água
+food=Comida
+
+dead=Tu Morreste!
+dead.respawn=Reaparecer
+
+
+# --------   Dialogue   ---------
+todor.greeting=Olá! Pareces ser novo por aqui. Bem-vindo à nossa alegre cidade!
+todor.greeting2=Nesta vila, as pessoas são amigáveis e adoram conversar umas com as outras. É como uma grande família!
+todor.greeting3=Sabes, se alguma vez precisares de dinheiro rápido, as pessoas podem oferecer-te alguns trabalhos estranhos. É uma ótima maneira de conseguir trocos.
+todor.greeting4=Sê livre para explorar a cidade ao teu ritmo. Não é costume a passagem de carros, então podes correr por aí sem preocupações.
+todor.greeting5=Quando os tempos ficarem difíceis, recolher recicláveis e fazer trabalhos estranhos pode ajudar a juntar algumas moedas. Já todos passámos por isso, mano. E, ei, estamos sempre prontos para ajudar um companheiro em apuros.
+player.money=Como consigo dinheiro?
+player.crafting=Como é que o crafting funciona?
+todor.money=Olá de novo! Se estás a querer encher os bolsos, há algumas maneiras de ganhar uns trocos rápidos por aqui.
+todor.money2=Primeiro, mantém os olhos abertos para qualquer tralha espalhada pela cidade. Apanha esses objetos desperdiçados e podes vendê-los nas lojas locais. Não é fantástico, mas, como se diz, grão a grão, a galinha enche o papo.
+todor.money3=Outra opção é pegar em trabalhos estranhos das pessoas da cidade. Podem precisar de ajuda com entregas, tarefas, ou sei lá o quê. É uma boa forma de ganhar algum dinheiro extra e conhecer a comunidade.
+todor.money4=Portanto, quer estejas a recolher lixo ou a assumir tarefas, vais acumular uns quantos paus num instante. Boa sorte por aí!
+todor.crafting=Olá, amigo! Então, estás ansioso para criar umas coisas úteis, né? Bem, é bastante simples assim que apanhas o jeito.
+todor.crafting2=Primeiro e antes de mais, precisas de algumas ferramentas. Uma serra para a madeira, martelo para o metal, e uma faca de bolso para os tecidos. Ah, e não te esqueças da Fita Cola, ela arranja tudo.
+todor.crafting3=Agora, deixa-me mostrar-te a base sobre a reciclagem. Pega numa Mochila Média, usa a tua Faca de Bolso e voilà - tens 5 Tecidos. Esmigalha um Brinquedo com um Martelo, e bam, 2 Plásticos. Bate em talheres de prata com um Martelo para 2 Metais, e um Lápis de Madeira mais uma Serra dá-te 1 Madeira. Simples, né?
+todor.crafting4=Agora, para a parte divertida - a criação! Combina a tua Serra, Martelo, Faca de Bolso, e aquele pedaço de Madeira, e terás uma Caixa de Ferramentas. Este mauzão pode fazer todo o tipo de coisas que precisam de ferramentas.
+todor.crafting5=Precisas de te curar? Mistura 8 Tecidos e um pedaço de Fita Cola para uma Bandagem. Apetece-te criar "tempo"? Usa 4 Metais, um Eletrónico e um Martelo para criar um Relógio.
+todor.crafting6=Cansado? Cria algumas Caixas de Cartão com 2 Cartões, ou guarda tudo para o melhor com 2 Cartões e 3 Jornais para uma sesta mais confortável. Para o setup de sesta definitivo, experimenta 10 Tecidos, uma tira de Fita Cola e 3 Plásticos para um Saco de Dormir.
+todor.crafting7=Ah, e se estiveres com vontade de uma fogueira acolhedora, junta 4 Madeiras, e terás uma Fogueira. E aqui tens, o básico de transformar tralha em tesouro! Boa criação!

@@ -12,6 +12,7 @@ extends Node
 @export var fall: AudioStreamPlayer
 @export var jump: AudioStreamPlayer
 @export var steps_timer: Timer
+@export var block: AudioStreamPlayer
 
 # Footstep sound parameters
 var min_step_interval = 0.3  # Minimum interval between steps

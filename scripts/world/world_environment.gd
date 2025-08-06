@@ -19,9 +19,9 @@ var has_day_changed : bool = false
 
 func _ready():
 	environment.adjustment_enabled = true
-	GlobalOptions.bloom_toggled.connect(_on_bloom_toggled)
-	GlobalOptions.brightness_updated.connect(_on_brightness_updated)
-	GlobalOptions.language_change.connect(update_language)
+	Options.bloom_toggled.connect(_on_bloom_toggled)
+	Options.brightness_updated.connect(_on_brightness_updated)
+	LanguageManager.language_change.connect(update_language)
 	if city == preload("res://scenes/world/test/test.tscn"): return
 	city.night = false
 

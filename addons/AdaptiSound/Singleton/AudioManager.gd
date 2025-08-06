@@ -20,7 +20,7 @@ var adaptive_music_paths
 var sound_paths
 
 ## SET PLUGIN DEBUG.console
-@export var debugging = false
+@export var debugging = true
 
 @onready var bgm_container = get_node("Background_Music")
 @onready var bgs_container = get_node("Background_Sounds")

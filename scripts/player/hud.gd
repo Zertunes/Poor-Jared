@@ -51,9 +51,9 @@ func connect_world_env_component():
 func _on_hour_changed(hour, space):
 	var signature
 	if space:
-		signature = TranslationServer.translate("§gg§AM")
+		signature = TranslationServer.translate("day.morning")
 	else:
-		signature = TranslationServer.translate("§gg§PM")
+		signature = TranslationServer.translate("day.evening")
 	time.text = str(hour) + " " + signature
 func _on_day_changed(day):
-	day_count.text = TranslationServer.translate("§gg§day") + " " + str(day)
+	day_count.text = TranslationServer.translate("day") + " " + str(day)

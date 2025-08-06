@@ -139,7 +139,6 @@ transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-1
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/rotation = Quaternion(-0.710469, -0.044919, 0.0127981, 0.702177)
-bones/0/scale = Vector3(1, 1, 1)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/rotation = Quaternion(0.102465, 0.00961712, 0.0148498, 0.994579)
 bones/4/rotation = Quaternion(-0.122263, 0.00751889, 0.00375275, 0.992462)

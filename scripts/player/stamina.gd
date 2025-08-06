@@ -45,7 +45,7 @@ func stamina():
 			run = false
 			run_ticking = false
 func _run_ticking():
-	if GlobalDebug.disable_run_ticking == true:
+	if Debug.disable_run_ticking == true:
 		stamina_points = 100
 		HUD._stamina_label()
 		return

@@ -35,13 +35,14 @@ config/windows_native_icon="res://icon.ico"
 [autoload]
 
 Panku="*res://addons/panku_console/console.tscn"
-GlobalOptions="*res://scripts/menu/global_options.gd"
-SaveOptions="*res://scripts/menu/save_options.gd"
-SaveKeybinds="*res://scripts/menu/save_keybinds.gd"
+Options="*res://globals/Options.gd"
+SaveOptions="*res://globals/SaveOptions.gd"
+SaveKeybinds="*res://globals/SaveKeybinds.gd"
 DiscordSDKLoader="*res://addons/discord-sdk-gd/nodes/core_updater.gd"
-GlobalDebug="*res://scripts/menu/global_debug.gd"
+Debug="*res://globals/Debug.gd"
 AudioManager="*res://addons/AdaptiSound/Singleton/AudioManager.tscn"
-Preferences="*res://scripts/menu/dir_settings.gd"
+Preferences="*res://globals/Preferences.gd"
+LanguageManager="*res://globals/LanguageManager.gd"
 
 [display]
 
@@ -60,7 +61,9 @@ enabled=PackedStringArray("res://addons/AdaptiSound/plugin.cfg", "res://addons/A
 
 folder_colors={
 "res://addons/": "gray",
+"res://globals/": "red",
 "res://hubimages/": "gray",
+"res://localization/": "teal",
 "res://models/": "pink",
 "res://scenes/": "orange",
 "res://scenes/menus/": "green",
@@ -150,10 +153,6 @@ defend={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(86, 16),"global_position":Vector2(95, 55),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
-
-[internationalization]
-
-locale/translations=PackedStringArray("res://text/translations.de.translation", "res://text/translations.en.translation", "res://text/translations.fr.translation", "res://text/translations.ja.translation", "res://text/translations.pt.translation", "res://text/translations.sr.translation", "res://text/translations.pr.translation", "res://text/translations.ro.translation")
 
 [physics]
 

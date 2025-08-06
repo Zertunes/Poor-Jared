@@ -7,7 +7,7 @@ func _input(event):
 	if event is InputEventKey:
 		# Test place
 		if Input.is_key_pressed(KEY_CTRL):
-			if Input.is_key_pressed(KEY_ENTER):
+			if Input.is_key_pressed(KEY_TAB):
 				get_tree().change_scene_to_packed(test)
 		else:
 			skip()

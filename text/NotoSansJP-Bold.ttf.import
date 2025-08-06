@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/NotoSansJP-Bold.ttf-51bad519f3c8c3ed8eb4af15e
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

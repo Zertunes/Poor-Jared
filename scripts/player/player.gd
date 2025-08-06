@@ -90,14 +90,14 @@ func loading_hiding(hide: bool):
 # ==================== [Options Updater] ====================
 # FOV, Sens, FPS Display, Speed Display, View Bobbing and Speed Changes FOV Options
 func connect_global_options():
-	GlobalOptions.fov_updated.connect(_on_fov_updated)
-	GlobalOptions.mouse_sens_updated.connect(_on_mouse_sens_updated)
-	GlobalOptions.fps_displayed.connect(_on_fps_displayed)
-	GlobalOptions.speed_displayed.connect(_on_speed_displayed)
-	GlobalOptions.view_bobbing_toggled.connect(_on_view_bobbing_toggled)
-	GlobalOptions.fov_change_toggled.connect(_on_fov_change_toggled)
-	GlobalOptions.sideways_tilt_toggled.connect(_on_sideways_tilt_toggled)
-	GlobalOptions.chromatic_abberation_toggled.connect(_on_chromatic_abberation_toggled)
+	Options.fov_updated.connect(_on_fov_updated)
+	Options.mouse_sens_updated.connect(_on_mouse_sens_updated)
+	Options.fps_displayed.connect(_on_fps_displayed)
+	Options.speed_displayed.connect(_on_speed_displayed)
+	Options.view_bobbing_toggled.connect(_on_view_bobbing_toggled)
+	Options.fov_change_toggled.connect(_on_fov_change_toggled)
+	Options.sideways_tilt_toggled.connect(_on_sideways_tilt_toggled)
+	Options.chromatic_abberation_toggled.connect(_on_chromatic_abberation_toggled)
 
 func _on_fov_updated(value):
 	fov_base = value
@@ -151,7 +151,7 @@ func sideways_tilt_option() -> void:
 		FstP.tilt.rotation.z = 0
 		return
 	
-	if GlobalDebug.noclip == true:
+	if Debug.noclip == true:
 		FstP.tilt.rotation.z = 0
 		return
 	
@@ -218,7 +218,7 @@ func _process(delta):
 	sideways_tilt_option()
 	chromatic_abberation_option()
 	
-	GlobalDebug.debug_checker()
+	Debug.debug_checker()
 	
 	TrdP.perspective_switch()
 	
@@ -229,20 +229,20 @@ func _physics_process(delta):
 		HUD.visible = false
 		return
 	
-	if GlobalDebug.just_start_noclip == false: # Then coming out of noclip
+	if Debug.just_start_noclip == false: # Then coming out of noclip
 		HUD.visible = true
 		MOVEMENT.standing_collision.disabled = false
 		MOVEMENT.crouching_collision.disabled = true
 		set_collision_mask_value(5, true)
-		GlobalDebug.just_start_noclip = true
-	if GlobalDebug.noclip == true:
-		if GlobalDebug.just_start_noclip == true: # Then going to noclip
+		Debug.just_start_noclip = true
+	if Debug.noclip == true:
+		if Debug.just_start_noclip == true: # Then going to noclip
 			velocity = Vector3.ZERO
 			HUD.visible = false
 			MOVEMENT.standing_collision.disabled = true
 			MOVEMENT.crouching_collision.disabled = true
 			set_collision_mask_value(5, false)
-			GlobalDebug.just_start_noclip = false
+			Debug.just_start_noclip = false
 			
 		FstP.manage_camera_smoothing(delta)
 		MOVEMENT._movement_interpolation(delta)

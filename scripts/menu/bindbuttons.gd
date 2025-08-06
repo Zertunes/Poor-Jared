@@ -15,10 +15,20 @@ signal button_keybind
 @onready var second = null
 @onready var entering = 1
 @export var action: String = "forward"
+@onready var sounds = $"../../../../../../../../../../Sounds and Songs"
+var parent : String
 
 func _ready():
-#	loading_keybinds()
+	parent = str(get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()).split(":")[0].strip_edges()
+	if parent == "GameMenu":
+		sounds = $"../../../../../../../../../../../Sounds and Songs"
+	elif parent == "JoinLobby":
+		get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().player_created.connect(load_binds)
+	#loading_keybinds()
 	
+	load_binds()
+
+func load_binds():
 	_key_checker()
 	button1.set_process_unhandled_key_input(false)
 	button2.set_process_unhandled_key_input(false)
@@ -56,7 +66,7 @@ func display_keys():
 		blank2 = 0
 
 func _on_bind_button_toggled(button_pressed):
-	$"../../../../../../../../../../Sounds and Songs/ButtonSound".play()
+	sounds.get_node_or_null("ButtonSound").play()
 	if entering == 1:
 		emit_signal("button_keybind")
 		entering = 0
@@ -68,7 +78,7 @@ func _on_bind_button_toggled(button_pressed):
 		display_keys()
 
 func _on_bind_button_2_toggled(button_pressed):
-	$"../../../../../../../../../../Sounds and Songs/ButtonSound".play()
+	sounds.get_node_or_null("ButtonSound").play()
 	if entering == 1:
 		emit_signal("button_keybind")
 		entering = 0
@@ -84,14 +94,14 @@ func _input(key):
 		if button1.button_pressed:
 			remap_key(key, 1)
 			button1.button_pressed = false
-			$"../../../../../../../../../../Sounds and Songs/MouseSound".play()
+			sounds.get_node_or_null("MouseSound").play()
 			emit_signal("button_keybind_off")
 			entering = 1
 		
 		if button2.button_pressed:
 			remap_key(key, 2)
 			button2.button_pressed = false
-			$"../../../../../../../../../../Sounds and Songs/MouseSound".play()
+			sounds.get_node_or_null("MouseSound").play()
 			emit_signal("button_keybind_off")
 			entering = 1
 			_key_checker()
@@ -100,14 +110,14 @@ func _unhandled_key_input(event):
 	if button1.button_pressed:
 		remap_key(event, 1)
 		button1.button_pressed = false
-		$"../../../../../../../../../../Sounds and Songs/KeyEnterSound".play()
+		sounds.get_node_or_null("KeyEnterSound").play()
 		emit_signal("button_keybind_off")
 		entering = 1
 	
 	if button2.button_pressed:
 		remap_key(event, 2)
 		button2.button_pressed = false
-		$"../../../../../../../../../../Sounds and Songs/KeyEnterSound".play()
+		sounds.get_node_or_null("KeyEnterSound").play()
 		emit_signal("button_keybind_off")
 		entering = 1
 		_key_checker()
@@ -162,13 +172,13 @@ func saving_keybinds(key, button):
 #	SaveOptions.save_data()
 
 #func loading_keybinds():
-#	var keybind_key_save1 = "keybind1_" + action
-#	var keybind_key_save2 = "keybind2_" + action
-#	InputMap.action_erase_events(action)
-#	InputMap.action_add_event(action, keybind_key_save1)
-#	InputMap.action_add_event(action, keybind_key_save2)
-#	button1.text = SaveOptions.game_options_data[keybind_key_save1]
-#	button2.text = SaveOptions.game_options_data[keybind_key_save2]
+	#var keybind_key_save1 = "keybind1_" + action
+	#var keybind_key_save2 = "keybind2_" + action
+	#InputMap.action_erase_events(action)
+	#InputMap.action_add_event(action, keybind_key_save1)
+	#InputMap.action_add_event(action, keybind_key_save2)
+	#button1.text = SaveOptions.game_options_data[keybind_key_save1]
+	#button2.text = SaveOptions.game_options_data[keybind_key_save2]
 
 
 func _on_bind_button_mouse_entered():
@@ -214,7 +224,7 @@ func _on_unbind_button_2_mouse_exited():
 
 
 func _on_unbind_button_pressed():
-	$"../../../../../../../../../../Sounds and Songs/ButtonBackSound".play()
+	sounds.get_node_or_null("ButtonBackSound").play()
 	blank1 = 1
 	un_button1.hide()
 	InputMap.action_erase_event(action, first)
@@ -224,7 +234,7 @@ func _on_unbind_button_pressed():
 	SaveKeybinds.save_keymap()
 
 func _on_unbind_button_2_pressed():
-	$"../../../../../../../../../../Sounds and Songs/ButtonBackSound".play()
+	sounds.get_node_or_null("ButtonBackSound").play()
 	blank2 = 1
 	un_button2.hide()
 	InputMap.action_erase_event(action, second)

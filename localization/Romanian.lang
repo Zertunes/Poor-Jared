@@ -1,0 +1,135 @@
+# --------   Translation   ---------
+language=Română
+locale=ro
+translator=Rayan B. Milosav
+by=By
+
+
+# --------   Options   ---------
+title.options=Meniu de Optioni
+
+title.video=Video
+video.display=Modul de afișare
+video.display.desc=
+video.display.windowed=Geam
+video.display.fullscreen=Ecran complet
+video.vsync=VSync
+video.vsync.desc=
+video.fps=Max FPS
+video.fps.desc=
+video.fps.max=MAX
+video.bloom=Bloom
+video.bloom.desc=
+video.brightness=Luminozitate
+video.brightness.desc=
+video.chromatic=Aberație Cromatică
+video.chromatic.desc=
+video.unfocus=Pauză fără focalizare
+video.unfocus.desc=
+video.language=Limbă
+video.language.desc=
+
+title.volume=Audio
+volume.master=Volum Principal
+volume.master.desc=
+volume.music=Musică
+volume.music.desc=
+volume.sfx=Efecte Sonore
+volume.sfx.desc=
+
+title.gameplay=Gameplay
+gameplay.fov=FOV
+gameplay.fov.desc=
+gameplay.fov.quake=QUAKE PRO
+gameplay.fov.zoomer=Zoom
+gameplay.sensitivity=Sensibilitate de la Maus
+gameplay.sensitivity.desc=
+gameplay.showfps=Arată FPS
+gameplay.showfps.desc=
+gameplay.showspeed=Arată Viteza
+gameplay.showspeed.desc=
+gameplay.bobbing=View Bobbing
+gameplay.bobbing.desc=
+gameplay.speedfov=Viteza Scinbă FOV
+gameplay.speedfov.desc=
+gameplay.sidewaystilt=Inclinație Laterală de Cameră
+gameplay.sidewaystilt.desc=
+
+
+# --------   Menu   ---------
+yes=Da
+no=Nu
+back=Inapoii
+
+title.game=Meniu de Joc
+resume=Inapoii la Joc
+options=Opționi
+controls=Controle
+exit.save=Inainte la Meniu
+exit.save.ask=Sunteti singurii că vreţi să iesiţi din sesie? Progresia voastră nu o să fie salvată!
+exit.game=Iesi din joc
+exit.game.ask=Sunteți sigurii că vreți să iesiți?
+
+title.controls=Meniu de Controle
+controls.text=Apăsați o tastă... :)
+title.movement=Mișcarea
+controls.forward=Inainte
+controls.backward=Inapoii
+controls.left=Stânga
+controls.right=Dreapta
+controls.jump=Sari
+controls.crouch=Genuflexiune
+controls.sprint=Aleargă
+
+controls.pause=Pauză
+controls.console=Consola de Developăr
+controls.interact=Interacționa
+controls.attack=Atacă
+controls.perspective=Perspectivă
+
+multiplayer=Multiplayer
+multiplayer.lobby=intră intr-un Lobby
+multiplayer.address=Puneți adresa aicea
+multiplayer.join=Intră
+multiplayer.host=Gazdă
+
+singleplayer=Jocați Singuri
+credits=Credite
+
+
+# --------   Game   ---------
+stamina=Rezistență
+health=Viață
+coins=Piese
+inventory=Inventar
+
+day=Ziuă
+day.morning=DIMINIAȚA
+day.evening=PM
+
+water=Apă
+food=Mâncare
+
+dead=Ați Morit!
+dead.respawn=Reapară
+
+
+# --------   Dialogue   ---------
+todor.greeting=
+todor.greeting2=
+todor.greeting3=
+todor.greeting4=
+todor.greeting5=
+player.money=
+player.crafting=
+todor.money=
+todor.money2=
+todor.money3=
+todor.money4=
+todor.crafting=
+todor.crafting2=
+todor.crafting3=
+todor.crafting4=
+todor.crafting5=
+todor.crafting6=
+todor.crafting7=
